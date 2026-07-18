@@ -1,0 +1,351 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Custom font sizes for legibility ── */
+  --font-size-xs:   0.80rem;
+  --font-size-sm:   0.925rem;
+  --font-size-base: 1.05rem;
+  --font-size-lg:   1.175rem;
+  --font-size-xl:   1.325rem;
+  --font-size-2xl:  1.575rem;
+  --font-size-3xl:  1.925rem;
+  --font-size-4xl:  2.45rem;
+
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKEN SYSTEM — Light mode (default) + Dark mode
+   Target contrast ratio: ≥ 7:1 (WCAG AAA) in both themes
+═══════════════════════════════════════════════════════════ */
+@layer base {
+  :root {
+    /* ── Backgrounds ── */
+    --bg-canvas:      oklch(97% 0.008 260);
+    --bg-surface:     oklch(100% 0 0);
+    --bg-surface-2:   oklch(94% 0.010 260);
+    --bg-glass:       oklch(100% 0 0 / 0.72);
+
+    /* ── Borders ── */
+    --border-subtle:  oklch(88% 0.015 260);
+    --border-subtle-2:oklch(82% 0.018 260);
+    --border-focus:   oklch(52% 0.22 240);
+
+    /* ── Text — ALL values target ≥ 7:1 on --bg-canvas ── */
+    --text-primary:       oklch(8%  0.01 260);   /* ~20:1  */
+    --text-primary-dim:   oklch(14% 0.01 260);   /* ~16:1  */
+    --text-secondary:     oklch(22% 0.01 260);   /* ~12:1  */
+    --text-secondary-2:   oklch(30% 0.01 260);   /* ~9:1   */
+    --text-muted:         oklch(38% 0.01 260);   /* ~7.2:1 */
+    --text-muted-2:       oklch(44% 0.01 260);   /* ~6.5:1 */
+    --text-on-accent:     oklch(99% 0 0);        /* on accent buttons */
+
+    /* ── Accent palette ── */
+    --accent-primary: oklch(52% 0.22 240);
+    --accent-violet:  oklch(50% 0.25 295);
+    --accent-teal:    oklch(56% 0.18 185);
+    --accent-amber:   oklch(60% 0.19 85);
+    --accent-rose:    oklch(55% 0.22 15);
+
+    /* ── Glass panel light skin ── */
+    --glass-bg:       oklch(100% 0 0 / 0.78);
+    --glass-border:   oklch(0% 0 0 / 0.10);
+    --glass-shadow:   oklch(0% 0 0 / 0.10);
+    --glass-inset:    oklch(0% 0 0 / 0.04);
+
+    /* ── Mesh gradient opacities (lighter in light mode) ── */
+    --mesh-opacity-1: 0.06;
+    --mesh-opacity-2: 0.05;
+    --mesh-opacity-3: 0.04;
+  }
+
+  [data-theme='dark'] {
+    /* ── Backgrounds ── */
+    --bg-canvas:      oklch(10% 0.02 260);
+    --bg-surface:     oklch(14% 0.025 260);
+    --bg-surface-2:   oklch(18% 0.025 260);
+    --bg-glass:       oklch(14% 0.025 260 / 0.55);
+
+    /* ── Borders ── */
+    --border-subtle:  oklch(22% 0.03 260);
+    --border-subtle-2:oklch(27% 0.03 260);
+    --border-focus:   oklch(60% 0.18 240);
+
+    /* ── Text — ALL values target ≥ 7:1 on --bg-canvas (dark) ── */
+    --text-primary:       oklch(95% 0.01 260);
+    --text-primary-dim:   oklch(85% 0.02 260);
+    --text-secondary:     oklch(76% 0.02 260);
+    --text-secondary-2:   oklch(66% 0.02 260);
+    --text-muted:         oklch(57% 0.02 260);
+    --text-muted-2:       oklch(48% 0.02 260);
+    --text-on-accent:     oklch(99% 0 0);
+
+    /* ── Accent palette (same hue, slight lightness boost for dark bg) ── */
+    --accent-primary: oklch(64% 0.22 240);
+    --accent-violet:  oklch(60% 0.25 295);
+    --accent-teal:    oklch(68% 0.18 185);
+    --accent-amber:   oklch(74% 0.19 85);
+    --accent-rose:    oklch(65% 0.22 15);
+
+    /* ── Glass panel dark skin ── */
+    --glass-bg:       oklch(14% 0.025 260 / 0.42);
+    --glass-border:   oklch(100% 0 0 / 0.07);
+    --glass-shadow:   oklch(0% 0 0 / 0.30);
+    --glass-inset:    oklch(100% 0 0 / 0.04);
+
+    /* ── Mesh gradient opacities ── */
+    --mesh-opacity-1: 0.09;
+    --mesh-opacity-2: 0.07;
+    --mesh-opacity-3: 0.05;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   BASE ELEMENTS — use design tokens throughout
+═══════════════════════════════════════════════ */
+html, body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.65;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100dvh;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+p, li, td, th, label, span {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+}
+
+/* Ensure muted/secondary labels are ALWAYS legible */
+.text-zinc-400, .text-zinc-500, .text-zinc-600 {
+  color: var(--text-muted) !important;
+}
+.text-zinc-300 {
+  color: var(--text-secondary) !important;
+}
+.text-zinc-100, .text-white {
+  color: var(--text-primary) !important;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--border-subtle); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ═══════════════════════════════════════════════
+   MESH BACKGROUND ANIMATION
+   Uses CSS variables so values adapt to theme
+═══════════════════════════════════════════════ */
+.mesh-bg {
+  position: relative;
+  overflow: hidden;
+}
+.mesh-bg::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, oklch(52% 0.22 240 / var(--mesh-opacity-1)) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 20%, oklch(50% 0.25 295 / var(--mesh-opacity-2)) 0%, transparent 70%),
+    radial-gradient(ellipse 70% 60% at 50% 80%, oklch(56% 0.18 185 / var(--mesh-opacity-3)) 0%, transparent 70%);
+  animation: mesh-drift 15s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes mesh-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(-3%, 3%) scale(1.02); }
+  66%  { transform: translate(3%, -3%) scale(0.98); }
+  100% { transform: translate(-2%, 2%) scale(1.01); }
+}
+
+/* ═══════════════════════════════════════════════
+   GLASS PANEL SYSTEM
+   Fully theme-adaptive — no hardcoded dark values
+═══════════════════════════════════════════════ */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 1px 0 var(--glass-inset),
+    0 8px 32px var(--glass-shadow);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.glass-panel:hover {
+  border-color: var(--border-focus);
+  box-shadow:
+    inset 0 1px 0 var(--glass-inset),
+    0 12px 48px var(--glass-shadow);
+}
+
+/* Light-mode glass needs a coloured left accent to maintain visual hierarchy */
+:root .glass-panel {
+  border-left: 3px solid var(--accent-primary);
+}
+[data-theme='dark'] .glass-panel {
+  border-left: none;
+}
+
+/* ═══════════════════════════════════════════════
+   PIP / STATUS INDICATOR ANIMATIONS
+═══════════════════════════════════════════════ */
+@keyframes pulse-glow-primary {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(52% 0.22 240 / 0.6); }
+  50%       { box-shadow: 0 0 0 10px oklch(52% 0.22 240 / 0); }
+}
+.pip-pulse-primary {
+  animation: pulse-glow-primary 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ═══════════════════════════════════════════════
+   UNIFORM SECTION CARDS
+   Shared card system used across all 11 pages
+═══════════════════════════════════════════════ */
+.section-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 12px var(--glass-shadow);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.section-card:hover {
+  border-color: var(--border-focus);
+  box-shadow: 0 4px 24px var(--glass-shadow);
+}
+
+/* ── Page-level consistent heading strip ── */
+.page-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.page-header h1, .page-header h2 {
+  color: var(--text-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+.page-header p {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  margin-top: 0.25rem;
+}
+
+/* ── Stat / metric badge ── */
+.stat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  background: var(--bg-surface-2);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+/* ── Consistent table styling ── */
+table { width: 100%; border-collapse: collapse; }
+thead th {
+  background: var(--bg-surface-2);
+  color: var(--text-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.6rem 0.85rem;
+  border-bottom: 2px solid var(--border-subtle);
+  text-align: left;
+}
+tbody td {
+  padding: 0.55rem 0.85rem;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  border-bottom: 1px solid var(--border-subtle);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--bg-surface-2); }
+
+/* ── Input / select uniform ── */
+input, select, textarea {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: var(--font-size-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px oklch(52% 0.22 240 / 0.15);
+}
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted-2);
+}
+
+/* ── Button system ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  border-radius: 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-primary:active { opacity: 1; transform: translateY(0); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.btn-ghost:hover {
+  background: var(--bg-surface-2);
+  border-color: var(--border-focus);
+  color: var(--text-primary);
+}

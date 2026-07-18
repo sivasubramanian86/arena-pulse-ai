@@ -1,0 +1,78 @@
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyw
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.prof
+
+# ── Node / TypeScript ────────────────────────────────────────
+node_modules/
+.next/
+out/
+dist/
+.turbo/
+coverage/
+*.tsbuildinfo
+.npm/
+
+# ── Environment & Secrets ────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+service-account*.json
+credentials*.json
+*_key.json
+
+# ── Google Cloud ─────────────────────────────────────────────
+.gcloud/
+gcloud-service-key.json
+
+# ── Firebase ─────────────────────────────────────────────────
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# ── Build artifacts ──────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tgz
+backend-deploy.zip
+
+# ── IDE & OS ─────────────────────────────────────────────────
+.idea/
+.vscode/settings.json
+.vscode/launch.json
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+
+# ── Docker ───────────────────────────────────────────────────
+.dockerignore
+docker-compose.override.yml
+
+# ── Pre-commit ───────────────────────────────────────────────
+.pre-commit-config.yaml
+
+# ── Gemini / agent scratch ───────────────────────────────────
+.gemini/

@@ -1,0 +1,9 @@
+[run]
+source = app
+branch = True
+omit =
+    app/main.py
+
+[report]
+show_missing = True
+fail_under = 100

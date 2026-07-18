@@ -1,0 +1,19 @@
+# .gcloudignore
+# Exclude heavy dependencies and build artifacts from Google Cloud deployments
+.git
+.gitignore
+.gcloudignore
+node_modules/
+.next/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+backend/.venv/
+backend/venv/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.coverage
+.hypothesis/
+.pytest_cache/
+*.zip
+*.tar.gz

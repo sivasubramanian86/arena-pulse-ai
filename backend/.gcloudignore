@@ -1,0 +1,43 @@
+# backend/.gcloudignore
+# Used by `gcloud builds submit ./backend` to exclude files from the source archive.
+# This cuts the archive from ~5000 files (72MB) down to ~20 files (<1MB).
+
+# Python virtual environment (the biggest offender)
+.venv/
+venv/
+env/
+ENV/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+
+# Test artifacts
+.pytest_cache/
+.coverage
+.coveragerc
+htmlcov/
+tests/
+coverage.xml
+*.test.py
+
+# Environment secrets (never ship these)
+.env
+.env.*
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore

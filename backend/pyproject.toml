@@ -1,0 +1,28 @@
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "B",   # flake8-bugbear
+    "S",   # flake8-bandit (Security scans)
+    "I",   # isort (import sorting)
+    "C90", # mccabe complexity
+]
+ignore = []
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+exclude = [
+    ".venv",
+    "tests",
+    "__pycache__"
+]

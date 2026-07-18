@@ -1,0 +1,86 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions for security validation
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isEmailVerified() {
+      return request.auth.token.email_verified == true;
+    }
+
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function hasRole(role) {
+      return isAuthenticated() && getUserData().role == role;
+    }
+
+    function hasAnyRole(roles) {
+      return isAuthenticated() && getUserData().role in roles;
+    }
+
+    // Strict profile validation rules
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      // Users can only create their own user document, role must default to field_supervisor or volunteer unless admin
+      allow create: if isAuthenticated() 
+        && request.auth.uid == userId
+        && request.resource.data.role in ['field_supervisor', 'volunteer']
+        && request.resource.data.email == request.auth.token.email;
+      
+      // Prevent update bypass: users cannot upgrade their own role to 'noc_director'
+      allow update: if isAuthenticated() 
+        && request.auth.uid == userId
+        && (!request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'email']))
+        && request.resource.data.displayName is string
+        && request.resource.data.displayName.size() < 100;
+      
+      allow delete: if hasRole('noc_director');
+    }
+
+    // Stadium Topological Telemetry Rules (Real-time IoT nodes)
+    match /telemetry/{nodeId} {
+      allow read: if isAuthenticated();
+      // Only NOC director or automated IoT services can update telemetry weights/densities
+      allow write: if hasRole('noc_director')
+        && request.resource.data.density is float
+        && request.resource.data.density >= 0.0 
+        && request.resource.data.density <= 1.0
+        && request.resource.data.status in ['optimal', 'congested', 'critical', 'offline'];
+    }
+
+    // Crisis Alerts and Safe Routes
+    match /crisis_alerts/{alertId} {
+      allow read: if isAuthenticated();
+      // Only NOC director can trigger or modify a crisis evacuation simulation
+      allow write: if hasRole('noc_director')
+        && request.resource.data.hazardLevel in ['high', 'extreme']
+        && request.resource.data.evacuationProgress is float;
+    }
+
+    // Volunteer Dispatch Tasks
+    match /tasks/{taskId} {
+      allow read: if hasAnyRole(['noc_director', 'field_supervisor', 'volunteer']);
+      
+      // Creation restricted to supervisors and directors
+      allow create: if hasAnyRole(['noc_director', 'field_supervisor'])
+        && request.resource.data.title is string
+        && request.resource.data.title.size() < 150
+        && request.resource.data.status == 'PENDING';
+
+      // Volunteers can only claim or complete tasks
+      allow update: if isAuthenticated()
+        && (
+             hasAnyRole(['noc_director', 'field_supervisor']) || 
+             (hasRole('volunteer') && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'assignedTo']))
+           )
+        && request.resource.data.status in ['PENDING', 'IN_PROGRESS', 'COMPLETED'];
+
+      allow delete: if hasRole('noc_director');
+    }
+  }
+}
