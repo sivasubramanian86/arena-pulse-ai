@@ -1,30 +1,30 @@
 {
-  "title": "Monetization Intelligence",
-  "subtitle": "Revenue Analytics & Dynamic Pricing Dashboard",
-  "description": "AI-powered concession, merchandise, and premium experience revenue analytics.",
+  "title": "التحصيل المالي الذكي",
+  "subtitle": "تحليلات الإيرادات ولوحة التحكم بالأسعار الديناميكية",
+  "description": "تحليلات إيرادات بيع الأطعمة والمنتجات والخدمات المتميزة المدعومة بالذكاء الاصطناعي.",
   "revenue": {
-    "label": "Revenue",
-    "total": "Total Revenue",
-    "today": "Today",
-    "perFan": "Revenue Per Fan",
-    "projection": "Projection"
+    "label": "الإيرادات",
+    "total": "إجمالي الإيرادات",
+    "today": "اليوم",
+    "perFan": "الإيرادات لكل مشجع",
+    "projection": "التوقعات"
   },
   "categories": {
-    "concessions": "Concessions",
-    "merchandise": "Merchandise",
-    "premium": "Premium Experiences",
-    "parking": "Parking & Transit",
-    "digital": "Digital Add-ons"
+    "concessions": "الأطعمة والمشروبات",
+    "merchandise": "السلع والمنتجات",
+    "premium": "تجارب مميزة",
+    "parking": "مواقف السيارات والعبور",
+    "digital": "الخدمات الرقمية الإضافية"
   },
   "pricing": {
-    "title": "Dynamic Pricing",
-    "current": "Current Price",
-    "suggested": "AI Suggested",
-    "surge": "Surge Active"
+    "title": "التسعير الديناميكي",
+    "current": "السعر الحالي",
+    "suggested": "المقترح بالذكاء الاصطناعي",
+    "surge": "الزيادة النشطة"
   },
   "chart": {
-    "hourly": "Hourly Revenue",
-    "byCategory": "By Category",
-    "trend": "Trend"
+    "hourly": "الإيرادات بالساعة",
+    "byCategory": "حسب الفئة",
+    "trend": "الاتجاه"
   }
 }

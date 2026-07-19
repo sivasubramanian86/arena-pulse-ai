@@ -1,5 +1,4 @@
 """Unit tests for EdgeSwarmCoordinator and EdgeAgent."""
-import asyncio
 import pytest
 
 from app.core.agents.edge_swarm import (

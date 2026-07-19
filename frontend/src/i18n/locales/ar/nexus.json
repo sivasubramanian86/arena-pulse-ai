@@ -1,37 +1,37 @@
 {
-  "title": "Command Nexus",
-  "subtitle": "Agentic Graph RAG • Live Stadium Topology",
-  "description": "Real-time crowd routing and stadium node management powered by multi-agent consensus.",
+  "title": "مركز القيادة",
+  "subtitle": "RAG الرسومي للوكلاء الذكاء • هيكلية الملعب المباشرة",
+  "description": "توجيه الجماهير في الوقت الفعلي وإدارة عقد الملعب بناءً على إجماع الوكلاء.",
   "nodes": {
-    "label": "Stadium Nodes",
+    "label": "عقد الملعب",
     "status": {
-      "optimal": "Optimal",
-      "congested": "Congested",
-      "critical": "Critical",
-      "offline": "Offline"
+      "optimal": "مثالي",
+      "congested": "مزدحم",
+      "critical": "حرِج",
+      "offline": "غير متصل"
     },
-    "density": "Density",
-    "capacity": "Capacity"
+    "density": "الكثافة",
+    "capacity": "السعة"
   },
   "agent": {
-    "thinking": "Agent thinking...",
-    "executing": "Executing tool",
-    "completed": "Completed",
-    "idle": "Idle",
-    "error": "Error"
+    "thinking": "الوكيل يفكر...",
+    "executing": "تشغيل الأداة",
+    "completed": "اكتمل",
+    "idle": "خامل",
+    "error": "خطأ"
   },
   "query": {
-    "placeholder": "Ask the Ops Commander (e.g. 'Reroute Gate A crowd to Gate C')",
-    "submit": "Send to Agent",
-    "response": "Agent Response"
+    "placeholder": "اسأل قائد العمليات (مثال: 'إعادة توجيه جمهور بوابة A إلى بوابة C')",
+    "submit": "إرسال إلى الوكيل",
+    "response": "رد الوكيل"
   },
   "graph": {
-    "title": "Stadium Topology Graph",
+    "title": "مخطط هيكلية الملعب",
     "legend": {
-      "gate": "Gate",
-      "concourse": "Concourse",
-      "transit": "Transit Hub",
-      "kiosk": "Kiosk"
+      "gate": "بوابة",
+      "concourse": "ممر",
+      "transit": "محور النقل",
+      "kiosk": "كشك"
     }
   }
 }

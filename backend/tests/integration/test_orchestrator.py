@@ -1,4 +1,5 @@
 import pytest
+
 from app.core.agents.edge_swarm import SwarmAnomaly
 from app.core.orchestrator import ArenaPulseOrchestrator
 
@@ -12,7 +13,7 @@ async def test_orchestrator_cache_hit():
     steps = []
     async for step in orch.execute_task_stream("Where is Gate C?"):
         steps.append(step)
-    
+
     assert len(steps) == 3
     assert steps[0]["activeTool"] == "Cache Lookup"
     assert steps[1]["activeTool"] == "Cache Retrieval"

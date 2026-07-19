@@ -1,37 +1,37 @@
 {
-  "title": "Command Nexus",
-  "subtitle": "Agentic Graph RAG • Live Stadium Topology",
-  "description": "Real-time crowd routing and stadium node management powered by multi-agent consensus.",
+  "title": "커맨드 넥서스",
+  "subtitle": "에이전트 그래프 RAG • 실시간 경기장 토폴로지",
+  "description": "에이전트 동의 알고리즘 기반 실시간 인파 유도 및 경기장 노드 관리 시스템.",
   "nodes": {
-    "label": "Stadium Nodes",
+    "label": "경기장 노드",
     "status": {
-      "optimal": "Optimal",
-      "congested": "Congested",
-      "critical": "Critical",
-      "offline": "Offline"
+      "optimal": "최적",
+      "congested": "혼잡",
+      "critical": "위험",
+      "offline": "오프라인"
     },
-    "density": "Density",
-    "capacity": "Capacity"
+    "density": "밀도",
+    "capacity": "수용 용량"
   },
   "agent": {
-    "thinking": "Agent thinking...",
-    "executing": "Executing tool",
-    "completed": "Completed",
-    "idle": "Idle",
-    "error": "Error"
+    "thinking": "에이전트 분석 중...",
+    "executing": "도구 실행 중",
+    "completed": "완료",
+    "idle": "대기",
+    "error": "오류"
   },
   "query": {
-    "placeholder": "Ask the Ops Commander (e.g. 'Reroute Gate A crowd to Gate C')",
-    "submit": "Send to Agent",
-    "response": "Agent Response"
+    "placeholder": "운영 지시 입력 (예: '게이트 A의 인파를 게이트 C로 우회시켜줘')",
+    "submit": "에이전트에 송신",
+    "response": "에이전트 응답"
   },
   "graph": {
-    "title": "Stadium Topology Graph",
+    "title": "경기장 토폴로지 그래프",
     "legend": {
-      "gate": "Gate",
-      "concourse": "Concourse",
-      "transit": "Transit Hub",
-      "kiosk": "Kiosk"
+      "gate": "게이트",
+      "concourse": "콘코스",
+      "transit": "환승지",
+      "kiosk": "키오스크"
     }
   }
 }

@@ -1,5 +1,4 @@
 """Unit tests for ConsensusProtocol — Agent-to-Agent Negotiation."""
-import asyncio
 import pytest
 
 from app.core.agents.consensus import (

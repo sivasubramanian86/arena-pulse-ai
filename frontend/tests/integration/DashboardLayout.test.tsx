@@ -3,9 +3,46 @@ import { DashboardLayout } from "../../src/components/DashboardLayout";
 import { TelemetryProvider } from "../../src/context/TelemetryContext";
 import "@testing-library/jest-dom";
 
+// Mock next-intl
+jest.mock("next-intl", () => ({
+  useTranslations: () => (key: string) => {
+    const keys: Record<string, string> = {
+      "brand": "ArenaPulseAI",
+      "tagline": "Real-time Operations Director",
+      "status.telemetryLive": "TELEMETRY LIVE",
+      "status.degraded": "DEGRADED",
+      "role.label": "Role",
+      "role.nocDirector": "noc_director",
+      "role.fieldSupervisor": "field_supervisor",
+      "role.volunteer": "volunteer",
+      "nav.commandNexus": "Nexus",
+      "nav.fanpass": "Fan Pass",
+      "nav.polyglot": "Polyglot",
+      "nav.multimodal": "Multimodal",
+      "nav.ecoTransit": "Transit",
+      "nav.volunteerHUD": "Volunteer HUD",
+      "nav.evacSimulator": "Crisis",
+      "nav.monetization": "Monetization",
+      "nav.edgeMesh": "Mesh",
+      "nav.settings": "Settings",
+      "nav.vaultFaq": "FAQ",
+      "aria.toggleTheme": "Toggle Light/Dark operational layout",
+      "aria.systemMenu": "System Menu",
+      "telemetry.fifaLive": "FIFA Live",
+      "telemetry.stadiumAttendance": "Attendance",
+      "telemetry.wifiDataRate": "WiFi Data Rate",
+      "auditConsole": "Audit Console"
+    };
+    return keys[key] || key;
+  }
+}));
+
 // Mock next/navigation
 jest.mock("next/navigation", () => ({
   usePathname: () => "/nexus",
+  useRouter: () => ({
+    push: jest.fn(),
+  }),
 }));
 
 // Mock WebSocket so TelemetryProvider works in tests

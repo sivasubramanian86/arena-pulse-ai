@@ -1,34 +1,34 @@
 {
-  "title": "EcoTransit Sync",
-  "subtitle": "Real-Time Shuttle & Transit Orchestration",
-  "description": "Live transit coordination for sustainable fan transportation across all venues.",
+  "title": "इको ट्रांजिट",
+  "subtitle": "वास्तविक समय शटल और पारगमन संचालन",
+  "description": "सभी स्थानों पर प्रशंसकों के टिकाऊ परिवहन के लिए लाइव पारगमन समन्वय।",
   "shuttle": {
-    "label": "Shuttles",
+    "label": "शटल",
     "status": {
-      "onRoute": "On Route",
-      "atStop": "At Stop",
-      "delayed": "Delayed",
-      "offline": "Offline"
+      "onRoute": "मार्ग पर",
+      "atStop": "स्टॉप पर",
+      "delayed": "विलंबित",
+      "offline": "ऑफ़लाइन"
     },
-    "capacity": "Capacity",
-    "eta": "ETA",
-    "minutes": "min"
+    "capacity": "क्षमता",
+    "eta": "अनुमानित समय",
+    "minutes": "मिनट"
   },
   "route": {
-    "label": "Routes",
-    "origin": "Origin",
-    "destination": "Destination",
-    "duration": "Duration",
-    "eco": "Eco Score"
+    "label": "मार्ग",
+    "origin": "स्रोत",
+    "destination": "गंतव्य",
+    "duration": "अवधि",
+    "eco": "इको स्कोर"
   },
   "emissions": {
-    "label": "CO₂ Savings",
-    "today": "Today",
-    "total": "Tournament Total"
+    "label": "CO₂ बचत",
+    "today": "आज",
+    "total": "टूर्नामेंट कुल"
   },
   "gantt": {
-    "title": "Transit Gantt Schedule",
-    "departure": "Departure",
-    "arrival": "Arrival"
+    "title": "पारगमन गैंट शेड्यूल",
+    "departure": "प्रस्थान",
+    "arrival": "आगमन"
   }
 }

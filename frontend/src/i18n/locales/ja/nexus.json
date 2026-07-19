@@ -1,37 +1,37 @@
 {
-  "title": "Command Nexus",
-  "subtitle": "Agentic Graph RAG • Live Stadium Topology",
-  "description": "Real-time crowd routing and stadium node management powered by multi-agent consensus.",
+  "title": "コマンドネクサス",
+  "subtitle": "自律エージェント型グラフRAG • スタジアムトポロジー実況",
+  "description": "マルチエージェント合意形成に基づく、リアルタイムの観客誘導とスタジアムノード管理。",
   "nodes": {
-    "label": "Stadium Nodes",
+    "label": "スタジアムノード",
     "status": {
-      "optimal": "Optimal",
-      "congested": "Congested",
-      "critical": "Critical",
-      "offline": "Offline"
+      "optimal": "最適",
+      "congested": "混雑",
+      "critical": "危険混雑",
+      "offline": "オフライン"
     },
-    "density": "Density",
-    "capacity": "Capacity"
+    "density": "密度",
+    "capacity": "収容数"
   },
   "agent": {
-    "thinking": "Agent thinking...",
-    "executing": "Executing tool",
-    "completed": "Completed",
-    "idle": "Idle",
-    "error": "Error"
+    "thinking": "エージェント思考中...",
+    "executing": "ツールを実行中",
+    "completed": "完了",
+    "idle": "待機中",
+    "error": "エラー"
   },
   "query": {
-    "placeholder": "Ask the Ops Commander (e.g. 'Reroute Gate A crowd to Gate C')",
-    "submit": "Send to Agent",
-    "response": "Agent Response"
+    "placeholder": "指示を入力（例:『ゲートAの混雑をゲートCへ迂回させて』）",
+    "submit": "指示を送信",
+    "response": "応答結果"
   },
   "graph": {
-    "title": "Stadium Topology Graph",
+    "title": "スタジアムトポロジーグラフ",
     "legend": {
-      "gate": "Gate",
-      "concourse": "Concourse",
-      "transit": "Transit Hub",
-      "kiosk": "Kiosk"
+      "gate": "ゲート",
+      "concourse": "コンコース",
+      "transit": "交通機関",
+      "kiosk": "キオスク"
     }
   }
 }

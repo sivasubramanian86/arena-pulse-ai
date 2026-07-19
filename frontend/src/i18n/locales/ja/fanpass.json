@@ -1,30 +1,30 @@
 {
-  "title": "FanPass AR",
-  "subtitle": "Ticket Hub & Venue Navigation",
-  "description": "Access your digital ticket, find your seat, and navigate the stadium with AR wayfinding.",
+  "title": "ファンパスAR",
+  "subtitle": "チケットハブ • 会場ナビゲーション",
+  "description": "デジタルチケットの確認、座席の特定、AR案内を使用したスタジアム内の移動をサポートします。",
   "ticket": {
-    "label": "Your Ticket",
-    "section": "Section",
-    "row": "Row",
-    "seat": "Seat",
-    "gate": "Entry Gate",
-    "match": "Match"
+    "label": "お手持ちのチケット",
+    "section": "セクション",
+    "row": "列",
+    "seat": "座席",
+    "gate": "入場ゲート",
+    "match": "対戦カード"
   },
   "navigation": {
-    "title": "Navigate to Seat",
-    "openMaps": "Open in Google Maps",
-    "directions": "Get Directions",
-    "estimatedWalk": "Estimated Walk"
+    "title": "座席までのルート案内",
+    "openMaps": "Googleマップで開く",
+    "directions": "行き方を調べる",
+    "estimatedWalk": "徒歩予想時間"
   },
   "amenities": {
-    "title": "Nearby Amenities",
-    "restroom": "Restroom",
-    "concession": "Concession Stand",
-    "medic": "Medical Station",
-    "accessibility": "Accessibility Services"
+    "title": "付近の施設",
+    "restroom": "トイレ",
+    "concession": "売店・飲食フード",
+    "medic": "救護室",
+    "accessibility": "バリアフリー対応"
   },
   "ar": {
-    "launch": "Launch AR View",
-    "scanning": "Scanning environment..."
+    "launch": "ARビューを起動する",
+    "scanning": "周囲をスキャンしています..."
   }
 }

@@ -1,11 +1,11 @@
 {
-  "title": "Sincronizzazione Eco-Transito",
-  "subtitle": "Orchestrazione in Tempo Reale di Navette e Transito",
-  "description": "Coordinamento del transito in tempo reale per il trasporto sostenibile dei tifosi in tutte le sedi.",
+  "title": "EcoTransit Sync",
+  "subtitle": "Orchestra Navette e Transito in Tempo Reale",
+  "description": "Coordinamento in tempo reale del transito per il trasporto sostenibile dei tifosi in tutte le sedi.",
   "shuttle": {
     "label": "Navette",
     "status": {
-      "onRoute": "In Percorso",
+      "onRoute": "In Viaggio",
       "atStop": "Alla Fermata",
       "delayed": "In Ritardo",
       "offline": "Offline"
@@ -22,12 +22,12 @@
     "eco": "Punteggio Eco"
   },
   "emissions": {
-    "label": "Risparmi di CO₂",
+    "label": "Risparmio di CO₂",
     "today": "Oggi",
     "total": "Totale Torneo"
   },
   "gantt": {
-    "title": "Programma Gantt del Transito",
+    "title": "Programma Transito Gantt",
     "departure": "Partenza",
     "arrival": "Arrivo"
   }

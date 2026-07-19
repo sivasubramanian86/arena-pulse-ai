@@ -1,12 +1,12 @@
 {
-  "title": "EcoTransit Sync",
-  "subtitle": "Realtime Pendel- & Vervoercoördinatie",
-  "description": "Live vervoercoördinatie voor duurzaam fanvervoer over alle locaties.",
+  "title": "EcoTransit",
+  "subtitle": "Realtime Shuttle & Transit Orkestratie",
+  "description": "Live transitcoördinatie voor duurzaam fanvervoer over alle stadions.",
   "shuttle": {
-    "label": "Pendelbussen",
+    "label": "Shuttles",
     "status": {
       "onRoute": "Onderweg",
-      "atStop": "Bij halte",
+      "atStop": "Bij Halte",
       "delayed": "Vertraagd",
       "offline": "Offline"
     },
@@ -16,18 +16,18 @@
   },
   "route": {
     "label": "Routes",
-    "origin": "Vertrekpunt",
+    "origin": "Vertrek",
     "destination": "Bestemming",
     "duration": "Duur",
     "eco": "Eco Score"
   },
   "emissions": {
-    "label": "CO₂ Besparingen",
+    "label": "CO₂-Besparing",
     "today": "Vandaag",
-    "total": "Totaal Toernooi"
+    "total": "Toernooitotaal"
   },
   "gantt": {
-    "title": "Gantt-schema voor vervoer",
+    "title": "Transit Gantt Schema",
     "departure": "Vertrek",
     "arrival": "Aankomst"
   }

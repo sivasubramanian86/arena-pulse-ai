@@ -1,6 +1,7 @@
-import pytest
 from fastapi.testclient import TestClient
+
 from app.main import app
+
 
 def test_websocket_e2e_simulation_flow():
     client = TestClient(app)
@@ -15,7 +16,7 @@ def test_websocket_e2e_simulation_flow():
                 "hazardLocationId": "n-5"
             }
         })
-        
+
         # Verify that we receive events back over the socket connection
         data = websocket.receive_json()
         assert "event" in data
@@ -29,7 +30,7 @@ def test_websocket_e2e_query_flow():
             "action": "query",
             "queryText": "Where is Gate C?"
         })
-        
+
         data = websocket.receive_json()
         assert "event" in data
         assert data["event"] in ["telemetry", "audit_log", "crisis_alert", "agent_state"]

@@ -1,36 +1,36 @@
 {
-  "title": "Volunteer HUD",
-  "subtitle": "Staff Deployment & Task Assignment",
-  "description": "Real-time volunteer management and task dispatch for stadium operations.",
+  "title": "स्वयंसेवक एचयूडी",
+  "subtitle": "कर्मचारी तैनाती और कार्य असाइनमेंट",
+  "description": "स्टेडियम संचालन के लिए वास्तविक समय स्वयंसेवक प्रबंधन और कार्य प्रेषण।",
   "staff": {
-    "label": "Staff",
+    "label": "स्टाफ",
     "status": {
-      "available": "Available",
-      "deployed": "Deployed",
-      "break": "On Break",
-      "offline": "Offline"
+      "available": "उपलब्ध",
+      "deployed": "तैनात",
+      "break": "ब्रेक पर",
+      "offline": "ऑफ़लाइन"
     },
-    "role": "Role",
-    "zone": "Assigned Zone",
-    "tasks": "Active Tasks"
+    "role": "भूमिका",
+    "zone": "असाइन किया गया ज़ोन",
+    "tasks": "सक्रिय कार्य"
   },
   "dispatch": {
-    "title": "Dispatch",
-    "assign": "Assign Task",
-    "recall": "Recall",
+    "title": "प्रेषण",
+    "assign": "कार्य सौंपें",
+    "recall": "वापस बुलाएं",
     "priority": {
-      "label": "Priority",
-      "low": "Low",
-      "normal": "Normal",
-      "high": "High",
-      "critical": "Critical"
+      "label": "प्राथमिकता",
+      "low": "कम",
+      "normal": "सामान्य",
+      "high": "उच्च",
+      "critical": "गंभीर"
     }
   },
   "tasks": {
-    "title": "Task Queue",
-    "empty": "No pending tasks",
-    "completed": "Completed",
-    "pending": "Pending",
-    "inProgress": "In Progress"
+    "title": "कार्य कतार",
+    "empty": "कोई कार्य लंबित नहीं",
+    "completed": "पूरा",
+    "pending": "लंबित",
+    "inProgress": "प्रगति पर"
   }
 }

@@ -1,5 +1,6 @@
 from app.core.agents.base import ArenaAgent
 
+
 class TransitWorker(ArenaAgent):
     """Worker specializing in public transport synchronization and shuttle timelines."""
 

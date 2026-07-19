@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { render, screen, fireEvent, act } from "@testing-library/react";
 import { MultiModalHub } from "../../src/components/MultiModalHub";
 import "@testing-library/jest-dom";
@@ -241,13 +242,14 @@ describe("MultiModalHub Unit Component", () => {
   it("handles loading demo assets (Stadium Image and Security Video)", () => {
     render(<MultiModalHub />);
     
-    // Click Stadium Image demo button
-    const imgBtn = screen.getByRole("button", { name: "Stadium Image" });
+    // Click Stadium Image demo button (first Analyze in Vision AI button)
+    const analyzeButtons = screen.getAllByRole("button", { name: "Analyze in Vision AI" });
+    const imgBtn = analyzeButtons[0];
     fireEvent.click(imgBtn);
     expect(screen.getByAltText("Uploaded Preview")).toBeInTheDocument();
 
-    // Click Security Video demo button
-    const vidBtn = screen.getByRole("button", { name: "Security Video" });
+    // Click Security Video demo button (second Analyze in Vision AI button)
+    const vidBtn = analyzeButtons[1];
     fireEvent.click(vidBtn);
     expect(screen.getByText("security_cam.mp4")).toBeInTheDocument();
   });

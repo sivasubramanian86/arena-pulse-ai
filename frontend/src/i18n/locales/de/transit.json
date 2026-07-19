@@ -1,34 +1,34 @@
 {
-  "title": "EcoTransit Sync",
-  "subtitle": "Real-Time Shuttle & Transit Orchestration",
-  "description": "Live transit coordination for sustainable fan transportation across all venues.",
+  "title": "EcoTransit",
+  "subtitle": "Echtzeit-Shuttle- & Transitsteuerung",
+  "description": "Live-Koordination für nachhaltige Fan-Transporte über alle Veranstaltungsorte hinweg.",
   "shuttle": {
     "label": "Shuttles",
     "status": {
-      "onRoute": "On Route",
-      "atStop": "At Stop",
-      "delayed": "Delayed",
+      "onRoute": "Unterwegs",
+      "atStop": "Am Stopp",
+      "delayed": "Verspätet",
       "offline": "Offline"
     },
-    "capacity": "Capacity",
+    "capacity": "Kapazität",
     "eta": "ETA",
-    "minutes": "min"
+    "minutes": "Min"
   },
   "route": {
-    "label": "Routes",
-    "origin": "Origin",
-    "destination": "Destination",
-    "duration": "Duration",
-    "eco": "Eco Score"
+    "label": "Routen",
+    "origin": "Startort",
+    "destination": "Zielort",
+    "duration": "Dauer",
+    "eco": "Eco-Wertung"
   },
   "emissions": {
-    "label": "CO₂ Savings",
-    "today": "Today",
-    "total": "Tournament Total"
+    "label": "CO₂-Einsparung",
+    "today": "Heute",
+    "total": "Turnier-Gesamt"
   },
   "gantt": {
-    "title": "Transit Gantt Schedule",
-    "departure": "Departure",
-    "arrival": "Arrival"
+    "title": "Transit Gantt-Zeitplan",
+    "departure": "Abfahrt",
+    "arrival": "Ankunft"
   }
 }

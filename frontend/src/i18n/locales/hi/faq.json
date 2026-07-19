@@ -1,27 +1,27 @@
 {
-  "title": "Vault FAQ",
-  "subtitle": "AI-Powered Stadium Intelligence",
-  "description": "Ask any question about the stadium, match schedule, services, or FIFA rules.",
+  "title": "पूछे जाने वाले प्रश्न",
+  "subtitle": "एआई-संचालित स्टेडियम इंटेलिजेंस",
+  "description": "स्टेडियम, मैच शेड्यूल, सेवाओं या फीफा नियमों के बारे में कोई भी प्रश्न पूछें।",
   "input": {
-    "placeholder": "Ask anything about the stadium or FIFA World Cup 2026...",
-    "submit": "Ask AI",
-    "thinking": "Searching knowledge vault..."
+    "placeholder": "स्टेडियम या फीफा विश्व कप 2026 के बारे में कुछ भी पूछें...",
+    "submit": "एआई से पूछें",
+    "thinking": "ज्ञान भंडार खोजा जा रहा है..."
   },
   "categories": {
-    "all": "All",
-    "navigation": "Navigation",
-    "services": "Services",
-    "schedule": "Schedule",
-    "safety": "Safety",
-    "accessibility": "Accessibility"
+    "all": "सभी",
+    "navigation": "नेविगेशन",
+    "services": "सेवाएँ",
+    "schedule": "शेड्यूल",
+    "safety": "सुरक्षा",
+    "accessibility": "सुलभता"
   },
   "response": {
-    "sources": "Sources",
-    "confidence": "Confidence",
-    "relatedQuestions": "Related Questions"
+    "sources": "स्रोत",
+    "confidence": "विश्वास",
+    "relatedQuestions": "संबंधित प्रश्न"
   },
   "empty": {
-    "title": "Ask Anything",
-    "subtitle": "Your AI stadium guide is ready"
+    "title": "कुछ भी पूछें",
+    "subtitle": "आपका एआई स्टेडियम गाइड तैयार है"
   }
 }

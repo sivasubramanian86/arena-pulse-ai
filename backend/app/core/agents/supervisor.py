@@ -1,5 +1,7 @@
 from typing import List
-from app.core.agents.base import ArenaAgent, ADKTask
+
+from app.core.agents.base import ADKTask, ArenaAgent
+
 
 class OpsSupervisor(ArenaAgent):
     """Supervisor agent that triages incoming queries, routes to workers, and aggregates responses."""

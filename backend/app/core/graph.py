@@ -1,7 +1,9 @@
 import random
 from datetime import datetime
-from typing import Dict, Any, List, Optional
+from typing import Any, Dict, List, Optional
+
 from pydantic import BaseModel
+
 
 class StadiumNode(BaseModel):
     """Represents a topological node in the stadium knowledge graph."""
@@ -64,11 +66,11 @@ class StadiumTopology:
         node = self.nodes.get(node_id)
         if not node:
             return {"error": f"Node {node_id} not found"}
-        
+
         # Inject minor simulation variance to live data
         sim_variance = random.uniform(-0.05, 0.05)
         new_density = min(max(node.density + sim_variance, 0.0), 1.0)
-        
+
         if new_density > 0.85:
             new_status = "critical"
         elif new_density > 0.6:
@@ -122,7 +124,7 @@ class StadiumTopology:
                     edge = next((e for e in self.edges if e.source == src and e.target == tgt), None)
                     weight = edge.weight if edge else 1.0
                     node_density = self.nodes[tgt].density
-                    
+
                     # Traversal time increases under high densities
                     estimated_time += weight * (1.0 + node_density * 2.0)
 
@@ -191,7 +193,7 @@ class StadiumTopology:
         node = self.nodes.get(node_id)
         if not node:
             return {"error": f"Node {node_id} not found"}
-        
+
         node.density = min(max(node.density + delta_density, 0.0), 1.0)
         if node.density > 0.85:
             node.status = "critical"

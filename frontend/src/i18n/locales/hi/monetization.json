@@ -1,30 +1,30 @@
 {
-  "title": "Monetization Intelligence",
-  "subtitle": "Revenue Analytics & Dynamic Pricing Dashboard",
-  "description": "AI-powered concession, merchandise, and premium experience revenue analytics.",
+  "title": "मुद्रीकरण इंटेलिजेंस",
+  "subtitle": "राजस्व विश्लेषण और गतिशील मूल्य निर्धारण डैशबोर्ड",
+  "description": "एआई-संचालित रियायत, माल और प्रीमियम अनुभव राजस्व विश्लेषण।",
   "revenue": {
-    "label": "Revenue",
-    "total": "Total Revenue",
-    "today": "Today",
-    "perFan": "Revenue Per Fan",
-    "projection": "Projection"
+    "label": "राजस्व",
+    "total": "कुल राजस्व",
+    "today": "आज",
+    "perFan": "राजस्व प्रति प्रशंसक",
+    "projection": "अनुमान"
   },
   "categories": {
-    "concessions": "Concessions",
-    "merchandise": "Merchandise",
-    "premium": "Premium Experiences",
-    "parking": "Parking & Transit",
-    "digital": "Digital Add-ons"
+    "concessions": "रियायतें",
+    "merchandise": "सामान",
+    "premium": "प्रीमियम अनुभव",
+    "parking": "पार्किंग और पारगमन",
+    "digital": "डिजिटल ऐड-ऑन"
   },
   "pricing": {
-    "title": "Dynamic Pricing",
-    "current": "Current Price",
-    "suggested": "AI Suggested",
-    "surge": "Surge Active"
+    "title": "गतिशील मूल्य निर्धारण",
+    "current": "वर्तमान मूल्य",
+    "suggested": "एआई सुझाया गया",
+    "surge": "सर्ज मूल्य निर्धारण सक्रिय"
   },
   "chart": {
-    "hourly": "Hourly Revenue",
-    "byCategory": "By Category",
-    "trend": "Trend"
+    "hourly": "प्रति घंटा राजस्व",
+    "byCategory": "श्रेणी अनुसार",
+    "trend": "प्रवृत्ति"
   }
 }

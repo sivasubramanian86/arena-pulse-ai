@@ -1,5 +1,6 @@
 from app.core.agents.base import ArenaAgent
 
+
 class PolyglotWorker(ArenaAgent):
     """Worker specializing in fast, low-cost localized translations."""
 

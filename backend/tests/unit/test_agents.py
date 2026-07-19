@@ -1,11 +1,13 @@
 import pytest
 from google.genai.errors import APIError
+
 from app.core.agents.base import ADKMemory, ADKTask, ArenaAgent
-from app.core.agents.supervisor import OpsSupervisor
 from app.core.agents.crowd import CrowdWorker
-from app.core.agents.transit import TransitWorker
-from app.core.agents.polyglot import PolyglotWorker
 from app.core.agents.logistics import LogisticsWorker
+from app.core.agents.polyglot import PolyglotWorker
+from app.core.agents.supervisor import OpsSupervisor
+from app.core.agents.transit import TransitWorker
+
 
 @pytest.mark.asyncio
 async def test_agent_fallback_no_api_key(monkeypatch):
@@ -15,6 +17,7 @@ async def test_agent_fallback_no_api_key(monkeypatch):
     assert "[MOCK_FALLBACK] TestAgent" in resp
 
 from unittest.mock import MagicMock, patch
+
 
 @pytest.mark.asyncio
 async def test_agent_generate_response_with_mock_client():

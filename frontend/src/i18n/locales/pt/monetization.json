@@ -1,30 +1,30 @@
 {
-  "title": "Monetization Intelligence",
-  "subtitle": "Revenue Analytics & Dynamic Pricing Dashboard",
-  "description": "AI-powered concession, merchandise, and premium experience revenue analytics.",
+  "title": "Inteligência de Monetização",
+  "subtitle": "Painel de Análise de Receita e Preços Dinâmicos",
+  "description": "Análise de receita de lanchonetes, produtos oficiais e experiências premium com IA.",
   "revenue": {
-    "label": "Revenue",
-    "total": "Total Revenue",
-    "today": "Today",
-    "perFan": "Revenue Per Fan",
-    "projection": "Projection"
+    "label": "Receita",
+    "total": "Receita Total",
+    "today": "Hoje",
+    "perFan": "Receita por Torcedor",
+    "projection": "Projeção"
   },
   "categories": {
-    "concessions": "Concessions",
-    "merchandise": "Merchandise",
-    "premium": "Premium Experiences",
-    "parking": "Parking & Transit",
-    "digital": "Digital Add-ons"
+    "concessions": "Concessões",
+    "merchandise": "Mercadoria",
+    "premium": "Experiências Premium",
+    "parking": "Estacionamento e Trânsito",
+    "digital": "Adicionais Digitais"
   },
   "pricing": {
-    "title": "Dynamic Pricing",
-    "current": "Current Price",
-    "suggested": "AI Suggested",
-    "surge": "Surge Active"
+    "title": "Preços Dinâmicos",
+    "current": "Preço Atual",
+    "suggested": "Sugerido por IA",
+    "surge": "Preço Dinâmico Ativo"
   },
   "chart": {
-    "hourly": "Hourly Revenue",
-    "byCategory": "By Category",
-    "trend": "Trend"
+    "hourly": "Receita Horária",
+    "byCategory": "Por Categoria",
+    "trend": "Tendência"
   }
 }

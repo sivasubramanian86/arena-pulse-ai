@@ -1,12 +1,12 @@
 {
   "title": "Commando Nexus",
-  "subtitle": "Agentische Graph RAG • Live Stadiontopologie",
-  "description": "Realtime crowd routing en beheer van stadionknooppunten, aangedreven door multi-agent consensus.",
+  "subtitle": "Agentische Grafiek RAG • Live Stadion Topologie",
+  "description": "Realtime menigteRoutering en stadionknooppuntbeheer aangedreven door agentenconsensus.",
   "nodes": {
-    "label": "Stadionknooppunten",
+    "label": "Stadion Knooppunten",
     "status": {
       "optimal": "Optimaal",
-      "congested": "Overbelast",
+      "congested": "Druk",
       "critical": "Kritiek",
       "offline": "Offline"
     },
@@ -15,22 +15,22 @@
   },
   "agent": {
     "thinking": "Agent denkt na...",
-    "executing": "Gereedschap uitvoeren",
+    "executing": "Tool uitvoeren",
     "completed": "Voltooid",
     "idle": "Inactief",
     "error": "Fout"
   },
   "query": {
-    "placeholder": "Vraag de Ops Commandant (bijv. 'Verplaats menigte Poort A naar Poort C')",
+    "placeholder": "Vraag de Ops Commander (bijv. 'Leid de menigte van Gate A om naar Gate C')",
     "submit": "Versturen naar Agent",
-    "response": "Agent Reactie"
+    "response": "Antwoord van Agent"
   },
   "graph": {
-    "title": "Stadiontopologie Grafiek",
+    "title": "Stadion Topologie Grafiek",
     "legend": {
       "gate": "Poort",
-      "concourse": "Verkeersruimte",
-      "transit": "Verbindingsknooppunt",
+      "concourse": "Omloop",
+      "transit": "Knooppunt",
       "kiosk": "Kiosk"
     }
   }

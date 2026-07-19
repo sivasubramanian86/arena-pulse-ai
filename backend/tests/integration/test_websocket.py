@@ -1,13 +1,11 @@
-import pytest
 from app.schemas.websocket_schemas import (
-    NexusNodeModel,
-    NexusEdgeModel,
-    TelemetryPayloadModel,
-    AgentStatePayloadModel,
-    AuditLogPayloadModel,
     CrisisAlertPayloadModel,
-    SafeRouteModel
+    NexusEdgeModel,
+    NexusNodeModel,
+    SafeRouteModel,
+    TelemetryPayloadModel,
 )
+
 
 def test_websocket_pydantic_schemas():
     node = NexusNodeModel(id="n-1", name="Gate A", type="GATE", density=0.15, status="optimal")

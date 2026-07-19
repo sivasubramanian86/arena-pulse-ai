@@ -1,5 +1,6 @@
 from app.core.agents.base import ArenaAgent
 
+
 class LogisticsWorker(ArenaAgent):
     """Worker specializing in volunteer dispatches, equipment checks, and physical security assets."""
 

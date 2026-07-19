@@ -79,7 +79,7 @@
 - Python 3.12+
 - Google Cloud SDK (`gcloud`) authenticated as project owner
 - `gh` CLI (GitHub CLI) for repository operations
-- GCP Project: `genai-apac-2026-491004` with billing enabled
+- GCP Project with billing enabled
 
 ---
 

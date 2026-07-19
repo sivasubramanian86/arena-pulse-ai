@@ -1,31 +1,31 @@
 {
-  "title": "Edge Mesh NOC",
-  "subtitle": "Network Beacon Health Grid & Latency Monitoring",
-  "description": "Real-time visibility into stadium Wi-Fi, 5G beacons, and edge node health.",
+  "title": "边缘网格网络监控中心 (NOC)",
+  "subtitle": "基站健康网络状态与通信时延监控",
+  "description": "实时监测体育场Wi-Fi覆盖、5G网络信标以及边缘计算节点性能健康状态。",
   "beacon": {
-    "label": "Beacons",
+    "label": "网标基站",
     "status": {
-      "healthy": "Healthy",
-      "degraded": "Degraded",
-      "offline": "Offline"
+      "healthy": "正常",
+      "degraded": "降级/拥堵",
+      "offline": "离线"
     },
-    "latency": "Latency",
-    "throughput": "Throughput",
-    "signal": "Signal Strength"
+    "latency": "网络时延",
+    "throughput": "数据吞吐率",
+    "signal": "信号强度"
   },
   "grid": {
-    "title": "Beacon Health Grid",
-    "zone": "Zone",
-    "coverage": "Coverage"
+    "title": "基站网络健康监测网格",
+    "zone": "看台片区",
+    "coverage": "信号覆盖比"
   },
   "alerts": {
-    "title": "Network Alerts",
-    "noAlerts": "All systems nominal"
+    "title": "网络故障警告",
+    "noAlerts": "所有网络节点状态正常"
   },
   "metrics": {
-    "totalNodes": "Total Nodes",
-    "healthyNodes": "Healthy",
-    "degradedNodes": "Degraded",
-    "offlineNodes": "Offline"
+    "totalNodes": "节点总数",
+    "healthyNodes": "正常状态",
+    "degradedNodes": "降级运行",
+    "offlineNodes": "故障离线"
   }
 }

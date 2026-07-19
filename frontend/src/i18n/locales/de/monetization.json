@@ -1,30 +1,30 @@
 {
-  "title": "Monetization Intelligence",
-  "subtitle": "Revenue Analytics & Dynamic Pricing Dashboard",
-  "description": "AI-powered concession, merchandise, and premium experience revenue analytics.",
+  "title": "Monetisierung",
+  "subtitle": "Umsatzanalysen & Dashboard für dynamische Preisgestaltung",
+  "description": "KI-gestützte Analysen für Verkaufsstände, Fanartikel und Premium-Erlebnisse.",
   "revenue": {
-    "label": "Revenue",
-    "total": "Total Revenue",
-    "today": "Today",
-    "perFan": "Revenue Per Fan",
-    "projection": "Projection"
+    "label": "Umsatz",
+    "total": "Gesamtumsatz",
+    "today": "Heute",
+    "perFan": "Umsatz pro Fan",
+    "projection": "Prognose"
   },
   "categories": {
-    "concessions": "Concessions",
-    "merchandise": "Merchandise",
-    "premium": "Premium Experiences",
-    "parking": "Parking & Transit",
-    "digital": "Digital Add-ons"
+    "concessions": "Verkaufsstände",
+    "merchandise": "Fanartikel",
+    "premium": "Premium-Erlebnisse",
+    "parking": "Parken & Anreise",
+    "digital": "Digitale Extras"
   },
   "pricing": {
-    "title": "Dynamic Pricing",
-    "current": "Current Price",
-    "suggested": "AI Suggested",
-    "surge": "Surge Active"
+    "title": "Dynamische Preise",
+    "current": "Aktueller Preis",
+    "suggested": "KI-Vorschlag",
+    "surge": "Erhöhte Nachfrage aktiv"
   },
   "chart": {
-    "hourly": "Hourly Revenue",
-    "byCategory": "By Category",
+    "hourly": "Stündlicher Umsatz",
+    "byCategory": "Nach Kategorie",
     "trend": "Trend"
   }
 }

@@ -1,30 +1,30 @@
 {
-  "title": "Monetization Intelligence",
-  "subtitle": "Revenue Analytics & Dynamic Pricing Dashboard",
-  "description": "AI-powered concession, merchandise, and premium experience revenue analytics.",
+  "title": "수익화 비즈니스 모델",
+  "subtitle": "매출 분석 및 동적 가격 정책 대시보드",
+  "description": "AI 기반 식음료 매점, 공식 굿즈 숍 및 VIP 상품 매출 추이 통합 대시보드.",
   "revenue": {
-    "label": "Revenue",
-    "total": "Total Revenue",
-    "today": "Today",
-    "perFan": "Revenue Per Fan",
-    "projection": "Projection"
+    "label": "매출 지표",
+    "total": "총 매출액",
+    "today": "오늘 매출",
+    "perFan": "관객 1인당 평균 지출",
+    "projection": "매출 전망"
   },
   "categories": {
-    "concessions": "Concessions",
-    "merchandise": "Merchandise",
-    "premium": "Premium Experiences",
-    "parking": "Parking & Transit",
-    "digital": "Digital Add-ons"
+    "concessions": "식음료 매점",
+    "merchandise": "공식 굿즈",
+    "premium": "VIP 및 단독 룸",
+    "parking": "주차 및 모빌리티",
+    "digital": "디지털 콘텐츠"
   },
   "pricing": {
-    "title": "Dynamic Pricing",
-    "current": "Current Price",
-    "suggested": "AI Suggested",
-    "surge": "Surge Active"
+    "title": "동적 가격 정책",
+    "current": "현재 적용가",
+    "suggested": "AI 추천 적용가",
+    "surge": "수요 집중 가산세 적용"
   },
   "chart": {
-    "hourly": "Hourly Revenue",
-    "byCategory": "By Category",
-    "trend": "Trend"
+    "hourly": "시간별 매출 현황",
+    "byCategory": "카테고리별 비중",
+    "trend": "매출 추이"
   }
 }

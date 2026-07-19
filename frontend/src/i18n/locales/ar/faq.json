@@ -1,27 +1,27 @@
 {
-  "title": "Vault FAQ",
-  "subtitle": "AI-Powered Stadium Intelligence",
-  "description": "Ask any question about the stadium, match schedule, services, or FIFA rules.",
+  "title": "الأسئلة الشائعة",
+  "subtitle": "ذكاء الملعب المدعوم بالذكاء الاصطناعي",
+  "description": "اسأل أي سؤال حول الاستاد، جدول المباريات، الخدمات، أو قوانين الفيفا.",
   "input": {
-    "placeholder": "Ask anything about the stadium or FIFA World Cup 2026...",
-    "submit": "Ask AI",
-    "thinking": "Searching knowledge vault..."
+    "placeholder": "اسأل أي شيء عن الاستاد أو كأس العالم لكرة القدم ٢٠٢٦...",
+    "submit": "اسأل الذكاء الاصطناعي",
+    "thinking": "جاري البحث في قاعدة المعرفة..."
   },
   "categories": {
-    "all": "All",
-    "navigation": "Navigation",
-    "services": "Services",
-    "schedule": "Schedule",
-    "safety": "Safety",
-    "accessibility": "Accessibility"
+    "all": "الكل",
+    "navigation": "التنقل",
+    "services": "الخدمات",
+    "schedule": "الجدول",
+    "safety": "الأمان والسلامة",
+    "accessibility": "سهولة الوصول"
   },
   "response": {
-    "sources": "Sources",
-    "confidence": "Confidence",
-    "relatedQuestions": "Related Questions"
+    "sources": "المصادر",
+    "confidence": "مستوى الثقة",
+    "relatedQuestions": "الأسئلة ذات الصلة"
   },
   "empty": {
-    "title": "Ask Anything",
-    "subtitle": "Your AI stadium guide is ready"
+    "title": "اسأل أي شيء",
+    "subtitle": "دليل الاستاد بالذكاء الاصطناعي جاهز للإجابة"
   }
 }

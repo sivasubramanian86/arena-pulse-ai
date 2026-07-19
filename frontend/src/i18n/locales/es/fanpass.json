@@ -1,30 +1,30 @@
 {
-  "title": "FanPass AR",
-  "subtitle": "Ticket Hub & Venue Navigation",
-  "description": "Access your digital ticket, find your seat, and navigate the stadium with AR wayfinding.",
+  "title": "Pase de Fan AR",
+  "subtitle": "Centro de Boletos y Navegación de Sedes",
+  "description": "Acceda a su boleto digital, encuentre su asiento y navegue por el estadio con orientación AR.",
   "ticket": {
-    "label": "Your Ticket",
-    "section": "Section",
-    "row": "Row",
-    "seat": "Seat",
-    "gate": "Entry Gate",
-    "match": "Match"
+    "label": "Su Boleto",
+    "section": "Sección",
+    "row": "Fila",
+    "seat": "Asiento",
+    "gate": "Puerta de Entrada",
+    "match": "Partido"
   },
   "navigation": {
-    "title": "Navigate to Seat",
-    "openMaps": "Open in Google Maps",
-    "directions": "Get Directions",
-    "estimatedWalk": "Estimated Walk"
+    "title": "Navegar al Asiento",
+    "openMaps": "Abrir en Google Maps",
+    "directions": "Obtener Direcciones",
+    "estimatedWalk": "Caminata Estimada"
   },
   "amenities": {
-    "title": "Nearby Amenities",
-    "restroom": "Restroom",
-    "concession": "Concession Stand",
-    "medic": "Medical Station",
-    "accessibility": "Accessibility Services"
+    "title": "Servicios Cercanos",
+    "restroom": "Baños",
+    "concession": "Puestos de Comida",
+    "medic": "Estación Médica",
+    "accessibility": "Servicios de Accesibilidad"
   },
   "ar": {
-    "launch": "Launch AR View",
-    "scanning": "Scanning environment..."
+    "launch": "Iniciar Vista AR",
+    "scanning": "Escaneando entorno..."
   }
 }

@@ -1,5 +1,6 @@
 import difflib
-from typing import Dict, Any, Optional
+from typing import Any, Dict, Optional
+
 
 class SemanticCache:
     """A semantic caching layer for frequent operations queries to optimize API latency and cost."""

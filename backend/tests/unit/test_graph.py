@@ -1,5 +1,5 @@
-import pytest
-from app.core.graph import StadiumTopology, StadiumNode, StadiumEdge
+from app.core.graph import StadiumEdge, StadiumTopology
+
 
 def test_topology_initialization():
     topo = StadiumTopology()

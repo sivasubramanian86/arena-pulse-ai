@@ -1,36 +1,36 @@
 {
-  "title": "Volunteer HUD",
-  "subtitle": "Staff Deployment & Task Assignment",
-  "description": "Real-time volunteer management and task dispatch for stadium operations.",
+  "title": "شاشة المتطوعين",
+  "subtitle": "نشر الطاقم وتوزيع المهام والعمليات",
+  "description": "إدارة المتطوعين وتوزيع المهام في الوقت الفعلي لعمليات إدارة الاستاد.",
   "staff": {
-    "label": "Staff",
+    "label": "الموظفين",
     "status": {
-      "available": "Available",
-      "deployed": "Deployed",
-      "break": "On Break",
-      "offline": "Offline"
+      "available": "متاح",
+      "deployed": "تم النشر",
+      "break": "في استراحة",
+      "offline": "غير متصل"
     },
-    "role": "Role",
-    "zone": "Assigned Zone",
-    "tasks": "Active Tasks"
+    "role": "الدور",
+    "zone": "المنطقة المخصصة",
+    "tasks": "المهام النشطة"
   },
   "dispatch": {
-    "title": "Dispatch",
-    "assign": "Assign Task",
-    "recall": "Recall",
+    "title": "توزيع",
+    "assign": "تعيين مهمة",
+    "recall": "استدعاء",
     "priority": {
-      "label": "Priority",
-      "low": "Low",
-      "normal": "Normal",
-      "high": "High",
-      "critical": "Critical"
+      "label": "الأولوية",
+      "low": "منخفضة",
+      "normal": "عادية",
+      "high": "مرتفعة",
+      "critical": "حرجة"
     }
   },
   "tasks": {
-    "title": "Task Queue",
-    "empty": "No pending tasks",
-    "completed": "Completed",
-    "pending": "Pending",
-    "inProgress": "In Progress"
+    "title": "طابور المهام",
+    "empty": "لا توجد مهام معلقة",
+    "completed": "مكتملة",
+    "pending": "معلقة",
+    "inProgress": "جاري التنفيذ"
   }
 }

@@ -172,8 +172,9 @@ export const TelemetryProvider: React.FC<{ children: React.ReactNode }> = ({ chi
               });
             }
           }
-        } catch (err: any) {
-          addLog(`Zod validation error: ${err.message}`, "error", "WSClient");
+        } catch (err) {
+          const errMsg = err instanceof Error ? err.message : String(err);
+          addLog(`Zod validation error: ${errMsg}`, "error", "WSClient");
         }
       };
 

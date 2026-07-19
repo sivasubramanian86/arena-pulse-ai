@@ -1,27 +1,27 @@
 {
-  "title": "Vault FAQ",
-  "subtitle": "AI-Powered Stadium Intelligence",
-  "description": "Ask any question about the stadium, match schedule, services, or FIFA rules.",
+  "title": "知识库与常见问题",
+  "subtitle": "AI赋能的体育场馆智能问答",
+  "description": "向智能体咨询关于场馆设施、赛事日程安排、志愿者服务或FIFA世界杯赛事规则的任何问题。",
   "input": {
-    "placeholder": "Ask anything about the stadium or FIFA World Cup 2026...",
-    "submit": "Ask AI",
-    "thinking": "Searching knowledge vault..."
+    "placeholder": "输入关于场馆或2026年FIFA世界杯的任何问题...",
+    "submit": "AI问答",
+    "thinking": "正在检索知识库储备中..."
   },
   "categories": {
-    "all": "All",
-    "navigation": "Navigation",
-    "services": "Services",
-    "schedule": "Schedule",
-    "safety": "Safety",
-    "accessibility": "Accessibility"
+    "all": "全部",
+    "navigation": "场馆导航",
+    "services": "配套服务",
+    "schedule": "赛事日程",
+    "safety": "应急安防",
+    "accessibility": "无障碍关怀"
   },
   "response": {
-    "sources": "Sources",
-    "confidence": "Confidence",
-    "relatedQuestions": "Related Questions"
+    "sources": "答案数据来源",
+    "confidence": "可信度评级",
+    "relatedQuestions": "推荐相关问题"
   },
   "empty": {
-    "title": "Ask Anything",
-    "subtitle": "Your AI stadium guide is ready"
+    "title": "自由探索问答",
+    "subtitle": "专属AI体育场馆助理随时待命"
   }
 }

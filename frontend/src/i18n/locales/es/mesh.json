@@ -1,31 +1,31 @@
 {
-  "title": "Edge Mesh NOC",
-  "subtitle": "Network Beacon Health Grid & Latency Monitoring",
-  "description": "Real-time visibility into stadium Wi-Fi, 5G beacons, and edge node health.",
+  "title": "NOC de Malla Perimetral",
+  "subtitle": "Cuadrícula de Salud de Balizas de Red y Latencia",
+  "description": "Visibilidad en tiempo real del Wi-Fi del estadio, balizas 5G y salud de los nodos perimetrales.",
   "beacon": {
-    "label": "Beacons",
+    "label": "Balizas",
     "status": {
-      "healthy": "Healthy",
-      "degraded": "Degraded",
-      "offline": "Offline"
+      "healthy": "Saludable",
+      "degraded": "Degradado",
+      "offline": "Fuera de Servicio"
     },
-    "latency": "Latency",
-    "throughput": "Throughput",
-    "signal": "Signal Strength"
+    "latency": "Latencia",
+    "throughput": "Rendimiento",
+    "signal": "Potencia de Señal"
   },
   "grid": {
-    "title": "Beacon Health Grid",
-    "zone": "Zone",
-    "coverage": "Coverage"
+    "title": "Cuadrícula de Salud de Balizas",
+    "zone": "Zona",
+    "coverage": "Cobertura"
   },
   "alerts": {
-    "title": "Network Alerts",
-    "noAlerts": "All systems nominal"
+    "title": "Alertas de Red",
+    "noAlerts": "Todos los sistemas nominales"
   },
   "metrics": {
-    "totalNodes": "Total Nodes",
-    "healthyNodes": "Healthy",
-    "degradedNodes": "Degraded",
-    "offlineNodes": "Offline"
+    "totalNodes": "Nodos Totales",
+    "healthyNodes": "Saludables",
+    "degradedNodes": "Degradados",
+    "offlineNodes": "Fuera de Servicio"
   }
 }

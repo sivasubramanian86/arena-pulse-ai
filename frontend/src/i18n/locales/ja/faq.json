@@ -1,27 +1,27 @@
 {
-  "title": "Vault FAQ",
-  "subtitle": "AI-Powered Stadium Intelligence",
-  "description": "Ask any question about the stadium, match schedule, services, or FIFA rules.",
+  "title": "よくある質問",
+  "subtitle": "AIを活用したスタジアムインテリジェンス案内",
+  "description": "スタジアム施設、試合日程、サービス、FIFAのルールなど、ご不明な点をお尋ねください。",
   "input": {
-    "placeholder": "Ask anything about the stadium or FIFA World Cup 2026...",
-    "submit": "Ask AI",
-    "thinking": "Searching knowledge vault..."
+    "placeholder": "スタジアムまたは2026年FIFAワールドカップについて質問を入力...",
+    "submit": "AIに質問",
+    "thinking": "ナレッジベースを検索中..."
   },
   "categories": {
-    "all": "All",
-    "navigation": "Navigation",
-    "services": "Services",
-    "schedule": "Schedule",
-    "safety": "Safety",
-    "accessibility": "Accessibility"
+    "all": "すべて",
+    "navigation": "場内移動・道案内",
+    "services": "サービス・施設",
+    "schedule": "日程・スケジュール",
+    "safety": "防災・防犯",
+    "accessibility": "バリアフリー対応"
   },
   "response": {
-    "sources": "Sources",
-    "confidence": "Confidence",
-    "relatedQuestions": "Related Questions"
+    "sources": "情報ソース",
+    "confidence": "信頼度スコア",
+    "relatedQuestions": "関連する質問"
   },
   "empty": {
-    "title": "Ask Anything",
-    "subtitle": "Your AI stadium guide is ready"
+    "title": "AIアシスタントに聞く",
+    "subtitle": "スタジアム専用のAIガイドがお答えします"
   }
 }

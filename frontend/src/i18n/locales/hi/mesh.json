@@ -1,31 +1,31 @@
 {
-  "title": "Edge Mesh NOC",
-  "subtitle": "Network Beacon Health Grid & Latency Monitoring",
-  "description": "Real-time visibility into stadium Wi-Fi, 5G beacons, and edge node health.",
+  "title": "एज मेश एनओसी",
+  "subtitle": "नेटवर्क बीकन स्वास्थ्य ग्रिड और विलंबता निगरानी",
+  "description": "स्टेडियम वाई-फाई, 5जी बीकन और एज नोड स्वास्थ्य की वास्तविक समय में निगरानी।",
   "beacon": {
-    "label": "Beacons",
+    "label": "बीकन",
     "status": {
-      "healthy": "Healthy",
-      "degraded": "Degraded",
-      "offline": "Offline"
+      "healthy": "स्वस्थ",
+      "degraded": "निम्न",
+      "offline": "ऑफ़लाइन"
     },
-    "latency": "Latency",
-    "throughput": "Throughput",
-    "signal": "Signal Strength"
+    "latency": "विलंबता",
+    "throughput": "थ्रूपुट",
+    "signal": "सिग्नल की शक्ति"
   },
   "grid": {
-    "title": "Beacon Health Grid",
-    "zone": "Zone",
-    "coverage": "Coverage"
+    "title": "बीकन स्वास्थ्य ग्रिड",
+    "zone": "ज़ोन",
+    "coverage": "कवरेज"
   },
   "alerts": {
-    "title": "Network Alerts",
-    "noAlerts": "All systems nominal"
+    "title": "नेटवर्क अलर्ट",
+    "noAlerts": "सभी प्रणालियाँ सामान्य हैं"
   },
   "metrics": {
-    "totalNodes": "Total Nodes",
-    "healthyNodes": "Healthy",
-    "degradedNodes": "Degraded",
-    "offlineNodes": "Offline"
+    "totalNodes": "कुल नोड्स",
+    "healthyNodes": "स्वस्थ",
+    "degradedNodes": "निम्न",
+    "offlineNodes": "ऑफ़लाइन"
   }
 }

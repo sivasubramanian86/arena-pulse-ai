@@ -1,36 +1,36 @@
 {
-  "title": "Volunteer HUD",
-  "subtitle": "Staff Deployment & Task Assignment",
-  "description": "Real-time volunteer management and task dispatch for stadium operations.",
+  "title": "자원봉사자 HUD",
+  "subtitle": "현장 인력 배치 및 업무 하달",
+  "description": "경기장 운영을 위해 자원봉사자 배치 현황을 확인하고 업무를 실시간으로 지시합니다.",
   "staff": {
-    "label": "Staff",
+    "label": "현장 직원",
     "status": {
-      "available": "Available",
-      "deployed": "Deployed",
-      "break": "On Break",
-      "offline": "Offline"
+      "available": "대기 중",
+      "deployed": "근무 중",
+      "break": "휴식 중",
+      "offline": "오프라인"
     },
-    "role": "Role",
-    "zone": "Assigned Zone",
-    "tasks": "Active Tasks"
+    "role": "역할",
+    "zone": "배치 구역",
+    "tasks": "활성 업무"
   },
   "dispatch": {
-    "title": "Dispatch",
-    "assign": "Assign Task",
-    "recall": "Recall",
+    "title": "배정 조작",
+    "assign": "업무 하달",
+    "recall": "소환",
     "priority": {
-      "label": "Priority",
-      "low": "Low",
-      "normal": "Normal",
-      "high": "High",
-      "critical": "Critical"
+      "label": "우선순위",
+      "low": "낮음",
+      "normal": "보통",
+      "high": "높음",
+      "critical": "긴급"
     }
   },
   "tasks": {
-    "title": "Task Queue",
-    "empty": "No pending tasks",
-    "completed": "Completed",
-    "pending": "Pending",
-    "inProgress": "In Progress"
+    "title": "업무 목록",
+    "empty": "남아있는 업무가 없습니다",
+    "completed": "해결 완료",
+    "pending": "대기 중",
+    "inProgress": "수행 중"
   }
 }

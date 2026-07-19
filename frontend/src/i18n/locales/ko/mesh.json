@@ -1,31 +1,31 @@
 {
-  "title": "Edge Mesh NOC",
-  "subtitle": "Network Beacon Health Grid & Latency Monitoring",
-  "description": "Real-time visibility into stadium Wi-Fi, 5G beacons, and edge node health.",
+  "title": "에지 메쉬 NOC",
+  "subtitle": "네트워크 비콘 상태 격자망 및 지연 모니터링",
+  "description": "경기장 내 와이파이, 5G 비콘 및 에지 노드 동작 현황을 실시간 분석합니다.",
   "beacon": {
-    "label": "Beacons",
+    "label": "비콘",
     "status": {
-      "healthy": "Healthy",
-      "degraded": "Degraded",
-      "offline": "Offline"
+      "healthy": "정상",
+      "degraded": "저하됨",
+      "offline": "오프라인"
     },
-    "latency": "Latency",
-    "throughput": "Throughput",
-    "signal": "Signal Strength"
+    "latency": "지연 시간",
+    "throughput": "처리량",
+    "signal": "신호 세기"
   },
   "grid": {
-    "title": "Beacon Health Grid",
-    "zone": "Zone",
-    "coverage": "Coverage"
+    "title": "비콘 상태 모니터링 맵",
+    "zone": "구역",
+    "coverage": "커버리지"
   },
   "alerts": {
-    "title": "Network Alerts",
-    "noAlerts": "All systems nominal"
+    "title": "네트워크 알림",
+    "noAlerts": "모든 시스템 정상 작동 중"
   },
   "metrics": {
-    "totalNodes": "Total Nodes",
-    "healthyNodes": "Healthy",
-    "degradedNodes": "Degraded",
-    "offlineNodes": "Offline"
+    "totalNodes": "총 노드 수",
+    "healthyNodes": "정상",
+    "degradedNodes": "저하됨",
+    "offlineNodes": "오프라인"
   }
 }

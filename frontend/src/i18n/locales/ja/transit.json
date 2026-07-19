@@ -1,34 +1,34 @@
 {
-  "title": "EcoTransit Sync",
-  "subtitle": "Real-Time Shuttle & Transit Orchestration",
-  "description": "Live transit coordination for sustainable fan transportation across all venues.",
+  "title": "エコトランジット",
+  "subtitle": "シャトルバス運行 • 交通機関リアルタイム統合管理",
+  "description": "全スタジアムを巡る、サステナブルで効率的な観客輸送のためのライブ運行管理システム。",
   "shuttle": {
-    "label": "Shuttles",
+    "label": "シャトルバス",
     "status": {
-      "onRoute": "On Route",
-      "atStop": "At Stop",
-      "delayed": "Delayed",
-      "offline": "Offline"
+      "onRoute": "巡回中",
+      "atStop": "停留所に停車中",
+      "delayed": "遅延あり",
+      "offline": "運休中"
     },
-    "capacity": "Capacity",
-    "eta": "ETA",
-    "minutes": "min"
+    "capacity": "乗車率",
+    "eta": "到着予定",
+    "minutes": "分"
   },
   "route": {
-    "label": "Routes",
-    "origin": "Origin",
-    "destination": "Destination",
-    "duration": "Duration",
-    "eco": "Eco Score"
+    "label": "ルート一覧",
+    "origin": "出発地",
+    "destination": "目的地",
+    "duration": "所要時間",
+    "eco": "エコスコア"
   },
   "emissions": {
-    "label": "CO₂ Savings",
-    "today": "Today",
-    "total": "Tournament Total"
+    "label": "CO₂削減量",
+    "today": "本日",
+    "total": "大会累計"
   },
   "gantt": {
-    "title": "Transit Gantt Schedule",
-    "departure": "Departure",
-    "arrival": "Arrival"
+    "title": "運行スケジュール運行表（ガント）",
+    "departure": "出発時間",
+    "arrival": "到着時間"
   }
 }

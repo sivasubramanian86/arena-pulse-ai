@@ -1,30 +1,30 @@
 {
-  "title": "Monetization Intelligence",
-  "subtitle": "Revenue Analytics & Dynamic Pricing Dashboard",
-  "description": "AI-powered concession, merchandise, and premium experience revenue analytics.",
+  "title": "商业化与营收智能监测",
+  "subtitle": "商品餐饮收入分析与动态定价控制台",
+  "description": "基于AI驱动的特许经营店、官方周边以及VIP包厢的营收数据统计分析系统。",
   "revenue": {
-    "label": "Revenue",
-    "total": "Total Revenue",
-    "today": "Today",
-    "perFan": "Revenue Per Fan",
-    "projection": "Projection"
+    "label": "营收指标",
+    "total": "总营业额",
+    "today": "当日实销",
+    "perFan": "客单价/人均消费",
+    "projection": "未来盈收预测"
   },
   "categories": {
-    "concessions": "Concessions",
-    "merchandise": "Merchandise",
-    "premium": "Premium Experiences",
-    "parking": "Parking & Transit",
-    "digital": "Digital Add-ons"
+    "concessions": "餐饮小吃",
+    "merchandise": "周边商品",
+    "premium": "高端/VIP体验",
+    "parking": "停车与交通费",
+    "digital": "数字增值服务"
   },
   "pricing": {
-    "title": "Dynamic Pricing",
-    "current": "Current Price",
-    "suggested": "AI Suggested",
-    "surge": "Surge Active"
+    "title": "AI动态定价调整",
+    "current": "现行单价",
+    "suggested": "智能推荐价",
+    "surge": "价格上浮中"
   },
   "chart": {
-    "hourly": "Hourly Revenue",
-    "byCategory": "By Category",
-    "trend": "Trend"
+    "hourly": "每小时营收变化",
+    "byCategory": "分类比重",
+    "trend": "营收走势"
   }
 }

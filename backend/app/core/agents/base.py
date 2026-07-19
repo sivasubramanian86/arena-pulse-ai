@@ -1,9 +1,9 @@
 import os
 from dataclasses import dataclass
-from typing import Dict, Any, List, Optional, Callable
+from typing import Any, Callable, Dict, List, Optional
+
 from google import genai
-from google.genai import types
-from google.genai import errors
+from google.genai import errors, types
 
 
 @dataclass
@@ -80,7 +80,7 @@ class ArenaAgent:
                 config_args["tools"] = self.tools
 
             config = types.GenerateContentConfig(**config_args)
-            
+
             # Execute standard call
             response = self.client.models.generate_content(
                 model=self.model,

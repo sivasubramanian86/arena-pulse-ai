@@ -1,30 +1,30 @@
 {
-  "title": "Monetization Intelligence",
-  "subtitle": "Revenue Analytics & Dynamic Pricing Dashboard",
-  "description": "AI-powered concession, merchandise, and premium experience revenue analytics.",
+  "title": "マネタイズインテリジェンス",
+  "subtitle": "収益アナリティクス • ダイナミックプライシング管理画面",
+  "description": "AIを活用したスタジアム内飲食売店、公式グッズ、プレミアム席の収益動向分析。",
   "revenue": {
-    "label": "Revenue",
-    "total": "Total Revenue",
-    "today": "Today",
-    "perFan": "Revenue Per Fan",
-    "projection": "Projection"
+    "label": "売上高",
+    "total": "総売上額",
+    "today": "本日",
+    "perFan": "ファン平均単価",
+    "projection": "将来売上予測"
   },
   "categories": {
-    "concessions": "Concessions",
-    "merchandise": "Merchandise",
-    "premium": "Premium Experiences",
-    "parking": "Parking & Transit",
-    "digital": "Digital Add-ons"
+    "concessions": "飲食売店",
+    "merchandise": "グッズ販売",
+    "premium": "プレミアムプラン",
+    "parking": "駐車場・シャトル",
+    "digital": "デジタル特典"
   },
   "pricing": {
-    "title": "Dynamic Pricing",
-    "current": "Current Price",
-    "suggested": "AI Suggested",
-    "surge": "Surge Active"
+    "title": "変動料金制設定",
+    "current": "現行価格",
+    "suggested": "AI推奨価格",
+    "surge": "混雑料金適用中"
   },
   "chart": {
-    "hourly": "Hourly Revenue",
-    "byCategory": "By Category",
-    "trend": "Trend"
+    "hourly": "時間別売上高",
+    "byCategory": "カテゴリ別割合",
+    "trend": "収益トレンド"
   }
 }

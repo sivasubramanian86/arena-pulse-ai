@@ -1,36 +1,36 @@
 {
-  "title": "Volunteer HUD",
-  "subtitle": "Staff Deployment & Task Assignment",
-  "description": "Real-time volunteer management and task dispatch for stadium operations.",
+  "title": "志愿者智能HUD",
+  "subtitle": "现场人员分布与岗位任务派遣",
+  "description": "用于体育场运营的实时志愿者排班、定位与快速任务派遣控制台。",
   "staff": {
-    "label": "Staff",
+    "label": "在岗人员",
     "status": {
-      "available": "Available",
-      "deployed": "Deployed",
-      "break": "On Break",
-      "offline": "Offline"
+      "available": "待命",
+      "deployed": "已执勤",
+      "break": "休假/就餐",
+      "offline": "下班"
     },
-    "role": "Role",
-    "zone": "Assigned Zone",
-    "tasks": "Active Tasks"
+    "role": "执勤岗位",
+    "zone": "责任防区",
+    "tasks": "当前任务"
   },
   "dispatch": {
-    "title": "Dispatch",
-    "assign": "Assign Task",
-    "recall": "Recall",
+    "title": "任务派发",
+    "assign": "下发任务",
+    "recall": "撤回指令",
     "priority": {
-      "label": "Priority",
-      "low": "Low",
-      "normal": "Normal",
-      "high": "High",
-      "critical": "Critical"
+      "label": "紧急程度",
+      "low": "低",
+      "normal": "中",
+      "high": "高",
+      "critical": "特急"
     }
   },
   "tasks": {
-    "title": "Task Queue",
-    "empty": "No pending tasks",
-    "completed": "Completed",
-    "pending": "Pending",
-    "inProgress": "In Progress"
+    "title": "任务队列",
+    "empty": "暂无未完成的任务",
+    "completed": "已解决",
+    "pending": "待处理",
+    "inProgress": "处理中"
   }
 }

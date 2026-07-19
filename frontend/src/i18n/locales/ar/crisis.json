@@ -1,29 +1,29 @@
 {
-  "title": "Evacuation Simulator",
-  "subtitle": "Monte Carlo Crisis Modeling • Real-Time Egress Computation",
-  "description": "Simulate and plan emergency evacuations using AI-powered route optimization.",
+  "title": "محاكي الإخلاء",
+  "subtitle": "نمذجة الأزمات بمونتي كارلو • حساب التدفقات في الوقت الفعلي",
+  "description": "محاكاة وتخطيط عمليات الإخلاء في حالات الطوارئ باستخدام تحسين المسارات المدعوم بالذكاء الاصطناعي.",
   "hazardLevel": {
-    "label": "Hazard Level",
-    "low": "Low",
-    "medium": "Medium",
-    "high": "High",
-    "extreme": "Extreme"
+    "label": "مستوى الخطر",
+    "low": "منخفض",
+    "medium": "متوسط",
+    "high": "مرتفع",
+    "extreme": "قصوى"
   },
   "routes": {
-    "title": "Safe Routes",
-    "estimatedTime": "Estimated Time",
-    "seconds": "seconds",
-    "bottleneck": "Bottleneck Node"
+    "title": "المسارات الآمنة",
+    "estimatedTime": "الوقت المقدر",
+    "seconds": "ثانية",
+    "bottleneck": "نقطة الاختناق"
   },
   "progress": {
-    "label": "Evacuation Progress",
-    "complete": "Complete"
+    "label": "تقدم الإخلاء",
+    "complete": "مكتمل"
   },
   "simulation": {
-    "run": "Run Simulation",
-    "running": "Simulating...",
-    "gateCount": "Gate Count",
-    "initialDensity": "Initial Crowd Density",
-    "hazardLocation": "Hazard Location"
+    "run": "بدء المحاكاة",
+    "running": "جاري المحاكاة...",
+    "gateCount": "عدد البوابات المتاحة",
+    "initialDensity": "كثافة الحشد الأولية",
+    "hazardLocation": "موقع الخطر"
   }
 }

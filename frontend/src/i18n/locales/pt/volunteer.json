@@ -1,36 +1,36 @@
 {
-  "title": "Volunteer HUD",
-  "subtitle": "Staff Deployment & Task Assignment",
-  "description": "Real-time volunteer management and task dispatch for stadium operations.",
+  "title": "HUD de Voluntários",
+  "subtitle": "Implantação de Pessoal e Atribuição de Tarefas",
+  "description": "Gerenciamento de voluntários em tempo real e despacho de tarefas para operações do estádio.",
   "staff": {
-    "label": "Staff",
+    "label": "Pessoal",
     "status": {
-      "available": "Available",
-      "deployed": "Deployed",
-      "break": "On Break",
-      "offline": "Offline"
+      "available": "Disponível",
+      "deployed": "Implantado",
+      "break": "Em Intervalo",
+      "offline": "Fora de Linha"
     },
-    "role": "Role",
-    "zone": "Assigned Zone",
-    "tasks": "Active Tasks"
+    "role": "Função",
+    "zone": "Zona Atribuída",
+    "tasks": "Tarefas Ativas"
   },
   "dispatch": {
-    "title": "Dispatch",
-    "assign": "Assign Task",
-    "recall": "Recall",
+    "title": "Despacho",
+    "assign": "Atribuir Tarefa",
+    "recall": "Chamar de Volta",
     "priority": {
-      "label": "Priority",
-      "low": "Low",
+      "label": "Prioridade",
+      "low": "Baixa",
       "normal": "Normal",
-      "high": "High",
-      "critical": "Critical"
+      "high": "Alta",
+      "critical": "Crítica"
     }
   },
   "tasks": {
-    "title": "Task Queue",
-    "empty": "No pending tasks",
-    "completed": "Completed",
-    "pending": "Pending",
-    "inProgress": "In Progress"
+    "title": "Fila de Tarefas",
+    "empty": "Sem tarefas pendentes",
+    "completed": "Concluído",
+    "pending": "Pendente",
+    "inProgress": "Em Andamento"
   }
 }

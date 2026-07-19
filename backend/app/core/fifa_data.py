@@ -1,6 +1,4 @@
-import json
-from datetime import datetime, timezone
-from typing import Dict, Any, List, Optional
+from typing import Any, Dict, List
 
 # Static mock database for FIFA World Cup 2026 Matches & Venues
 # In a real-world scenario, this would query a third-party Sports API.
@@ -187,7 +185,7 @@ class FIFAMatchEngine:
             matched_matches = FIFA_MATCHES
 
         context_lines = ["<FIFA_WORLD_CUP_2026_CONTEXT>"]
-        
+
         # Matches info
         context_lines.append("  <MATCHES>")
         for m in matched_matches:
@@ -221,6 +219,6 @@ class FIFAMatchEngine:
                     f"    </VENUE>"
                 )
         context_lines.append("  </VENUES>")
-        
+
         context_lines.append("</FIFA_WORLD_CUP_2026_CONTEXT>")
         return "\n".join(context_lines)

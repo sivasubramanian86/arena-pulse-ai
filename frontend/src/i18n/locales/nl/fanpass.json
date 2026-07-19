@@ -1,30 +1,30 @@
 {
   "title": "FanPass AR",
-  "subtitle": "Tickethub & Locatienavigatie",
-  "description": "Toegang tot uw digitale ticket, vind uw stoel en navigeer door het stadion met AR-wegwijzers.",
+  "subtitle": "Ticket Hub & Stadion Navigatie",
+  "description": "Toegang tot uw digitale ticket, vind uw stoel en navigeer door het stadion met AR-navigatie.",
   "ticket": {
     "label": "Uw Ticket",
-    "section": "Vak",
+    "section": "Sectie",
     "row": "Rij",
     "seat": "Stoel",
-    "gate": "Toegangspoort",
+    "gate": "Ingang",
     "match": "Wedstrijd"
   },
   "navigation": {
-    "title": "Navigeer naar stoel",
-    "openMaps": "Openen in Google Maps",
-    "directions": "Routebeschrijving opvragen",
-    "estimatedWalk": "Geschatte looptijd"
+    "title": "Navigeer naar Stoel",
+    "openMaps": "Open in Google Maps",
+    "directions": "Routebeschrijving",
+    "estimatedWalk": "Geschatte Wandeltijd"
   },
   "amenities": {
-    "title": "Voorzieningen in de buurt",
-    "restroom": "Toilet",
-    "concession": "Verkoopkraam",
-    "medic": "EHBO-post",
+    "title": "Voorzieningen in de Buurt",
+    "restroom": "Toiletten",
+    "concession": "Catering",
+    "medic": "Eerste Hulp",
     "accessibility": "Toegankelijkheidsdiensten"
   },
   "ar": {
-    "launch": "AR-weergave starten",
+    "launch": "Start AR Weergave",
     "scanning": "Omgeving scannen..."
   }
 }

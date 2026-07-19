@@ -1,37 +1,37 @@
 {
-  "title": "Command Nexus",
-  "subtitle": "Agentic Graph RAG • Live Stadium Topology",
-  "description": "Real-time crowd routing and stadium node management powered by multi-agent consensus.",
+  "title": "指挥中心",
+  "subtitle": "智能图RAG • 体育场拓扑实时监测",
+  "description": "基于多智能体共识的实时人群路由与体育场节点管理系统。",
   "nodes": {
-    "label": "Stadium Nodes",
+    "label": "体育场节点",
     "status": {
-      "optimal": "Optimal",
-      "congested": "Congested",
-      "critical": "Critical",
-      "offline": "Offline"
+      "optimal": "最佳",
+      "congested": "拥挤",
+      "critical": "严重拥挤",
+      "offline": "离线"
     },
-    "density": "Density",
-    "capacity": "Capacity"
+    "density": "密度",
+    "capacity": "容量"
   },
   "agent": {
-    "thinking": "Agent thinking...",
-    "executing": "Executing tool",
-    "completed": "Completed",
-    "idle": "Idle",
-    "error": "Error"
+    "thinking": "智能体思考中...",
+    "executing": "正在执行工具",
+    "completed": "已完成",
+    "idle": "空闲",
+    "error": "错误"
   },
   "query": {
-    "placeholder": "Ask the Ops Commander (e.g. 'Reroute Gate A crowd to Gate C')",
-    "submit": "Send to Agent",
-    "response": "Agent Response"
+    "placeholder": "向运维指挥官提问 (例如：'将A门的人流分流到C门')",
+    "submit": "发送给智能体",
+    "response": "智能体响应"
   },
   "graph": {
-    "title": "Stadium Topology Graph",
+    "title": "体育场拓扑网络图",
     "legend": {
-      "gate": "Gate",
-      "concourse": "Concourse",
-      "transit": "Transit Hub",
-      "kiosk": "Kiosk"
+      "gate": "通道门",
+      "concourse": "大厅/走廊",
+      "transit": "交通枢纽",
+      "kiosk": "服务台"
     }
   }
 }

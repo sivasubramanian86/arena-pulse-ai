@@ -1,18 +1,20 @@
 import asyncio
-import os
 import json
+import os
 from datetime import datetime
+
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
+
 from app.core.orchestrator import ArenaPulseOrchestrator, topology
 from app.schemas.websocket_schemas import (
-    NexusNodeModel,
-    NexusEdgeModel,
-    TelemetryPayloadModel,
     AgentStatePayloadModel,
     AuditLogPayloadModel,
     CrisisAlertPayloadModel,
-    SafeRouteModel
+    NexusEdgeModel,
+    NexusNodeModel,
+    SafeRouteModel,
+    TelemetryPayloadModel,
 )
 
 app = FastAPI(
@@ -50,7 +52,7 @@ async def root():
 async def websocket_endpoint(websocket: WebSocket):
     """Main WebSocket server for real-time telemetry streaming and agent reasoning execution."""
     await websocket.accept()
-    
+
     # Spawn background task to stream telemetry updates
     async def telemetry_streamer():
         try:
@@ -90,12 +92,12 @@ async def websocket_endpoint(websocket: WebSocket):
             # Receive client queries or actions
             data = await websocket.receive_text()
             payload = json.loads(data)
-            
+
             action = payload.get("action")
 
             if action == "query":
                 query_text = payload.get("queryText", "")
-                
+
                 # Stream logs and reasoning steps from the orchestrator
                 async for step in orchestrator.execute_task_stream(query_text):
                     # Validate agent state payload
@@ -106,7 +108,7 @@ async def websocket_endpoint(websocket: WebSocket):
                         "payload": validated_step.model_dump()
                     }
                     await websocket.send_text(json.dumps(msg))
-                    
+
                     # Validate audit log payload
                     log_payload = AuditLogPayloadModel(
                         level="info" if step["status"] != "completed" else "success",
@@ -125,17 +127,17 @@ async def websocket_endpoint(websocket: WebSocket):
                 # Extract hazardLocationId
                 params = payload.get("parameters", {})
                 hazard_id = params.get("hazardLocationId", "n-5")  # default to Zone 2 (Tribunes)
-                
+
                 # Fetch safe routes from graph
                 routes = topology.find_safe_evacuation_routes(hazard_id)
-                
+
                 # Stream crisis alert
                 alert_payload = CrisisAlertPayloadModel(
                     hazardLevel="extreme" if len(routes) > 0 and routes[0]["estimatedTimeSeconds"] > 15 else "high",
                     safeRoutes=[SafeRouteModel(**r) for r in routes],
                     evacuationProgress=0.45
                 )
-                
+
                 msg = {
                     "timestamp": datetime.utcnow().isoformat(),
                     "event": "crisis_alert",

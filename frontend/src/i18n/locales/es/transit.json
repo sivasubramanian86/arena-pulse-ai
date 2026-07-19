@@ -1,34 +1,34 @@
 {
-  "title": "EcoTransit Sync",
-  "subtitle": "Real-Time Shuttle & Transit Orchestration",
-  "description": "Live transit coordination for sustainable fan transportation across all venues.",
+  "title": "EcoTránsito",
+  "subtitle": "Orquestación de Tránsito y Lanzaderas en Tiempo Real",
+  "description": "Coordinación de tránsito en vivo para el transporte sostenible de aficionados en todas las sedes.",
   "shuttle": {
-    "label": "Shuttles",
+    "label": "Lanzaderas",
     "status": {
-      "onRoute": "On Route",
-      "atStop": "At Stop",
-      "delayed": "Delayed",
-      "offline": "Offline"
+      "onRoute": "En Ruta",
+      "atStop": "En Parada",
+      "delayed": "Retrasado",
+      "offline": "Fuera de Servicio"
     },
-    "capacity": "Capacity",
-    "eta": "ETA",
+    "capacity": "Capacidad",
+    "eta": "Llegada",
     "minutes": "min"
   },
   "route": {
-    "label": "Routes",
-    "origin": "Origin",
-    "destination": "Destination",
-    "duration": "Duration",
-    "eco": "Eco Score"
+    "label": "Rutas",
+    "origin": "Origen",
+    "destination": "Destino",
+    "duration": "Duración",
+    "eco": "Eco-Valoración"
   },
   "emissions": {
-    "label": "CO₂ Savings",
-    "today": "Today",
-    "total": "Tournament Total"
+    "label": "Ahorro de CO₂",
+    "today": "Hoy",
+    "total": "Total del Torneo"
   },
   "gantt": {
-    "title": "Transit Gantt Schedule",
-    "departure": "Departure",
-    "arrival": "Arrival"
+    "title": "Horario Gantt de Tránsito",
+    "departure": "Salida",
+    "arrival": "Llegada"
   }
 }

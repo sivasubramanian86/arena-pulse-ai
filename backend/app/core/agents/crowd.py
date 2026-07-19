@@ -1,5 +1,6 @@
 from app.core.agents.base import ArenaAgent
 
+
 class CrowdWorker(ArenaAgent):
     """Worker specializing in crowd density, gate flows, and evacuation mapping."""
 

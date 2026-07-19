@@ -1,34 +1,34 @@
 {
-  "title": "EcoTransit Sync",
-  "subtitle": "Real-Time Shuttle & Transit Orchestration",
-  "description": "Live transit coordination for sustainable fan transportation across all venues.",
+  "title": "ÉcoTransit Sync",
+  "subtitle": "Orchestration en Temps Réel des Navettes et Transports",
+  "description": "Coordination en direct des transports pour assurer la mobilité durable des supporters sur tous les sites.",
   "shuttle": {
-    "label": "Shuttles",
+    "label": "Navettes",
     "status": {
-      "onRoute": "On Route",
-      "atStop": "At Stop",
-      "delayed": "Delayed",
-      "offline": "Offline"
+      "onRoute": "En Route",
+      "atStop": "À l'Arrêt",
+      "delayed": "Retardé",
+      "offline": "Hors-service"
     },
-    "capacity": "Capacity",
-    "eta": "ETA",
+    "capacity": "Capacité",
+    "eta": "Heure d'arrivée",
     "minutes": "min"
   },
   "route": {
-    "label": "Routes",
-    "origin": "Origin",
+    "label": "Itinéraires",
+    "origin": "Départ",
     "destination": "Destination",
-    "duration": "Duration",
+    "duration": "Durée",
     "eco": "Eco Score"
   },
   "emissions": {
-    "label": "CO₂ Savings",
-    "today": "Today",
-    "total": "Tournament Total"
+    "label": "Économies de CO₂",
+    "today": "Aujourd'hui",
+    "total": "Cumul Tournoi"
   },
   "gantt": {
-    "title": "Transit Gantt Schedule",
-    "departure": "Departure",
-    "arrival": "Arrival"
+    "title": "Planning de Transport Gantt",
+    "departure": "Départ",
+    "arrival": "Arrivée"
   }
 }

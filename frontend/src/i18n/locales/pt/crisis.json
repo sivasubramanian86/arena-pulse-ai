@@ -1,29 +1,29 @@
 {
-  "title": "Evacuation Simulator",
-  "subtitle": "Monte Carlo Crisis Modeling • Real-Time Egress Computation",
-  "description": "Simulate and plan emergency evacuations using AI-powered route optimization.",
+  "title": "Simulador de Evacuação",
+  "subtitle": "Modelagem de Crise Monte Carlo • Rotas de Egressos em Tempo Real",
+  "description": "Simule e planeje evacuações de emergência usando otimização de rotas com IA.",
   "hazardLevel": {
-    "label": "Hazard Level",
-    "low": "Low",
-    "medium": "Medium",
-    "high": "High",
-    "extreme": "Extreme"
+    "label": "Nível de Perigo",
+    "low": "Baixo",
+    "medium": "Médio",
+    "high": "Alto",
+    "extreme": "Extremo"
   },
   "routes": {
-    "title": "Safe Routes",
-    "estimatedTime": "Estimated Time",
-    "seconds": "seconds",
-    "bottleneck": "Bottleneck Node"
+    "title": "Rotas Seguras",
+    "estimatedTime": "Tempo Estimado",
+    "seconds": "segundos",
+    "bottleneck": "Ponto de Gargalo"
   },
   "progress": {
-    "label": "Evacuation Progress",
-    "complete": "Complete"
+    "label": "Progresso da Evacuação",
+    "complete": "Concluído"
   },
   "simulation": {
-    "run": "Run Simulation",
-    "running": "Simulating...",
-    "gateCount": "Gate Count",
-    "initialDensity": "Initial Crowd Density",
-    "hazardLocation": "Hazard Location"
+    "run": "Executar Simulação",
+    "running": "Simulando...",
+    "gateCount": "Número de Portões",
+    "initialDensity": "Densidade Inicial",
+    "hazardLocation": "Local do Perigo"
   }
 }

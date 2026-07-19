@@ -1,36 +1,36 @@
 {
-  "title": "Command Nexus",
-  "subtitle": "Agentic Graph RAG • Live Stadium Topology",
-  "description": "Real-time crowd routing and stadium node management powered by multi-agent consensus.",
+  "title": "Kommando-Nexus",
+  "subtitle": "Agentisches Graph-RAG • Live-Stadiontopologie",
+  "description": "Echtzeit-Besucherlenkung und Knotenstammverwaltung, unterstützt durch Agentenkonsens.",
   "nodes": {
-    "label": "Stadium Nodes",
+    "label": "Stadionknoten",
     "status": {
       "optimal": "Optimal",
-      "congested": "Congested",
-      "critical": "Critical",
+      "congested": "Überlastet",
+      "critical": "Kritisch",
       "offline": "Offline"
     },
-    "density": "Density",
-    "capacity": "Capacity"
+    "density": "Dichte",
+    "capacity": "Kapazität"
   },
   "agent": {
-    "thinking": "Agent thinking...",
-    "executing": "Executing tool",
-    "completed": "Completed",
-    "idle": "Idle",
-    "error": "Error"
+    "thinking": "Agent denkt nach...",
+    "executing": "Führe Werkzeug aus",
+    "completed": "Fertiggestellt",
+    "idle": "Bereit",
+    "error": "Fehler"
   },
   "query": {
-    "placeholder": "Ask the Ops Commander (e.g. 'Reroute Gate A crowd to Gate C')",
-    "submit": "Send to Agent",
-    "response": "Agent Response"
+    "placeholder": "Fragen Sie den Einsatzleiter (z. B. 'Leite die Menge von Tor A zu Tor C um')",
+    "submit": "An Agenten senden",
+    "response": "Agenten-Antwort"
   },
   "graph": {
-    "title": "Stadium Topology Graph",
+    "title": "Stadiontopologie-Graph",
     "legend": {
-      "gate": "Gate",
-      "concourse": "Concourse",
-      "transit": "Transit Hub",
+      "gate": "Tor",
+      "concourse": "Promenade",
+      "transit": "Knotenpunkt",
       "kiosk": "Kiosk"
     }
   }

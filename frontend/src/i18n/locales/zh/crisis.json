@@ -1,29 +1,29 @@
 {
-  "title": "Evacuation Simulator",
-  "subtitle": "Monte Carlo Crisis Modeling • Real-Time Egress Computation",
-  "description": "Simulate and plan emergency evacuations using AI-powered route optimization.",
+  "title": "安全疏散模拟器",
+  "subtitle": "蒙特卡洛危机推演模型 • 实时人群疏散路径计算",
+  "description": "利用AI驱动的路径优化算法，模拟并制定紧急状态下的安全应急疏散方案。",
   "hazardLevel": {
-    "label": "Hazard Level",
-    "low": "Low",
-    "medium": "Medium",
-    "high": "High",
-    "extreme": "Extreme"
+    "label": "安全隐患等级",
+    "low": "低危",
+    "medium": "中危",
+    "high": "高危",
+    "extreme": "极危"
   },
   "routes": {
-    "title": "Safe Routes",
-    "estimatedTime": "Estimated Time",
-    "seconds": "seconds",
-    "bottleneck": "Bottleneck Node"
+    "title": "安全逃生通道",
+    "estimatedTime": "预计用时",
+    "seconds": "秒",
+    "bottleneck": "瓶颈拥堵节点"
   },
   "progress": {
-    "label": "Evacuation Progress",
-    "complete": "Complete"
+    "label": "疏散进度反馈",
+    "complete": "已安全完成"
   },
   "simulation": {
-    "run": "Run Simulation",
-    "running": "Simulating...",
-    "gateCount": "Gate Count",
-    "initialDensity": "Initial Crowd Density",
-    "hazardLocation": "Hazard Location"
+    "run": "开始模拟演练",
+    "running": "计算模拟中...",
+    "gateCount": "安全出口数量",
+    "initialDensity": "初始人群密度",
+    "hazardLocation": "险情发生地点"
   }
 }

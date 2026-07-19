@@ -1,7 +1,7 @@
 {
-  "title": "Vrijwilligersoverzicht",
+  "title": "Vrijwilligers HUD",
   "subtitle": "Personeelsinzet & Taaktoewijzing",
-  "description": "Realtime vrijwilligersbeheer en taakverdeling voor stadionactiviteiten.",
+  "description": "Realtime vrijwilligersbeheer en taakverzending voor stadionoperaties.",
   "staff": {
     "label": "Personeel",
     "status": {
@@ -15,7 +15,7 @@
     "tasks": "Actieve Taken"
   },
   "dispatch": {
-    "title": "Opdrachten",
+    "title": "Dispatch",
     "assign": "Taak Toewijzen",
     "recall": "Terugroepen",
     "priority": {
@@ -27,10 +27,10 @@
     }
   },
   "tasks": {
-    "title": "Takenwachtrij",
+    "title": "Taak Wachtrij",
     "empty": "Geen openstaande taken",
     "completed": "Voltooid",
-    "pending": "Openstaand",
-    "inProgress": "Bezig"
+    "pending": "In Afwachting",
+    "inProgress": "In Uitvoering"
   }
 }

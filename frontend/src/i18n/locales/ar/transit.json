@@ -1,34 +1,34 @@
 {
-  "title": "EcoTransit Sync",
-  "subtitle": "Real-Time Shuttle & Transit Orchestration",
-  "description": "Live transit coordination for sustainable fan transportation across all venues.",
+  "title": "النقل البيئي",
+  "subtitle": "تنظيم حافلات النقل والعبور في الوقت الفعلي",
+  "description": "تنسيق النقل المباشر لتوفير وسائل نقل مستدامة للجماهير عبر جميع الملاعب.",
   "shuttle": {
-    "label": "Shuttles",
+    "label": "حافلات النقل",
     "status": {
-      "onRoute": "On Route",
-      "atStop": "At Stop",
-      "delayed": "Delayed",
-      "offline": "Offline"
+      "onRoute": "على الطريق",
+      "atStop": "في المحطة",
+      "delayed": "متأخر",
+      "offline": "خارج الخدمة"
     },
-    "capacity": "Capacity",
-    "eta": "ETA",
-    "minutes": "min"
+    "capacity": "السعة",
+    "eta": "الوصول",
+    "minutes": "دقيقة"
   },
   "route": {
-    "label": "Routes",
-    "origin": "Origin",
-    "destination": "Destination",
-    "duration": "Duration",
-    "eco": "Eco Score"
+    "label": "المسارات",
+    "origin": "نقطة الانطلاق",
+    "destination": "الوجهة",
+    "duration": "المدة",
+    "eco": "مؤشر البيئة"
   },
   "emissions": {
-    "label": "CO₂ Savings",
-    "today": "Today",
-    "total": "Tournament Total"
+    "label": "توفير CO₂",
+    "today": "اليوم",
+    "total": "إجمالي البطولة"
   },
   "gantt": {
-    "title": "Transit Gantt Schedule",
-    "departure": "Departure",
-    "arrival": "Arrival"
+    "title": "جدول مواعيد النقل (غانت)",
+    "departure": "المغادرة",
+    "arrival": "الوصول"
   }
 }

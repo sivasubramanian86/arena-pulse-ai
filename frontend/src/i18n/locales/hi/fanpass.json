@@ -1,30 +1,30 @@
 {
-  "title": "FanPass AR",
-  "subtitle": "Ticket Hub & Venue Navigation",
-  "description": "Access your digital ticket, find your seat, and navigate the stadium with AR wayfinding.",
+  "title": "फैनपास एआर",
+  "subtitle": "टिकट हब और स्थल नेविगेशन",
+  "description": "अपने डिजिटल टिकट का उपयोग करें, अपनी सीट का पता लगाएं, और एआर वेफाइंडिंग के साथ स्टेडियम में नेविगेट करें।",
   "ticket": {
-    "label": "Your Ticket",
-    "section": "Section",
-    "row": "Row",
-    "seat": "Seat",
-    "gate": "Entry Gate",
-    "match": "Match"
+    "label": "आपका टिकट",
+    "section": "सेक्शन",
+    "row": "कतार",
+    "seat": "सीट",
+    "gate": "प्रवेश द्वार",
+    "match": "मैच"
   },
   "navigation": {
-    "title": "Navigate to Seat",
-    "openMaps": "Open in Google Maps",
-    "directions": "Get Directions",
-    "estimatedWalk": "Estimated Walk"
+    "title": "सीट तक नेविगेट करें",
+    "openMaps": "Google Maps में खोलें",
+    "directions": "दिशा निर्देश प्राप्त करें",
+    "estimatedWalk": "पैदल चलने का अनुमानित समय"
   },
   "amenities": {
-    "title": "Nearby Amenities",
-    "restroom": "Restroom",
-    "concession": "Concession Stand",
-    "medic": "Medical Station",
-    "accessibility": "Accessibility Services"
+    "title": "आस-पास की सुविधाएं",
+    "restroom": "शौचालय",
+    "concession": "रियायत स्टैंड",
+    "medic": "चिकित्सा केंद्र",
+    "accessibility": "सुलभता सेवाएं"
   },
   "ar": {
-    "launch": "Launch AR View",
-    "scanning": "Scanning environment..."
+    "launch": "एआर व्यू शुरू करें",
+    "scanning": "परिवेश को स्कैन किया जा रहा है..."
   }
 }

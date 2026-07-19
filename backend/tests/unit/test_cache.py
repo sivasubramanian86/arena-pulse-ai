@@ -1,5 +1,5 @@
-import pytest
 from app.core.cache import SemanticCache
+
 
 def test_semantic_cache_exact_hit():
     cache = SemanticCache()

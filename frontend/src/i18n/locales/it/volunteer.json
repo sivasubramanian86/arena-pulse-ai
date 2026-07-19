@@ -1,12 +1,12 @@
 {
   "title": "HUD Volontari",
-  "subtitle": "Dispiegamento del Personale e Assegnazione dei Compiti",
-  "description": "Gestione in tempo reale dei volontari e smistamento dei compiti per le operazioni dello stadio.",
+  "subtitle": "Distribuzione Personale e Assegnazione Compiti",
+  "description": "Gestione in tempo reale dei volontari e distribuzione delle attività per le operazioni dello stadio.",
   "staff": {
     "label": "Personale",
     "status": {
       "available": "Disponibile",
-      "deployed": "Dispiegato",
+      "deployed": "Schierato",
       "break": "In Pausa",
       "offline": "Offline"
     },
@@ -15,7 +15,7 @@
     "tasks": "Compiti Attivi"
   },
   "dispatch": {
-    "title": "Smistamento",
+    "title": "Distribuzione",
     "assign": "Assegna Compito",
     "recall": "Richiama",
     "priority": {
@@ -28,9 +28,9 @@
   },
   "tasks": {
     "title": "Coda Compiti",
-    "empty": "Nessun compito in sospeso",
+    "empty": "Nessun compito in attesa",
     "completed": "Completato",
-    "pending": "In Sospeso",
+    "pending": "In attesa",
     "inProgress": "In Corso"
   }
 }

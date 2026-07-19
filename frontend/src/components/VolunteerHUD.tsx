@@ -318,7 +318,7 @@ export const VolunteerHUD: React.FC = React.memo(() => {
                     <select
                       id="dispatch-priority"
                       value={alertPriority}
-                      onChange={(e) => setAlertPriority(e.target.value as any)}
+                      onChange={(e) => setAlertPriority(e.target.value as "high" | "medium" | "low")}
                       className="w-full bg-zinc-50 dark:bg-zinc-950/60 border border-zinc-200 dark:border-zinc-800 rounded-xl px-3 py-2 text-xs text-zinc-900 dark:text-white focus:outline-none focus:border-blue-500 cursor-pointer"
                     >
                       <option value="low">Low</option>

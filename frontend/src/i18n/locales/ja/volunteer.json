@@ -1,36 +1,36 @@
 {
-  "title": "Volunteer HUD",
-  "subtitle": "Staff Deployment & Task Assignment",
-  "description": "Real-time volunteer management and task dispatch for stadium operations.",
+  "title": "ボランティアHUD",
+  "subtitle": "スタッフ配置 • 業務割り当て管理",
+  "description": "スタジアム運用のためのリアルタイムのボランティア情報管理とタスク配信機能。",
   "staff": {
-    "label": "Staff",
+    "label": "スタッフ",
     "status": {
-      "available": "Available",
-      "deployed": "Deployed",
-      "break": "On Break",
-      "offline": "Offline"
+      "available": "待機中",
+      "deployed": "配置完了",
+      "break": "休憩中",
+      "offline": "オフライン"
     },
-    "role": "Role",
-    "zone": "Assigned Zone",
-    "tasks": "Active Tasks"
+    "role": "業務",
+    "zone": "担当エリア",
+    "tasks": "実施中タスク"
   },
   "dispatch": {
-    "title": "Dispatch",
-    "assign": "Assign Task",
-    "recall": "Recall",
+    "title": "配信コマンド",
+    "assign": "業務をアサイン",
+    "recall": "呼び戻す",
     "priority": {
-      "label": "Priority",
-      "low": "Low",
-      "normal": "Normal",
-      "high": "High",
-      "critical": "Critical"
+      "label": "優先度",
+      "low": "低",
+      "normal": "中",
+      "high": "高",
+      "critical": "最優先"
     }
   },
   "tasks": {
-    "title": "Task Queue",
-    "empty": "No pending tasks",
-    "completed": "Completed",
-    "pending": "Pending",
-    "inProgress": "In Progress"
+    "title": "タスク一覧キュー",
+    "empty": "待機中のタスクはありません",
+    "completed": "完了",
+    "pending": "保留",
+    "inProgress": "実施中"
   }
 }

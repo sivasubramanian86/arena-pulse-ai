@@ -1,30 +1,30 @@
 {
   "title": "Edge Mesh NOC",
-  "subtitle": "Griglia di stato dei beacon di rete e monitoraggio della latenza",
-  "description": "Visibilità in tempo reale dello stato del Wi-Fi dello stadio, dei beacon 5G e dell'integrità dei nodi edge.",
+  "subtitle": "Monitoraggio Latenza e Stato Rete Beacons",
+  "description": "Visibilità in tempo reale del Wi-Fi dello stadio, dei beacons 5G e dello stato dei nodi edge.",
   "beacon": {
-    "label": "Beacon",
+    "label": "Beacons",
     "status": {
-      "healthy": "Ottimale",
+      "healthy": "Sano",
       "degraded": "Degradato",
       "offline": "Offline"
     },
     "latency": "Latenza",
     "throughput": "Throughput",
-    "signal": "Intensità del segnale"
+    "signal": "Potenza Segnale"
   },
   "grid": {
-    "title": "Griglia di stato dei Beacon",
+    "title": "Griglia Stato Beacons",
     "zone": "Zona",
     "coverage": "Copertura"
   },
   "alerts": {
-    "title": "Avvisi di rete",
+    "title": "Allarmi di Rete",
     "noAlerts": "Tutti i sistemi nominali"
   },
   "metrics": {
-    "totalNodes": "Nodi totali",
-    "healthyNodes": "Ottimali",
+    "totalNodes": "Nodi Totali",
+    "healthyNodes": "Sani",
     "degradedNodes": "Degradati",
     "offlineNodes": "Offline"
   }

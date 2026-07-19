@@ -1,31 +1,31 @@
 {
-  "title": "Edge Mesh NOC",
-  "subtitle": "Network Beacon Health Grid & Latency Monitoring",
-  "description": "Real-time visibility into stadium Wi-Fi, 5G beacons, and edge node health.",
+  "title": "شبكة الحافة NOC",
+  "subtitle": "مؤشر صحة منارات الشبكة ومراقبة زمن الاستجابة",
+  "description": "مراقبة مستمرة لشبكة Wi-Fi بالاستاد، ومنارات 5G، وحالة عقد شبكة الحافة.",
   "beacon": {
-    "label": "Beacons",
+    "label": "المنارات",
     "status": {
-      "healthy": "Healthy",
-      "degraded": "Degraded",
-      "offline": "Offline"
+      "healthy": "سليم",
+      "degraded": "متدهور",
+      "offline": "غير متصل"
     },
-    "latency": "Latency",
-    "throughput": "Throughput",
-    "signal": "Signal Strength"
+    "latency": "زمن الاستجابة",
+    "throughput": "معدل النقل",
+    "signal": "قوة الإشارة"
   },
   "grid": {
-    "title": "Beacon Health Grid",
-    "zone": "Zone",
-    "coverage": "Coverage"
+    "title": "مؤشر صحة المنارات",
+    "zone": "المنطقة",
+    "coverage": "التغطية"
   },
   "alerts": {
-    "title": "Network Alerts",
-    "noAlerts": "All systems nominal"
+    "title": "تنبيهات الشبكة",
+    "noAlerts": "جميع الأنظمة تعمل بشكل طبيعي"
   },
   "metrics": {
-    "totalNodes": "Total Nodes",
-    "healthyNodes": "Healthy",
-    "degradedNodes": "Degraded",
-    "offlineNodes": "Offline"
+    "totalNodes": "إجمالي العقد",
+    "healthyNodes": "سليم",
+    "degradedNodes": "متدهور",
+    "offlineNodes": "غير متصل"
   }
 }

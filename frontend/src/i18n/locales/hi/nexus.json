@@ -1,37 +1,37 @@
 {
-  "title": "Command Nexus",
-  "subtitle": "Agentic Graph RAG • Live Stadium Topology",
-  "description": "Real-time crowd routing and stadium node management powered by multi-agent consensus.",
+  "title": "कमांड नेक्सस",
+  "subtitle": "एजेंटिक ग्राफ आरएजी • लाइव स्टेडियम टोपोलॉजी",
+  "description": "एजेंट सर्वसम्मति द्वारा संचालित वास्तविक समय में भीड़ रूटिंग और स्टेडियम नोड प्रबंधन।",
   "nodes": {
-    "label": "Stadium Nodes",
+    "label": "स्टेडियम नोड्स",
     "status": {
-      "optimal": "Optimal",
-      "congested": "Congested",
-      "critical": "Critical",
-      "offline": "Offline"
+      "optimal": "इष्टतम",
+      "congested": "भीड़भाड़",
+      "critical": "गंभीर",
+      "offline": "ऑफ़लाइन"
     },
-    "density": "Density",
-    "capacity": "Capacity"
+    "density": "घनत्व",
+    "capacity": "क्षमता"
   },
   "agent": {
-    "thinking": "Agent thinking...",
-    "executing": "Executing tool",
-    "completed": "Completed",
-    "idle": "Idle",
-    "error": "Error"
+    "thinking": "एजेंट सोच रहा है...",
+    "executing": "टूल का निष्पादन",
+    "completed": "पूरा हुआ",
+    "idle": "निष्क्रिय",
+    "error": "त्रुटि"
   },
   "query": {
-    "placeholder": "Ask the Ops Commander (e.g. 'Reroute Gate A crowd to Gate C')",
-    "submit": "Send to Agent",
-    "response": "Agent Response"
+    "placeholder": "ऑप्स कमांडर से पूछें (जैसे 'गेट ए की भीड़ को गेट सी पर पुनर्निर्देशित करें')",
+    "submit": "एजेंट को भेजें",
+    "response": "एजेंट प्रतिक्रिया"
   },
   "graph": {
-    "title": "Stadium Topology Graph",
+    "title": "स्टेडियम टोपोलॉजी ग्राफ",
     "legend": {
-      "gate": "Gate",
-      "concourse": "Concourse",
-      "transit": "Transit Hub",
-      "kiosk": "Kiosk"
+      "gate": "गेट",
+      "concourse": "कॉनकोर्स",
+      "transit": "पारगमन हब",
+      "kiosk": "कियोस्क"
     }
   }
 }

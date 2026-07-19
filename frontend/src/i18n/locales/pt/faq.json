@@ -1,27 +1,27 @@
 {
-  "title": "Vault FAQ",
-  "subtitle": "AI-Powered Stadium Intelligence",
-  "description": "Ask any question about the stadium, match schedule, services, or FIFA rules.",
+  "title": "Perguntas Frequentes",
+  "subtitle": "Inteligência do Estádio Impulsionada por IA",
+  "description": "Pergunte qualquer coisa sobre o estádio, calendário de jogos, serviços ou regras da FIFA.",
   "input": {
-    "placeholder": "Ask anything about the stadium or FIFA World Cup 2026...",
-    "submit": "Ask AI",
-    "thinking": "Searching knowledge vault..."
+    "placeholder": "Pergunte algo sobre o estádio ou a Copa do Mundo FIFA 2026...",
+    "submit": "Perguntar à IA",
+    "thinking": "Pesquisando na base de conhecimento..."
   },
   "categories": {
-    "all": "All",
-    "navigation": "Navigation",
-    "services": "Services",
-    "schedule": "Schedule",
-    "safety": "Safety",
-    "accessibility": "Accessibility"
+    "all": "Tudo",
+    "navigation": "Navegação",
+    "services": "Serviços",
+    "schedule": "Calendário",
+    "safety": "Segurança",
+    "accessibility": "Acessibilidade"
   },
   "response": {
-    "sources": "Sources",
-    "confidence": "Confidence",
-    "relatedQuestions": "Related Questions"
+    "sources": "Fontes",
+    "confidence": "Confiança",
+    "relatedQuestions": "Perguntas Relacionadas"
   },
   "empty": {
-    "title": "Ask Anything",
-    "subtitle": "Your AI stadium guide is ready"
+    "title": "Perguntar Qualquer Coisa",
+    "subtitle": "Seu guia de IA do estádio está pronto"
   }
 }

@@ -1,19 +1,19 @@
 import asyncio
 from datetime import datetime
-from typing import AsyncGenerator, Dict, Any, List
+from typing import Any, AsyncGenerator, Dict, List
 
-from app.core.graph import StadiumTopology
-from app.core.cache import SemanticCache
 from app.core.agents import (
-    OpsSupervisor,
-    CrowdWorker,
-    TransitWorker,
-    PolyglotWorker,
-    LogisticsWorker,
-    ConsensusProtocol,
     AgentRecommendation,
-    EdgeSwarmCoordinator
+    ConsensusProtocol,
+    CrowdWorker,
+    EdgeSwarmCoordinator,
+    LogisticsWorker,
+    OpsSupervisor,
+    PolyglotWorker,
+    TransitWorker,
 )
+from app.core.cache import SemanticCache
+from app.core.graph import StadiumTopology
 
 # Shared global topology instance for live telemetry status
 topology = StadiumTopology()
@@ -84,7 +84,7 @@ class ArenaPulseOrchestrator:
 
         # Step 2: ADK Task Decomposition / Query Triage / Adaptive Routing
         is_translation = any(word in query.lower() for word in ["translate", "spanish", "french", "hola", "kiosk"])
-        
+
         if is_translation:
             yield {
                 "agentName": "OpsSupervisor",

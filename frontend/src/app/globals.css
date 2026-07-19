@@ -141,7 +141,7 @@ p, li, td, th, label, span {
 .text-zinc-300 {
   color: var(--text-secondary) !important;
 }
-.text-zinc-100, .text-white {
+.text-zinc-100 {
   color: var(--text-primary) !important;
 }
 
