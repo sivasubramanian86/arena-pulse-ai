@@ -47,9 +47,11 @@ class ArenaAgent:
         self.tools: List[Callable] = []
         self.memory = ADKMemory()
 
-        self.use_vertex = os.getenv("USE_VERTEX_AI", "false").lower() == "true" or os.getenv("GOOGLE_CLOUD_PROJECT") is not None
+        use_vertex_env = os.getenv("USE_VERTEX_AI", "false").strip().lower() == "true"
+        project_env = os.getenv("GOOGLE_CLOUD_PROJECT", "").strip()
+        self.use_vertex = use_vertex_env or bool(project_env)
         if self.use_vertex:
-            project = os.getenv("GOOGLE_CLOUD_PROJECT", "genai-apac-2026-491004")
+            project = project_env or "genai-apac-2026-491004"
             location = os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1")
             self.client = genai.Client(vertexai=True, project=project, location=location)
         elif self.api_key:
