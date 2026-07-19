@@ -1,38 +1,38 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Slim Stadion Besturingssysteem • FIFA Wereldkampioenschap 2026",
+  "tagline": "Smart Stadium OS • FIFA Wereldbeker 2026",
   "nav": {
-    "commandNexus": "Commando Centrum",
+    "commandNexus": "Commando Nexus",
     "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
+    "polyglot": "Meertalige Kiosk",
     "multimodal": "Multimodale Hub",
     "ecoTransit": "EcoTransit",
     "volunteerHUD": "Vrijwilligers HUD",
-    "evacSimulator": "Evacuatie Simulator",
-    "monetization": "Monetisatie",
-    "edgeMesh": "Randnetwerk",
+    "evacSimulator": "Evacuatiesimulator",
+    "monetization": "Monetisering",
+    "edgeMesh": "Edge Mesh Netwerk",
     "settings": "Instellingen",
-    "vaultFaq": "Kluis FAQ"
+    "vaultFaq": "FAQ Kluis"
   },
   "status": {
-    "telemetryLive": "TELEMETRIE LIVE",
-    "degraded": "VERSLECHTERD (LOKALE MOCK)"
+    "telemetryLive": "LIVE TELEMETRIE",
+    "degraded": "BEPERKT (LOKALE SIMULATIE)"
   },
   "role": {
     "label": "Rol:",
     "nocDirector": "NOC Directeur",
-    "fieldSupervisor": "Veld supervisor",
+    "fieldSupervisor": "Veld Supervisor",
     "volunteer": "Vrijwilliger"
   },
   "auditConsole": "NOC Operationele Audit Console",
   "telemetry": {
     "stadiumAttendance": "Stadionbezetting",
     "wifiDataRate": "WiFi Datasnelheid",
-    "fifaLive": "FIFA Live Wedstrijd Telemetrie"
+    "fifaLive": "FIFA Live Wedstrijdtelemetrie"
   },
   "aria": {
-    "toggleTheme": "Wissel Lichte/Donkere operationele lay-out",
-    "systemMenu": "Systeeminterfaces Menu"
+    "toggleTheme": "Wissel visuele lay-out",
+    "systemMenu": "Systeemmenu"
   },
   "language": {
     "switcherLabel": "Taal",
@@ -40,7 +40,7 @@
   },
   "buttons": {
     "translate": "Vertalen",
-    "translating": "Bezig met vertalen...",
+    "translating": "Vertalen...",
     "swap": "Wisselen",
     "run": "Uitvoeren",
     "reset": "Resetten",

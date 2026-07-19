@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "스마트 스타디움 OS • 2026 FIFA 월드컵",
   "nav": {
-    "commandNexus": "Command Nexus",
-    "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
-    "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "commandNexus": "커맨드 넥서스",
+    "fanpass": "팬패스 AR",
+    "polyglot": "다국어 키오스크",
+    "multimodal": "멀티모달 허브",
+    "ecoTransit": "친환경 대중교통",
+    "volunteerHUD": "자원봉사자 HUD",
+    "evacSimulator": "대피 시뮬레이터",
+    "monetization": "수익화",
+    "edgeMesh": "에지 메쉬",
+    "settings": "설정",
+    "vaultFaq": "자주 묻는 질문"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "원격 측정 실시간 스트리밍",
+    "degraded": "제한됨 (로컬 모의)"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "역할:",
+    "nocDirector": "NOC 디렉터",
+    "fieldSupervisor": "현장 감독관",
+    "volunteer": "자원봉사자"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "NOC 운영 감사 콘솔",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "경기장 관중 수",
+    "wifiDataRate": "WiFi 데이터 속도",
+    "fifaLive": "FIFA 실시간 경기 데이터"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "운영 레이아웃 테마 전환",
+    "systemMenu": "시스템 인터페이스 메뉴"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "언어",
+    "select": "언어 선택"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "번역",
+    "translating": "번역 중...",
+    "swap": "바꾸기",
+    "run": "실행",
+    "reset": "재설정",
+    "save": "저장",
+    "close": "닫기",
+    "submit": "제출"
   }
 }

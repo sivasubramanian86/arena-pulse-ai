@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "स्मार्ट स्टेडियम ओएस • फीफा विश्व कप 2026",
   "nav": {
-    "commandNexus": "Command Nexus",
-    "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
-    "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "commandNexus": "कमांड नेक्सस",
+    "fanpass": "फैनपास एआर",
+    "polyglot": "बहुभाषी कियोस्क",
+    "multimodal": "मल्टीमॉडल हब",
+    "ecoTransit": "इको ट्रांजिट",
+    "volunteerHUD": "स्वयंसेवक एचयूडी",
+    "evacSimulator": "निकासी सिम्युलेटर",
+    "monetization": "मुद्रीकरण",
+    "edgeMesh": "एज मेश",
+    "settings": "सेटिंग्स",
+    "vaultFaq": "पूछे जाने वाले प्रश्न"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "लाइव टेलीमेट्री",
+    "degraded": "सीमित मोड (स्थानीय सिमुलेशन)"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "भूमिका:",
+    "nocDirector": "एनओसी निदेशक",
+    "fieldSupervisor": "फील्ड पर्यवेक्षक",
+    "volunteer": "स्वयंसेवक"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "एनओसी परिचालन ऑडिट कंसोल",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "स्टेडियम उपस्थिति",
+    "wifiDataRate": "वाइफाई डेटा दर",
+    "fifaLive": "फीफा लाइव मैच टेलीमेट्री"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "परिचालन लेआउट थीम बदलें",
+    "systemMenu": "सिस्टम इंटरफ़ेस मेनू"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "भाषा",
+    "select": "भाषा चुनें"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "अनुवाद करें",
+    "translating": "अनुवाद हो रहा है...",
+    "swap": "बदलें",
+    "run": "चलाएं",
+    "reset": "रीसेट करें",
+    "save": "सहेजें",
+    "close": "बंद करें",
+    "submit": "जमा करें"
   }
 }

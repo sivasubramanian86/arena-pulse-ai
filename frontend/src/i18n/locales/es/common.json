@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "Stadium Inteligente OS • Copa Mundial de la FIFA 2026",
   "nav": {
-    "commandNexus": "Command Nexus",
-    "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
-    "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "commandNexus": "Nexo de Comando",
+    "fanpass": "Pase de Fan AR",
+    "polyglot": "Quiosco Multilingüe",
+    "multimodal": "Centro Multimodal",
+    "ecoTransit": "EcoTránsito",
+    "volunteerHUD": "HUD de Voluntarios",
+    "evacSimulator": "Simulador de Evacuación",
+    "monetization": "Monetización",
+    "edgeMesh": "Malla Perimetral",
+    "settings": "Configuración",
+    "vaultFaq": "Preguntas Frecuentes"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "TELEMETRÍA EN VIVO",
+    "degraded": "DEGRADADO (SIMULACIÓN LOCAL)"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "Rol:",
+    "nocDirector": "Director del NOC",
+    "fieldSupervisor": "Supervisor de Campo",
+    "volunteer": "Voluntario"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "Consola de Auditoría Operativa del NOC",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "Asistencia al Estadio",
+    "wifiDataRate": "Velocidad de Datos WiFi",
+    "fifaLive": "Telemetría de Partido FIFA en Vivo"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "Alternar tema visual operativo",
+    "systemMenu": "Menú de Interfaces del Sistema"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "Idioma",
+    "select": "Seleccionar idioma"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "Traducir",
+    "translating": "Traduciendo...",
+    "swap": "Intercambiar",
+    "run": "Ejecutar",
+    "reset": "Restablecer",
+    "save": "Guardar",
+    "close": "Cerrar",
+    "submit": "Enviar"
   }
 }

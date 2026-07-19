@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "智能体育场系统 • 2026年FIFA世界杯",
   "nav": {
-    "commandNexus": "Command Nexus",
-    "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
-    "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "commandNexus": "指挥中心",
+    "fanpass": "球迷AR通行证",
+    "polyglot": "多语言问讯处",
+    "multimodal": "多模态枢纽",
+    "ecoTransit": "绿色交通",
+    "volunteerHUD": "志愿者HUD",
+    "evacSimulator": "疏散模拟器",
+    "monetization": "商业变现",
+    "edgeMesh": "边缘网格",
+    "settings": "系统设置",
+    "vaultFaq": "常见问题"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "实时遥测",
+    "degraded": "降级（本地模拟）"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "角色：",
+    "nocDirector": "NOC主管",
+    "fieldSupervisor": "现场监督员",
+    "volunteer": "志愿者"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "NOC操作审计控制台",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "体育场出勤率",
+    "wifiDataRate": "WiFi数据吞吐量",
+    "fifaLive": "FIFA实时比赛数据遥测"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "切换运行界面主题",
+    "systemMenu": "系统接口菜单"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "语言",
+    "select": "选择语言"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "翻译",
+    "translating": "翻译中...",
+    "swap": "对调",
+    "run": "运行",
+    "reset": "重置",
+    "save": "保存",
+    "close": "关闭",
+    "submit": "提交"
   }
 }

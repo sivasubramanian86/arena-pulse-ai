@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "Smart Stadium OS • FIFA-Weltmeisterschaft 2026",
   "nav": {
-    "commandNexus": "Command Nexus",
+    "commandNexus": "Kommando-Nexus",
     "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
+    "polyglot": "Mehrsprachiger Kiosk",
+    "multimodal": "Multimodales Hub",
     "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "volunteerHUD": "Freiwilligen-HUD",
+    "evacSimulator": "Evakuierungssimulator",
+    "monetization": "Monetisierung",
+    "edgeMesh": "Edge-Mesh-Netzwerk",
+    "settings": "Einstellungen",
+    "vaultFaq": "FAQ-Tresor"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "LIVE-TELEMETRIE",
+    "degraded": "EINGESCHRÄNKT (LOKALE SIMULATION)"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "Rolle:",
+    "nocDirector": "NOC-Direktor",
+    "fieldSupervisor": "Feld-Supervisor",
+    "volunteer": "Freiwilliger"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "NOC-Betriebsüberwachungskonsole",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "Stadionauslastung",
+    "wifiDataRate": "WLAN-Datenrate",
+    "fifaLive": "FIFA Live-Spieltelemetrie"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "Visuelles Layout umschalten",
+    "systemMenu": "Systemschnittstellen-Menü"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "Sprache",
+    "select": "Sprache auswählen"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "Übersetzen",
+    "translating": "Übersetzung...",
+    "swap": "Tauschen",
+    "run": "Ausführen",
+    "reset": "Zurücksetzen",
+    "save": "Speichern",
+    "close": "Schließen",
+    "submit": "Senden"
   }
 }

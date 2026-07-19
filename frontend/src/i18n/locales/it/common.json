@@ -1,37 +1,37 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Sistema Operativo per Stadi Intelligenti • FIFA World Cup 2026",
+  "tagline": "Smart Stadium OS • Coppa del Mondo FIFA 2026",
   "nav": {
-    "commandNexus": "Centro di Comando",
+    "commandNexus": "Nesso di Comando",
     "fanpass": "FanPass AR",
-    "polyglot": "Chiosco Poliglotta",
+    "polyglot": "Chiosco Multilingue",
     "multimodal": "Hub Multimodale",
-    "ecoTransit": "EcoTrasporto",
-    "volunteerHUD": "HUD Volontario",
+    "ecoTransit": "EcoTransit",
+    "volunteerHUD": "HUD Volontari",
     "evacSimulator": "Simulatore di Evacuazione",
     "monetization": "Monetizzazione",
-    "edgeMesh": "Edge Mesh",
+    "edgeMesh": "Rete Edge Mesh",
     "settings": "Impostazioni",
-    "vaultFaq": "Domande Frequenti della Cassaforte"
+    "vaultFaq": "FAQ del Vault"
   },
   "status": {
-    "telemetryLive": "TELEMETRIA LIVE",
+    "telemetryLive": "TELEMETRIA IN DIRETTA",
     "degraded": "DEGRADATO (MOCK LOCALE)"
   },
   "role": {
     "label": "Ruolo:",
     "nocDirector": "Direttore NOC",
-    "fieldSupervisor": "Supervisore sul Campo",
+    "fieldSupervisor": "Supervisore di Campo",
     "volunteer": "Volontario"
   },
-  "auditConsole": "Console di Audit Operativo NOC",
+  "auditConsole": "Console di Audit Operativo del NOC",
   "telemetry": {
-    "stadiumAttendance": "Presenze nello Stadio",
+    "stadiumAttendance": "Presenze allo Stadio",
     "wifiDataRate": "Velocità Dati WiFi",
-    "fifaLive": "Telemetria Partita Live FIFA"
+    "fifaLive": "Telemetria Partita FIFA in Diretta"
   },
   "aria": {
-    "toggleTheme": "Attiva/Disattiva layout operativo Chiaro/Scuro",
+    "toggleTheme": "Alterna layout visivo operativo",
     "systemMenu": "Menu Interfacce di Sistema"
   },
   "language": {
@@ -40,7 +40,7 @@
   },
   "buttons": {
     "translate": "Traduci",
-    "translating": "Traduzione in corso...",
+    "translating": "Traduzione...",
     "swap": "Scambia",
     "run": "Esegui",
     "reset": "Reimposta",

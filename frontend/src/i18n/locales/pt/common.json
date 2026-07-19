@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "Stadium Inteligente OS • Copa do Mundo da FIFA 2026",
   "nav": {
-    "commandNexus": "Command Nexus",
-    "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
-    "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "commandNexus": "Nexo de Comando",
+    "fanpass": "Passe de Fan AR",
+    "polyglot": "Quiosque Multilíngue",
+    "multimodal": "Centro Multimodal",
+    "ecoTransit": "EcoTrânsito",
+    "volunteerHUD": "HUD de Voluntários",
+    "evacSimulator": "Simulador de Evacuação",
+    "monetization": "Monetização",
+    "edgeMesh": "Malha Perimetral",
+    "settings": "Configurações",
+    "vaultFaq": "Perguntas Frequentes"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "TELEMETRIA EM TEMPO REAL",
+    "degraded": "DEGRADADO (SIMULAÇÃO LOCAL)"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "Função:",
+    "nocDirector": "Diretor do NOC",
+    "fieldSupervisor": "Supervisor de Campo",
+    "volunteer": "Voluntário"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "Console de Auditoria Operacional do NOC",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "Público no Estádio",
+    "wifiDataRate": "Velocidade da Rede WiFi",
+    "fifaLive": "Telemetria do Jogo da FIFA em Tempo Real"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "Alternar layout visual operacional",
+    "systemMenu": "Menu de Interfaces do Sistema"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "Idioma",
+    "select": "Selecionar idioma"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "Traduzir",
+    "translating": "Traduzindo...",
+    "swap": "Inverter",
+    "run": "Executar",
+    "reset": "Redefinir",
+    "save": "Salvar",
+    "close": "Fechar",
+    "submit": "Enviar"
   }
 }

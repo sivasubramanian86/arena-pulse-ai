@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "スマートスタジアムOS • 2026 FIFAワールドカップ",
   "nav": {
-    "commandNexus": "Command Nexus",
-    "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
-    "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "commandNexus": "コマンドネクサス",
+    "fanpass": "ファンパスAR",
+    "polyglot": "多言語キオスク",
+    "multimodal": "マルチモーダルハブ",
+    "ecoTransit": "エコトランジット",
+    "volunteerHUD": "ボランティアHUD",
+    "evacSimulator": "避難シミュレーター",
+    "monetization": "マネタイズ",
+    "edgeMesh": "エッジメッシュ",
+    "settings": "システム設定",
+    "vaultFaq": "よくある質問"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "テレメトリー配信中",
+    "degraded": "機能制限（ローカル模擬）"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "役割：",
+    "nocDirector": "NOCディレクター",
+    "fieldSupervisor": "フィールド責任者",
+    "volunteer": "ボランティア"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "NOC運用監査コンソール",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "スタジアム来場者数",
+    "wifiDataRate": "WiFiデータ通信速度",
+    "fifaLive": "FIFAライブ試合テレメトリー"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "表示テーマの切り替え",
+    "systemMenu": "システムメニュー"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "言語",
+    "select": "言語を選択"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "翻訳",
+    "translating": "翻訳中...",
+    "swap": "入れ替え",
+    "run": "実行",
+    "reset": "リセット",
+    "save": "保存",
+    "close": "閉じる",
+    "submit": "送信"
   }
 }

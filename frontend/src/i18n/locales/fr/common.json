@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "Stadium Intelligent OS • Coupe du Monde de la FIFA 2026",
   "nav": {
-    "commandNexus": "Command Nexus",
-    "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
-    "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "commandNexus": "Nexus de Commandement",
+    "fanpass": "Pass Fan AR",
+    "polyglot": "Kiosque Multilingue",
+    "multimodal": "Carrefour Multimodal",
+    "ecoTransit": "ÉcoTransit",
+    "volunteerHUD": "HUD Volontaires",
+    "evacSimulator": "Simulateur d'Évacuation",
+    "monetization": "Monétisation",
+    "edgeMesh": "Réseau Périphérique",
+    "settings": "Paramètres",
+    "vaultFaq": "FAQ du Coffre"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "TÉLÉMÉTRIE EN DIRECT",
+    "degraded": "DEGRADÉ (SIMULATION LOCALE)"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "Rôle:",
+    "nocDirector": "Directeur du NOC",
+    "fieldSupervisor": "Superviseur de Terrain",
+    "volunteer": "Bénévole"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "Console d'Audit Opérationnel du NOC",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "Affluence du Stade",
+    "wifiDataRate": "Débit de Données WiFi",
+    "fifaLive": "Télémétrie de Match FIFA en Direct"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "Basculer le thème visuel opérationnel",
+    "systemMenu": "Menu des Interfaces du Système"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "Langue",
+    "select": "Choisir la langue"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "Traduire",
+    "translating": "Traduction...",
+    "swap": "Inverser",
+    "run": "Lancer",
+    "reset": "Réinitialiser",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "submit": "Soumettre"
   }
 }

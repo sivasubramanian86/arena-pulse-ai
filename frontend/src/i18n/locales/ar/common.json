@@ -1,51 +1,51 @@
 {
   "brand": "ARENAPULSE AI",
-  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "tagline": "نظام الملعب الذكي • كأس العالم لكرة القدم ٢٠٢٦",
   "nav": {
-    "commandNexus": "Command Nexus",
-    "fanpass": "FanPass AR",
-    "polyglot": "Polyglot Kiosk",
-    "multimodal": "MultiModal Hub",
-    "ecoTransit": "EcoTransit",
-    "volunteerHUD": "Volunteer HUD",
-    "evacSimulator": "Evac Simulator",
-    "monetization": "Monetization",
-    "edgeMesh": "Edge Mesh",
-    "settings": "Settings",
-    "vaultFaq": "Vault FAQ"
+    "commandNexus": "مركز القيادة",
+    "fanpass": "بطاقة المشجع AR",
+    "polyglot": "كشك اللغات",
+    "multimodal": "محور متعدد الوسائط",
+    "ecoTransit": "النقل البيئي",
+    "volunteerHUD": "شاشة المتطوعين",
+    "evacSimulator": "محاكي الإخلاء",
+    "monetization": "التحصيل المالي",
+    "edgeMesh": "شبكة الحافة",
+    "settings": "الإعدادات",
+    "vaultFaq": "الأسئلة الشائعة"
   },
   "status": {
-    "telemetryLive": "TELEMETRY LIVE",
-    "degraded": "DEGRADED (LOCAL MOCK)"
+    "telemetryLive": "القياس عن بعد مباشر",
+    "degraded": "وضع محدود (محاكاة محلية)"
   },
   "role": {
-    "label": "Role:",
-    "nocDirector": "NOC Director",
-    "fieldSupervisor": "Field Supervisor",
-    "volunteer": "Volunteer"
+    "label": "الدور:",
+    "nocDirector": "مدير مركز NOC",
+    "fieldSupervisor": "مشرف ميداني",
+    "volunteer": "متطوع"
   },
-  "auditConsole": "NOC Operational Audit Console",
+  "auditConsole": "لوحة تدقيق عمليات NOC",
   "telemetry": {
-    "stadiumAttendance": "Stadium Attendance",
-    "wifiDataRate": "WiFi Data Rate",
-    "fifaLive": "FIFA Live Match Telemetry"
+    "stadiumAttendance": "حضور الاستاد",
+    "wifiDataRate": "سرعة بيانات WiFi",
+    "fifaLive": "بيانات مباراة FIFA المباشرة"
   },
   "aria": {
-    "toggleTheme": "Toggle Light/Dark operational layout",
-    "systemMenu": "System Interfaces Menu"
+    "toggleTheme": "تغيير المظهر البصري للمنصة",
+    "systemMenu": "قائمة واجهات النظام"
   },
   "language": {
-    "switcherLabel": "Language",
-    "select": "Select language"
+    "switcherLabel": "اللغة",
+    "select": "اختر اللغة"
   },
   "buttons": {
-    "translate": "Translate",
-    "translating": "Translating...",
-    "swap": "Swap",
-    "run": "Run",
-    "reset": "Reset",
-    "save": "Save",
-    "close": "Close",
-    "submit": "Submit"
+    "translate": "ترجم",
+    "translating": "جاري الترجمة...",
+    "swap": "تبديل",
+    "run": "تشغيل",
+    "reset": "إعادة ضبط",
+    "save": "حفظ",
+    "close": "إغلاق",
+    "submit": "إرسال"
   }
 }
