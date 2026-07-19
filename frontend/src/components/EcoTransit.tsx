@@ -1,3 +1,8 @@
+/**
+ * @file EcoTransit.tsx
+ * @description Transit optimization component coordinating shuttle schedules and public transit outbound flow metrics.
+ */
+
 "use client";
 
 import React, { useMemo } from "react";

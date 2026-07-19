@@ -1,3 +1,9 @@
+/**
+ * @file CommandNexus.tsx
+ * @description Core interactive command dashboard containing the stadium topological network graph representation
+ * and Graph RAG cognitive search interface. Leverages client-side Dijkstra safe route mapping.
+ */
+
 "use client";
 
 import React, { useState, useMemo, useCallback } from "react";
@@ -11,6 +17,9 @@ const QuerySchema = z.object({
   queryText: z.string().min(2, "Query must be at least 2 characters long"),
 });
 
+/**
+ * Props definition for the CommandNexus component.
+ */
 interface CommandNexusProps {
   nodes: NexusNode[];
   edges: NexusEdge[];
@@ -23,6 +32,11 @@ interface CommandNexusProps {
   } | null;
 }
 
+/**
+ * CommandNexus Component.
+ * Renders the active live-telemetry stadium node structure and enables operations director
+ * to invoke hierarchical Graph RAG queries with real-time feedback.
+ */
 export const CommandNexus: React.FC<CommandNexusProps> = React.memo(({
   nodes,
   edges,

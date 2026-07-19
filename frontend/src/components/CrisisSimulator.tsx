@@ -1,3 +1,8 @@
+/**
+ * @file CrisisSimulator.tsx
+ * @description Operational simulation interface modeling stadium emergency scenarios and computing optimal egress routes.
+ */
+
 "use client";
 
 import React, { useState, useCallback } from "react";
@@ -12,11 +17,18 @@ const SimulationParamSchema = z.object({
   initialDensity: z.number().min(0.1, "Initial crowd density must be at least 10%").max(1.0, "Density cannot exceed 100%"),
 });
 
+/**
+ * Props definition for the CrisisSimulator component.
+ */
 interface CrisisSimulatorProps {
   onTriggerSimulation: (gateCount: number, initialDensity: number) => void;
   simulationResult: CrisisAlertPayload | null;
 }
 
+/**
+ * CrisisSimulator Component.
+ * Enables live simulation parameters injection and displays routing vectors for crowd safety orchestration.
+ */
 export const CrisisSimulator: React.FC<CrisisSimulatorProps> = React.memo(({
   onTriggerSimulation,
   simulationResult,

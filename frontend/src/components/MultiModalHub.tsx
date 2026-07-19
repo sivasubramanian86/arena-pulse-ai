@@ -1,8 +1,17 @@
+/**
+ * @file MultiModalHub.tsx
+ * @description Operations interface for ingestion and analysis of security feeds (video/audio/image) using Gemini's multimodal capabilities.
+ */
+
 "use client";
 
 import React, { useState, useCallback, useRef } from "react";
 import { Upload, Image as ImageIcon, Volume2, Sparkles, CheckCircle, AlertCircle } from "lucide-react";
 
+/**
+ * MultiModalHub Component.
+ * Supports file drag-and-drop ingestion, audio feedback generation, and visual anomaly evaluation.
+ */
 export const MultiModalHub: React.FC = React.memo(() => {
   const [dragActive, setDragActive] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);

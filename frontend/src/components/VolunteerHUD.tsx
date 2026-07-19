@@ -1,3 +1,8 @@
+/**
+ * @file VolunteerHUD.tsx
+ * @description Operational dashboard for volunteer management and task dispatch to Wrist HUD units.
+ */
+
 "use client";
 
 import React, { useState, useCallback } from "react";

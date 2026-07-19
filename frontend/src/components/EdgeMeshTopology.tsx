@@ -1,3 +1,8 @@
+/**
+ * @file EdgeMeshTopology.tsx
+ * @description Network Operations Center visualization representing the live health, latency, and status grid of edge IoT devices.
+ */
+
 "use client";
 
 import React, { useMemo } from "react";
