@@ -36,20 +36,6 @@ npm run build
 Set-Location ..
 
 # ─────────────────────────────────────────────────────────────
-Write-Host "=== Ensuring Firebase Hosting Site '$HostingSite' Exists ===" -ForegroundColor Cyan
-$ErrorActionPreference = "Continue"
-npx -y firebase-tools@latest hosting:sites:describe $HostingSite --project=$ProjectId >$null 2>&1
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "Creating Firebase Hosting site '$HostingSite'..." -ForegroundColor Green
-    npx -y firebase-tools@latest hosting:sites:create $HostingSite --project=$ProjectId 2>$null
-    if ($LASTEXITCODE -ne 0) {
-        Write-Host "Site already exists (409) - continuing." -ForegroundColor Yellow
-    }
-} else {
-    Write-Host "Firebase Hosting site '$HostingSite' already exists." -ForegroundColor Yellow
-}
-$ErrorActionPreference = "Stop"
-
 Write-Host "=== Deploying to Firebase Hosting: $HostingSite ===" -ForegroundColor Cyan
 npx -y firebase-tools@latest deploy --only "hosting:$HostingSite" --project=$ProjectId
 
