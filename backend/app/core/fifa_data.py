@@ -1,6 +1,8 @@
 from typing import Any, Dict, List
 
 # Static mock database for FIFA World Cup 2026 Matches & Venues
+FIFA_VENUES: Dict[str, Dict[str, Any]]
+FIFA_MATCHES: List[Dict[str, Any]]
 # In a real-world scenario, this would query a third-party Sports API.
 FIFA_VENUES = {
     "metlife": {

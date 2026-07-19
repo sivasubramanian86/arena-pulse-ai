@@ -109,7 +109,7 @@ class StadiumTopology:
         Uses Dijkstra's shortest path modified to penalize congested/critical nodes.
         """
         destinations = [nid for nid, node in self.nodes.items() if node.type == "GATE" and node.status != "critical"]
-        routes = []
+        routes: List[Dict[str, Any]] = []
 
         for target in destinations:
             path = self._dijkstra(hazard_node_id, target)
@@ -150,7 +150,7 @@ class StadiumTopology:
 
         distances = {node_id: float('inf') for node_id in self.nodes}
         distances[start] = 0.0
-        previous = {node_id: None for node_id in self.nodes}
+        previous: Dict[str, Optional[str]] = {node_id: None for node_id in self.nodes}
         unvisited = set(self.nodes.keys())
 
         while unvisited:  # pragma: no cover
@@ -180,8 +180,8 @@ class StadiumTopology:
                     distances[neighbor] = temp_dist
                     previous[neighbor] = current
 
-        path = []
-        curr = end
+        path: List[str] = []
+        curr: Optional[str] = end
         while curr is not None:
             path.insert(0, curr)
             curr = previous[curr]

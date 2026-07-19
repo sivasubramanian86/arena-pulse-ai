@@ -47,7 +47,7 @@ class ArenaAgent:
         self.model = model
         self.api_key = os.getenv("GEMINI_API_KEY")
         self.client = None
-        self.tools: List[Callable] = []
+        self.tools: List[Callable[..., Any]] = []
         self.memory = ADKMemory()
 
         use_vertex_env = os.getenv("USE_VERTEX_AI", "false").strip().lower() == "true"
@@ -60,7 +60,7 @@ class ArenaAgent:
         elif self.api_key:
             self.client = genai.Client(api_key=self.api_key)
 
-    def inject_tools(self, tools_list: List[Callable]) -> None:
+    def inject_tools(self, tools_list: List[Callable[..., Any]]) -> None:
         """Dynamically injects a specific list of tools into the agent's toolset."""
         self.tools = tools_list
 

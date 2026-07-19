@@ -47,17 +47,17 @@ app.add_middleware(
 orchestrator = ArenaPulseOrchestrator()
 
 @app.get("/")
-async def root():
+async def root() -> dict[str, str]:
     """Liveness check endpoint."""
     return {"status": "online", "system": "ArenaPulseAI"}
 
 @app.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
+async def websocket_endpoint(websocket: WebSocket) -> None:
     """Main WebSocket server for real-time telemetry streaming and agent reasoning execution."""
     await websocket.accept()
 
     # Spawn background task to stream telemetry updates
-    async def telemetry_streamer():
+    async def telemetry_streamer() -> None:
         try:
             while True:
                 # Randomize density values slightly using the topology's simulated MCP endpoint

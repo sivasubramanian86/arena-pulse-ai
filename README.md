@@ -8,7 +8,8 @@
 [![Frontend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-frontend.yml?branch=main&label=Frontend%20CI)](../../actions)
 [![Backend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-backend.yml?branch=main&label=Backend%20CI)](../../actions)
 [![Security Scan](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/security-scan.yml?branch=main&label=Security%20Scan)](../../actions)
-[![codecov](https://img.shields.io/badge/coverage-100%25-brightgreen)](frontend/coverage)
+[![Backend Coverage](https://img.shields.io/badge/Backend%20Coverage-100%25-brightgreen)](./backend)
+[![Frontend Coverage](https://img.shields.io/badge/Frontend%20Coverage-100%25-brightgreen)](./frontend)
 
 ---
 
@@ -39,10 +40,15 @@ ArenaPulseAI is engineered to achieve 100% compliance with the hackathon's core 
 * **ADK Consensus Protocol:** Implements a multi-agent negotiation loop to resolve conflicting operations (e.g. Crowd safety gate closures vs. Transit egress flow) using utility functions.
 
 ### 3. Testing Rigor
-* **Backend:** Exactly **100.00% statement and branch coverage** via `pytest --cov=app` across the entire FastAPI core modules, verified in CI/CD.
-* **Frontend:** Exactly **100.00% statement coverage** via Jest + React Testing Library, enforcing rigorous UI component and state transition checks.
+* **Backend:** Exactly **100.00% statement and branch coverage** via `pytest --cov=app --cov-fail-under=100` across the entire FastAPI core modules, enforced in CI.
+* **Frontend:** Exactly **100.00% statement coverage** via Jest + React Testing Library, enforced in CI through `npm run test:unit -- --ci`.
 
-### 4. Security & Compliance
+### 4. Quality Gates
+* **Backend CI:** Runs Python linting with Ruff, static type checking with mypy, and 100% coverage across the full backend test suite.
+* **Frontend CI:** Runs ESLint, production build verification, and unit tests.
+* **Security:** Dedicated GitHub workflow performs secret scanning with Gitleaks, Node dependency auditing, and Python dependency auditing.
+
+### 5. Security & Compliance
 * **Zero Secret Leakage:** Checked via CI/CD pre-commit hooks and a dedicated Gitleaks security workflow. No API keys or credentials are in source control; Secret Manager is used for all runtime environment secrets.
 * **Firestore Security Rules:** Implements strict rule assertions to prevent unauthorized read/write access to volunteers' rosters.
 * **CORS Compliance:** Restricts origin access using FastAPI CORS Middleware.
@@ -50,6 +56,18 @@ ArenaPulseAI is engineered to achieve 100% compliance with the hackathon's core 
 ### 5. Accessibility & Design Aesthetics
 * **Contrast & Color System:** Built using dynamic OKLCH color spaces. All text colors target a **WCAG AAA compliance ratio of ≥ 7:1** on backgrounds in both light and dark modes.
 * **Semantic HTML:** Correct hierarchy of headings (`h1` through `h6`) and `aria-label` descriptors for interactive elements to ensure screen-reader compatibility.
+
+---
+
+## Core Requirement Traceability
+
+| Challenge Requirement | Implementation in ArenaPulseAI |
+|---|---|
+| Multilingual fan experience | 12-language `next-intl` UI with RTL support and dynamic translation contexts |
+| Stadium safety and crowd management | FastAPI orchestrator, Graph RAG safe-route planning, edge swarm anomaly simulation, crisis alerting |
+| Real-time AI-assisted operations | WebSocket telemetry + agent reasoning stream + task-based query handling |
+| Secure, audit-ready delivery | GitHub security workflow, Gitleaks, dependency audits, CORS whitelist, Secret Manager documentation |
+| Full-stack quality | Backend Ruff/mypy coverage gates + frontend ESLint/build/test gates in CI |
 
 ---
 
@@ -149,9 +167,10 @@ cp .env.example .env
 
 | Variable | Description | Required |
 |---|---|---|
-| `GOOGLE_CLOUD_PROJECT` | GCP project ID | Yes |
-| `GOOGLE_CLOUD_LOCATION` | GCP region (e.g. `us-central1`) | Yes |
-| `USE_VERTEX_AI` | Set to `true` to use Vertex AI | Yes |
+| `GOOGLE_CLOUD_PROJECT` | GCP project ID used when `USE_VERTEX_AI=true` | Required for Vertex AI workflows |
+| `GOOGLE_CLOUD_LOCATION` | GCP region (e.g. `us-central1`) | Required for Vertex AI workflows |
+| `USE_VERTEX_AI` | Set to `true` to use Vertex AI; otherwise uses `GEMINI_API_KEY` fallback | Optional |
+| `GEMINI_API_KEY` | Gemini API key used when not using Vertex AI | Required if `USE_VERTEX_AI` is not `true` |
 | `NEXT_PUBLIC_BACKEND_URL` | Cloud Run backend URL | Production |
 
 > **Never commit `.env` files.** All production secrets are stored in Google Secret Manager.
@@ -217,6 +236,15 @@ ArenaPulseAI/
 ├── firestore.rules           # Firestore security rules
 └── ARCHITECTURE.md           # Detailed system design
 ```
+
+---
+
+## Assumptions and Scope
+
+* Solution uses simulated FIFA 2026 event data and stadium telemetry; it is designed as an operational proof of concept, not a live control system.
+* Production secrets are expected to be provisioned via Google Secret Manager; `.env` files are for local development only.
+* The active feature set focuses on stadium operations, fan wayfinding, crisis simulation, and safety intelligence within a prompt-driven stadium control domain.
+* Out of scope: real-world CCTV ingest, third-party ticketing integrations, fully managed stadium facility services.
 
 ---
 

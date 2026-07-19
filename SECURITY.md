@@ -41,3 +41,4 @@ Report security issues privately via:
 - **CSP / Headers:** Firebase Hosting applies `X-Frame-Options: SAMEORIGIN`, `X-Content-Type-Options: nosniff`, and `Referrer-Policy: strict-origin-when-cross-origin`.
 - **Firestore:** Security rules require authentication for all writes; public reads are scoped to anonymous telemetry only.
 - **Dependency scanning:** `npm audit` and `pip-audit` run in CI on every PR.
+- **Secret scanning:** Gitleaks runs in CI to detect accidental credential exposure.

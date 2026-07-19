@@ -6,12 +6,13 @@ hardware (cameras, turnstiles). Edge Agents perform immediate local triage
 and only stream anomalies to the central Gemini orchestrator when a
 configurable threshold is breached.
 """
+
 from __future__ import annotations
 
 import asyncio
 import random
 from dataclasses import dataclass
-from typing import AsyncGenerator, Dict, List, Optional
+from typing import Any, AsyncGenerator, Dict, List, Optional
 
 
 @dataclass
@@ -22,7 +23,7 @@ class EdgeTelemetry:
     device_type: str      # CAMERA | TURNSTILE | HVAC | AUDIO
     density: float        # local crowd density reading
     anomaly_score: float  # 0.0 = nominal, 1.0 = critical
-    raw_payload: Dict     # simulated multimodal payload
+    raw_payload: Dict[str, Any]     # simulated multimodal payload
 
 
 @dataclass
@@ -33,7 +34,7 @@ class SwarmAnomaly:
     anomaly_type: str     # CROWD_SURGE | BLOCKED_EXIT | EQUIPMENT_FAILURE
     severity: float       # 0.0 → 1.0
     context: str          # human-readable triage summary
-    multimodal_context: Dict  # structured JSON for Gemini multimodal context
+    multimodal_context: Dict[str, Any]  # structured JSON for Gemini multimodal context
 
 
 class EdgeAgent:
@@ -62,7 +63,7 @@ class EdgeAgent:
         base_density = random.uniform(0.0, 1.0)
         anomaly_score = random.uniform(0.0, 1.0)
 
-        payload: Dict = {}
+        payload: Dict[str, Any] = {}
         if self.device_type == "CAMERA":
             payload = {
                 "frame_density": round(base_density, 3),

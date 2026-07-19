@@ -36,10 +36,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest pytest-asyncio
+          pip install ruff mypy
 
-      - name: Run backend unit tests
-        run: python -m pytest tests/unit -v
+      - name: Run backend lint and type checks
+        run: |
+          python -m ruff check app
+          python -m mypy --explicit-package-bases app
+
+      - name: Run backend tests with coverage
+        run: python -m pytest --cov=app --cov-fail-under=100 -v
         env:
           USE_VERTEX_AI: 'false'
           GOOGLE_CLOUD_PROJECT: ''
