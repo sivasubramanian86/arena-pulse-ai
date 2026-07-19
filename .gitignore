@@ -72,7 +72,6 @@ Thumbs.db
 docker-compose.override.yml
 
 # ── Pre-commit ───────────────────────────────────────────────
-.pre-commit-config.yaml
 
 # ── Gemini / agent scratch ───────────────────────────────────
 .gemini/
