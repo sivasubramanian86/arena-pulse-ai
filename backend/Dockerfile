@@ -18,8 +18,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application files
 COPY . .
 
-# Expose backend port
-EXPOSE 8000
-
-# Run uvicorn server
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run uvicorn server, binding to the dynamic PORT environment variable provided by Cloud Run
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
