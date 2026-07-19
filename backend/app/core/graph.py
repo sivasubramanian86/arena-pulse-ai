@@ -1,3 +1,5 @@
+"""Topological graph representation and search algorithms for stadium evacuation planning."""
+
 import random
 from datetime import datetime
 from typing import Any, Dict, List, Optional
@@ -7,6 +9,7 @@ from pydantic import BaseModel
 
 class StadiumNode(BaseModel):
     """Represents a topological node in the stadium knowledge graph."""
+
     id: str
     name: str
     type: str  # GATE, ZONE, CONCOURSE, TRANSIT_STATION, WIFI_NODE
@@ -15,6 +18,7 @@ class StadiumNode(BaseModel):
 
 class StadiumEdge(BaseModel):
     """Represents a directional pathway between stadium nodes."""
+
     source: str
     target: str
     weight: float  # base traversal time/distance
@@ -25,6 +29,7 @@ class StadiumTopology:
     """Manages the stadium's spatial knowledge graph and path-finding traversals."""
 
     def __init__(self) -> None:
+        """Initialize the StadiumTopology and populate with initial stadium nodes and edges."""
         self.nodes: Dict[str, StadiumNode] = {}
         self.edges: List[StadiumEdge] = []
         self.mutation_log: List[Dict[str, Any]] = []
@@ -62,7 +67,7 @@ class StadiumTopology:
         ]
 
     def get_live_telemetry_mcp(self, node_id: str) -> Dict[str, Any]:
-        """Simulates an MCP tool call to fetch live telemetry for a specific node."""
+        """Simulate an MCP tool call to fetch live telemetry for a specific node."""
         node = self.nodes.get(node_id)
         if not node:
             return {"error": f"Node {node_id} not found"}
@@ -89,7 +94,7 @@ class StadiumTopology:
         }
 
     def get_edge_status_mcp(self, source_id: str, target_id: str) -> Dict[str, Any]:
-        """Simulates an MCP tool call to fetch live traffic utilization of an edge pathway."""
+        """Simulate an MCP tool call to fetch live traffic utilization of an edge pathway."""
         for edge in self.edges:
             if edge.source == source_id and edge.target == target_id:
                 # Add minor dynamic congestion updates
@@ -104,7 +109,7 @@ class StadiumTopology:
         return {"error": f"Edge pathway from {source_id} to {target_id} not found"}
 
     def find_safe_evacuation_routes(self, hazard_node_id: str) -> List[Dict[str, Any]]:
-        """Calculates alternative paths from concourses/tribunes to safe gates, avoiding critical nodes.
+        """Calculate alternative paths from concourses/tribunes to safe gates, avoiding critical nodes.
 
         Uses Dijkstra's shortest path modified to penalize congested/critical nodes.
         """

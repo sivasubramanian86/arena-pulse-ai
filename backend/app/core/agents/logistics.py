@@ -1,3 +1,5 @@
+"""Logistics management and volunteer dispatcher agent."""
+
 from app.core.agents.base import ArenaAgent
 
 
@@ -5,6 +7,7 @@ class LogisticsWorker(ArenaAgent):
     """Worker specializing in volunteer dispatches, equipment checks, and physical security assets."""
 
     def __init__(self) -> None:
+        """Initialize the LogisticsWorker with dispatcher instructions and models."""
         super().__init__(
             name="LogisticsWorker",
             instruction=(

@@ -1,5 +1,4 @@
-"""
-MCP Standardized Tool Binding for ArenaPulseAI.
+"""MCP Standardized Tool Binding for ArenaPulseAI.
 
 All external integrations are strictly defined as MCP Server entries.
 ADK agents discover and bind tools at runtime based on crisis context,
@@ -15,6 +14,7 @@ from typing import Any, Awaitable, Callable, Dict, List
 @dataclass
 class MCPTool:
     """Represents a single tool exposed by an MCP Server."""
+
     name: str
     description: str
     input_schema: Dict[str, Any]
@@ -26,17 +26,18 @@ class MCPTool:
 @dataclass
 class MCPServer:
     """Represents an external integration registered as an MCP Server."""
+
     name: str
     description: str
     tools: List[MCPTool] = field(default_factory=list)
 
     def register_tool(self, tool: MCPTool) -> None:
+        """Register a tool with this server."""
         self.tools.append(tool)
 
 
 class MCPServerRegistry:
-    """
-    Dynamic MCP tool discovery and binding registry.
+    """Dynamic MCP tool discovery and binding registry.
 
     Agents call `discover(intent_context)` at runtime to get only the
     tools relevant to their current task context. This implements the
@@ -45,12 +46,12 @@ class MCPServerRegistry:
     """
 
     def __init__(self) -> None:
+        """Initialize the MCPServerRegistry and bootstrap servers."""
         self._servers: Dict[str, MCPServer] = {}
         self._initialize_servers()
 
     def _initialize_servers(self) -> None:
         """Bootstrap all MCP server definitions and their tool handlers."""
-
         # ── Metro Transit MCP Server ─────────────────────────────────────────
         metro_server = MCPServer(
             name="MetroAPI",
@@ -132,8 +133,8 @@ class MCPServerRegistry:
         self._servers[server.name] = server
 
     def discover(self, intent_context: str) -> List[MCPTool]:
-        """
-        Discover and return only the tools relevant to the given intent context.
+        """Discover and return only the tools relevant to the given intent context.
+
         Performs keyword matching against tool intent_tags.
         This ensures agents load minimal context into their window.
         """
@@ -148,7 +149,7 @@ class MCPServerRegistry:
         return matched
 
     def list_all_tools(self) -> List[MCPTool]:
-        """Returns all registered tools across all MCP servers."""
+        """List all registered tools across all MCP servers."""
         return [t for s in self._servers.values() for t in s.tools]
 
     # ── Simulated Tool Handlers ───────────────────────────────────────────────

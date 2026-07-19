@@ -1,3 +1,5 @@
+"""Semantic caching layer to reduce LLM latency and API costs."""
+
 import difflib
 from typing import Any, Dict, Optional
 
@@ -6,6 +8,7 @@ class SemanticCache:
     """A semantic caching layer for frequent operations queries to optimize API latency and cost."""
 
     def __init__(self, threshold: float = 0.85) -> None:
+        """Initialize the SemanticCache with a match threshold."""
         self.cache: Dict[str, Dict[str, Any]] = {}
         self.threshold = threshold
         self._prepopulate_cache()
@@ -35,7 +38,7 @@ class SemanticCache:
         return query.strip().lower().rstrip("?.!")
 
     def get(self, query: str) -> Optional[Dict[str, Any]]:
-        """Checks the cache for a semantically similar query based on threshold similarity."""
+        """Check the cache for a semantically similar query based on threshold similarity."""
         cleaned_query = self._clean_query(query)
         if not cleaned_query:
             return None
@@ -63,5 +66,5 @@ class SemanticCache:
         return None
 
     def set(self, query: str, response: Dict[str, Any]) -> None:
-        """Stores a query and its corresponding response in the cache."""
+        """Store a query and its corresponding response in the cache."""
         self.cache[query] = response

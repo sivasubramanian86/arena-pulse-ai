@@ -1,3 +1,5 @@
+"""Main orchestrator coordinating semantic caching, multi-agent parallel execution, and routing."""
+
 import asyncio
 from datetime import datetime
 from typing import Any, AsyncGenerator, Dict, List
@@ -22,6 +24,7 @@ class ArenaPulseOrchestrator:
     """Orchestrates queries using a semantic cache, query classifier, and parallel sub-agents."""
 
     def __init__(self) -> None:
+        """Initialize the ArenaPulseOrchestrator, load agents, and prepopulate tool bindings."""
         self.cache = SemanticCache()
         self.supervisor = OpsSupervisor()
         self.crowd_worker = CrowdWorker()
@@ -49,7 +52,7 @@ class ArenaPulseOrchestrator:
         self.logistics_worker.inject_tools([get_node_density])
 
     async def execute_task_stream(self, query: str) -> AsyncGenerator[Dict[str, Any], None]:
-        """Runs the orchestrator reasoning chain, streaming steps to the client.
+        """Run the orchestrator reasoning chain, streaming steps to the client.
 
         Uses semantic caching, adaptive model routing, and parallel execution.
         """

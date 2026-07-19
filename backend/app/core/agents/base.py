@@ -1,3 +1,8 @@
+"""Base ArenaAgent classes and primitives for the multi-agent system.
+
+Includes ADK task, memory representations, and base agent Vertex AI integration.
+"""
+
 import logging
 import os
 from dataclasses import dataclass
@@ -45,6 +50,7 @@ class ArenaAgent:
     """Base class for ArenaPulseAI agents with model selection, dynamic tool injection, and ADK primitives."""
 
     def __init__(self, name: str, instruction: str, model: str = "gemini-2.5-flash") -> None:
+        """Initialize the ArenaAgent with instructions, names, and LLM configuration."""
         self.name = name
         self.instruction = instruction
         self.model = model
@@ -68,7 +74,7 @@ class ArenaAgent:
         self.tools = tools_list
 
     async def generate_response(self, prompt: str, task: Optional[ADKTask] = None) -> str:
-        """Queries Gemini using the official Client or falls back to a mock if credentials are missing."""
+        """Query Gemini using the official Client or fall back to a mock if credentials are missing."""
         context_prompt = prompt
         if task:
             context_prompt = (

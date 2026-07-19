@@ -1,3 +1,5 @@
+"""Polyglot translation worker agent."""
+
 from app.core.agents.base import ArenaAgent
 
 
@@ -5,6 +7,7 @@ class PolyglotWorker(ArenaAgent):
     """Worker specializing in fast, low-cost localized translations."""
 
     def __init__(self) -> None:
+        """Initialize the PolyglotWorker with translation instructions and models."""
         super().__init__(
             name="PolyglotWorker",
             instruction=(

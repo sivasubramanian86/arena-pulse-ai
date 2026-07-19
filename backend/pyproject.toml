@@ -11,6 +11,7 @@ select = [
     "S",   # flake8-bandit (Security scans)
     "I",   # isort (import sorting)
     "C90", # mccabe complexity
+    "D",   # pydocstyle (docstrings enforcement)
 ]
 ignore = [
     "S311", # Standard pseudo-random generators (used for simulation)
@@ -18,7 +19,9 @@ ignore = [
     "S104", # Binding to all interfaces (required for Cloud Run / Docker)
     "C901", # McCabe complexity
     "E501", # Line too long
-    "E402"  # Module level import not at top of file
+    "E402", # Module level import not at top of file
+    "D203", # Conflict: incorrect-blank-line-before-class (we use D211)
+    "D213"  # Conflict: multi-line-summary-second-line (we use D212)
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -31,6 +34,7 @@ max-complexity = 10
 python_version = "3.12"
 strict = true
 ignore_missing_imports = true
+explicit_package_bases = true
 exclude = [
     ".venv",
     "tests",

@@ -1,5 +1,4 @@
-"""
-Edge Swarm Intelligence for ArenaPulseAI.
+"""Edge Swarm Intelligence for ArenaPulseAI.
 
 Simulates quantized Small Language Models (SLMs) running locally on stadium
 hardware (cameras, turnstiles). Edge Agents perform immediate local triage
@@ -18,6 +17,7 @@ from typing import Any, AsyncGenerator, Dict, List, Optional
 @dataclass
 class EdgeTelemetry:
     """Real-time sensor reading from a single edge device."""
+
     device_id: str
     node_id: str          # maps to StadiumNode id
     device_type: str      # CAMERA | TURNSTILE | HVAC | AUDIO
@@ -29,6 +29,7 @@ class EdgeTelemetry:
 @dataclass
 class SwarmAnomaly:
     """Anomaly report streamed from edge swarm to central orchestrator."""
+
     device_id: str
     node_id: str
     anomaly_type: str     # CROWD_SURGE | BLOCKED_EXIT | EQUIPMENT_FAILURE
@@ -38,8 +39,7 @@ class SwarmAnomaly:
 
 
 class EdgeAgent:
-    """
-    Simulates a quantized SLM running on stadium edge hardware.
+    """Simulates a quantized SLM running on stadium edge hardware.
 
     Performs immediate local triage of IoT telemetry. Only escalates
     to the central orchestrator when anomaly_score breaches the threshold,
@@ -53,6 +53,7 @@ class EdgeAgent:
         device_type: str,
         anomaly_threshold: float = 0.75,
     ) -> None:
+        """Initialize the EdgeAgent with ID, target node, and anomaly thresholds."""
         self.device_id = device_id
         self.node_id = node_id
         self.device_type = device_type
@@ -86,9 +87,10 @@ class EdgeAgent:
         )
 
     def triage(self, telemetry: EdgeTelemetry) -> Optional[SwarmAnomaly]:
-        """
-        Local SLM triage: returns a SwarmAnomaly if threshold is breached,
-        else returns None (anomaly suppressed at edge — no uplink required).
+        """Local SLM triage.
+
+        Returns a SwarmAnomaly if threshold is breached, else returns None
+        (anomaly suppressed at edge — no uplink required).
         """
         if telemetry.anomaly_score < self.anomaly_threshold:
             return None
@@ -121,8 +123,7 @@ class EdgeAgent:
 
 
 class EdgeSwarmCoordinator:
-    """
-    Manages a swarm of EdgeAgents across all stadium hardware nodes.
+    """Manages a swarm of EdgeAgents across all stadium hardware nodes.
 
     Polls all edge agents concurrently using asyncio, collects anomalies
     that breach threshold, and yields them for central Gemini orchestration.
@@ -130,6 +131,7 @@ class EdgeSwarmCoordinator:
     """
 
     def __init__(self, anomaly_threshold: float = 0.75) -> None:
+        """Initialize the coordinator with an anomaly threshold and bootstrap the agents."""
         self.agents: List[EdgeAgent] = []
         self._initialize_swarm(anomaly_threshold)
 
@@ -151,8 +153,8 @@ class EdgeSwarmCoordinator:
         ]
 
     async def poll_swarm(self) -> AsyncGenerator[SwarmAnomaly, None]:
-        """
-        Concurrently polls all edge agents and yields anomalies that breach threshold.
+        """Concurrently poll all edge agents and yield anomalies that breach threshold.
+
         Nominal readings are suppressed at the edge (no central uplink).
         """
         loop = asyncio.get_event_loop()
@@ -173,4 +175,5 @@ class EdgeSwarmCoordinator:
                 yield anomaly
 
     def get_agent_count(self) -> int:
+        """Return the total count of edge agents registered in the swarm."""
         return len(self.agents)

@@ -1,5 +1,4 @@
-"""
-Consensus Protocol for ArenaPulseAI Agent-to-Agent Negotiation.
+"""Consensus Protocol for ArenaPulseAI Agent-to-Agent Negotiation.
 
 Implements multi-turn autonomous negotiation between conflicting worker agents
 to maximize a shared utility function before escalating to OpsSupervisor.
@@ -14,6 +13,7 @@ from typing import Callable, List, Optional
 @dataclass
 class AgentRecommendation:
     """Structured recommendation from a single worker agent."""
+
     agent_name: str
     action: str          # e.g. "CLOSE_GATE_B", "MAINTAIN_FLOW"
     rationale: str
@@ -25,6 +25,7 @@ class AgentRecommendation:
 @dataclass
 class ConsensusResult:
     """Final negotiated result after multi-turn agent consensus."""
+
     agreed_action: str
     utility_score: float          # composite score after negotiation
     negotiation_rounds: int
@@ -34,8 +35,7 @@ class ConsensusResult:
 
 
 class ConsensusProtocol:
-    """
-    Implements an ADK-style Agent-to-Agent Consensus Loop.
+    """Implements an ADK-style Agent-to-Agent Consensus Loop.
 
     When CrowdWorker and TransitWorker have conflicting objectives, this protocol
     runs up to `max_rounds` negotiation turns to maximize the shared utility:
@@ -53,6 +53,7 @@ class ConsensusProtocol:
         max_rounds: int = 3,
         convergence_threshold: float = 0.05,
     ) -> None:
+        """Initialize the ConsensusProtocol with safety/flow weights and threshold limits."""
         self.safety_weight = safety_weight
         self.flow_weight = flow_weight
         self.max_rounds = max_rounds
@@ -66,7 +67,7 @@ class ConsensusProtocol:
         rec_a: AgentRecommendation,
         rec_b: AgentRecommendation,
     ) -> bool:
-        """Returns True if agents recommend contradictory actions."""
+        """Return True if agents recommend contradictory actions."""
         safety_delta = abs(rec_a.safety_score - rec_b.safety_score)
         flow_delta = abs(rec_a.flow_score - rec_b.flow_score)
         return safety_delta > 0.2 or flow_delta > 0.2
@@ -77,8 +78,7 @@ class ConsensusProtocol:
         rec_b: AgentRecommendation,
         negotiation_hook: Optional[Callable[[int, AgentRecommendation, AgentRecommendation], None]] = None,
     ) -> ConsensusResult:
-        """
-        Run multi-turn negotiation between two agent recommendations.
+        """Run multi-turn negotiation between two agent recommendations.
 
         Each round, both agents slightly converge towards the composite utility
         optimum via gradient-style score adjustment. A negotiation_hook callback

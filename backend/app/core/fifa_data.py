@@ -1,3 +1,5 @@
+"""Mock data and search engine for FIFA World Cup 2026 matches and venues."""
+
 from typing import Any, Dict, List
 
 # Static mock database for FIFA World Cup 2026 Matches & Venues
@@ -158,15 +160,17 @@ class FIFAMatchEngine:
 
     @staticmethod
     def get_all_matches() -> List[Dict[str, Any]]:
+        """Return all simulated FIFA match fixtures."""
         return FIFA_MATCHES
 
     @staticmethod
     def get_all_venues() -> Dict[str, Dict[str, Any]]:
+        """Return all registered FIFA stadium venues."""
         return FIFA_VENUES
 
     @staticmethod
     def search_matches(query: str) -> List[Dict[str, Any]]:
-        """Filters matches based on keyword search matching teams, venues, or stages."""
+        """Filter matches based on keyword search matching teams, venues, or stages."""
         cleaned_query = query.lower()
         results = []
         for m in FIFA_MATCHES:
@@ -180,7 +184,7 @@ class FIFAMatchEngine:
 
     @staticmethod
     def query_fifa_context(query: str) -> str:
-        """Constructs an XML context block summarizing relevant match and venue data."""
+        """Construct an XML context block summarizing relevant match and venue data."""
         matched_matches = FIFAMatchEngine.search_matches(query)
         # If no specific matches found, dump all scheduled upcoming games
         if not matched_matches:

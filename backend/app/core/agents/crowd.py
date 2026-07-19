@@ -1,3 +1,5 @@
+"""Crowd safety and congestion worker agent."""
+
 from app.core.agents.base import ArenaAgent
 
 
@@ -5,6 +7,7 @@ class CrowdWorker(ArenaAgent):
     """Worker specializing in crowd density, gate flows, and evacuation mapping."""
 
     def __init__(self) -> None:
+        """Initialize the CrowdWorker with specialized instructions and routing settings."""
         super().__init__(
             name="CrowdWorker",
             instruction=(

@@ -177,17 +177,76 @@ cp .env.example .env
 
 ---
 
-## Running Tests
+## Running Tests & Verifying Coverage
 
+### 1. How to Verify Test Coverage
+
+Both frontend and backend are configured with strict coverage requirements (100% statement and branch coverage).
+
+#### Backend Coverage Verification
+Run the backend tests with coverage from the `backend/` directory:
 ```bash
-# Frontend — Jest with 100% coverage gate
-cd frontend
-npm test
-
-# Backend — pytest with coverage
 cd backend
-python -m pytest --cov=app -q
+python -m pytest --cov=app --cov-report=term-missing --cov-fail-under=100
 ```
+This runs all 68 tests, prints lines that are uncovered (if any), and fails if total coverage drops below 100%.
+
+#### Frontend Coverage Verification
+Run the frontend Jest tests with coverage from the `frontend/` directory:
+```bash
+cd frontend
+npm run test
+```
+This runs all 15 test suites (64 tests) and prints a comprehensive coverage table confirming 100% statement/branch coverage across all component files.
+
+---
+
+## Local Security Scanning
+
+To audit package dependencies and scan for vulnerabilities locally before committing code:
+
+### 1. Python Dependencies Scan
+Run `pip-audit` to scan Python requirements against the PyPI vulnerability database:
+```bash
+cd backend
+python -m pip_audit -r requirements.txt
+```
+To run the same check that the CI pipeline executes (which fails on high/critical findings):
+```bash
+python -m pip_audit -r requirements.txt -f json -o audit_backend.json
+python ../scripts/check_pip_audit.py
+```
+
+### 2. Node Dependencies Scan
+Run `npm audit` to check for security vulnerabilities in Node modules:
+```bash
+cd frontend
+npm audit
+```
+
+### 3. Secret Scanner (Gitleaks)
+To detect passwords, API keys, or private keys locally before pushing:
+```bash
+# Ensure Gitleaks is installed on your system
+gitleaks detect --verbose
+```
+
+---
+
+## Quality Gates
+
+The ArenaPulseAI repository enforces the following quality gates in CI/CD and pre-commit hooks to ensure production readiness:
+
+| Check / Gate | Target / Threshold | Tooling |
+|---|---|---|
+| **Backend Lint & Formatting** | Zero errors/warnings | `ruff check app` |
+| **Backend Docstring Standards** | 100% coverage | `ruff check app --select D` |
+| **Backend Static Type Checks** | Strict type compliance | `mypy --explicit-package-bases app` |
+| **Backend Test Coverage** | 100.0% statement & branch | `pytest --cov=app --cov-fail-under=100` |
+| **Frontend Linting** | Zero errors, strict style | `npm run lint` (`eslint`) |
+| **Frontend Test Coverage** | 100.0% statement & branch | `jest --coverage` |
+| **Security Auditing** | Zero high/critical vulnerabilities | `pip-audit` & `npm audit` |
+| **Secret Leak Detection** | Zero credentials in git history | `gitleaks` scan |
 
 ---
 
@@ -239,12 +298,17 @@ ArenaPulseAI/
 
 ---
 
-## Assumptions and Scope
+## Assumptions and Out-of-Scope
 
-* Solution uses simulated FIFA 2026 event data and stadium telemetry; it is designed as an operational proof of concept, not a live control system.
-* Production secrets are expected to be provisioned via Google Secret Manager; `.env` files are for local development only.
-* The active feature set focuses on stadium operations, fan wayfinding, crisis simulation, and safety intelligence within a prompt-driven stadium control domain.
-* Out of scope: real-world CCTV ingest, third-party ticketing integrations, fully managed stadium facility services.
+### Key Assumptions
+* **Telemetry Data Simulator:** The system uses simulated FIFA 2026 event data and stadium IoT telemetry. It is designed as an operational control proof of concept, not a live production control system.
+* **Secret Provisioning:** Production secrets are expected to be provisioned via Google Secret Manager; local `.env` files are used only for sandbox development environments.
+* **Active Feature Scope:** The feature set focuses on stadium operations, fan wayfinding, crisis simulation, and safety intelligence within a prompt-driven stadium control domain.
+
+### Out-of-Scope Elements
+* **Real CCTV Integration:** Real-world live CCTV feeds ingest and active biometric stream decoding are out of scope. They are mocked via simulated frame payloads.
+* **Payment Gateways:** Third-party ticketing payment gateways and currency settlement APIs.
+* **Facilities Management:** Automated physical HVAC/infrastructure actuator controls are not wired to live actuators.
 
 ---
 

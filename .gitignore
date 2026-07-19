@@ -79,3 +79,8 @@ docker-compose.override.yml
 # ── Graphify knowledge graph ──────────────────────────────────
 graphify-out/
 
+# ── Local Auditing & Linting Artifacts ───────────────────────
+backend/audit_backend.json
+backend/ruff_d.json
+backend/ruff_d.txt
+backend/ruff_issues.txt

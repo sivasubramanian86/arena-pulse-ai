@@ -1,3 +1,5 @@
+"""OpsSupervisor orchestrating and aggregation agent."""
+
 from typing import List
 
 from app.core.agents.base import ADKTask, ArenaAgent
@@ -7,6 +9,7 @@ class OpsSupervisor(ArenaAgent):
     """Supervisor agent that triages incoming queries, routes to workers, and aggregates responses."""
 
     def __init__(self) -> None:
+        """Initialize the OpsSupervisor agent with director instructions and models."""
         super().__init__(
             name="OpsSupervisor",
             instruction=(

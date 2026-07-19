@@ -1,3 +1,5 @@
+"""Transit management and schedule optimizer worker agent."""
+
 from app.core.agents.base import ArenaAgent
 
 
@@ -5,6 +7,7 @@ class TransitWorker(ArenaAgent):
     """Worker specializing in public transport synchronization and shuttle timelines."""
 
     def __init__(self) -> None:
+        """Initialize the TransitWorker with scheduler instructions and models."""
         super().__init__(
             name="TransitWorker",
             instruction=(

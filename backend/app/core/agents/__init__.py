@@ -1,3 +1,8 @@
+"""ArenaPulseAI Multi-Agent Package.
+
+Defines the base ArenaAgent class and all specialized worker/supervisor agents.
+"""
+
 from app.core.agents.base import ArenaAgent
 from app.core.agents.consensus import AgentRecommendation, ConsensusProtocol, ConsensusResult
 from app.core.agents.crowd import CrowdWorker

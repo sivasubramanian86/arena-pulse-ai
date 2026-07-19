@@ -1,3 +1,5 @@
+"""Main FastAPI application backend exposing HTTP and WebSocket routing."""
+
 import asyncio
 import json
 import logging
@@ -53,7 +55,7 @@ async def root() -> dict[str, str]:
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket) -> None:
-    """Main WebSocket server for real-time telemetry streaming and agent reasoning execution."""
+    """Serve the main WebSocket server for real-time telemetry streaming and agent reasoning execution."""
     await websocket.accept()
 
     # Spawn background task to stream telemetry updates
