@@ -1,0 +1,30 @@
+{
+  "title": "FanPass AR",
+  "subtitle": "Hub Biglietti e Navigazione dello Stadio",
+  "description": "Accedi al tuo biglietto digitale, trova il tuo posto e naviga nello stadio con la guida AR.",
+  "ticket": {
+    "label": "Il tuo Biglietto",
+    "section": "Sezione",
+    "row": "Fila",
+    "seat": "Posto",
+    "gate": "Cancello d'Ingresso",
+    "match": "Partita"
+  },
+  "navigation": {
+    "title": "Raggiungi il tuo Posto",
+    "openMaps": "Apri in Google Maps",
+    "directions": "Ottieni Indicazioni",
+    "estimatedWalk": "Tempo di percorrenza stimato a piedi"
+  },
+  "amenities": {
+    "title": "Servizi Nelle Vicinanze",
+    "restroom": "Servizi Igienici",
+    "concession": "Punto Ristoro",
+    "medic": "Posto Medico",
+    "accessibility": "Servizi di Accessibilità"
+  },
+  "ar": {
+    "launch": "Avvia Vista AR",
+    "scanning": "Scansione ambiente..."
+  }
+}

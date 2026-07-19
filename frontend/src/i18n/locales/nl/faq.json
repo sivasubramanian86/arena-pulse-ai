@@ -1,0 +1,27 @@
+{
+  "title": "Kluis FAQ",
+  "subtitle": "AI-gestuurde Stadionintelligentie",
+  "description": "Stel elke vraag over het stadion, wedstrijdschema, diensten of FIFA regels.",
+  "input": {
+    "placeholder": "Stel elke vraag over het stadion of FIFA Wereldbeker 2026...",
+    "submit": "Vraag het aan AI",
+    "thinking": "Kenniskluis doorzoeken..."
+  },
+  "categories": {
+    "all": "Alles",
+    "navigation": "Navigatie",
+    "services": "Diensten",
+    "schedule": "Schema",
+    "safety": "Veiligheid",
+    "accessibility": "Toegankelijkheid"
+  },
+  "response": {
+    "sources": "Bronnen",
+    "confidence": "Vertrouwen",
+    "relatedQuestions": "Gerelateerde vragen"
+  },
+  "empty": {
+    "title": "Vraag alles",
+    "subtitle": "Uw AI-stadiongids is klaar"
+  }
+}

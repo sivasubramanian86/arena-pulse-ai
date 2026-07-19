@@ -1,0 +1,31 @@
+{
+  "title": "Edge Mesh NOC",
+  "subtitle": "Network Beacon Health Grid & Latency Monitoring",
+  "description": "Real-time visibility into stadium Wi-Fi, 5G beacons, and edge node health.",
+  "beacon": {
+    "label": "Beacons",
+    "status": {
+      "healthy": "Healthy",
+      "degraded": "Degraded",
+      "offline": "Offline"
+    },
+    "latency": "Latency",
+    "throughput": "Throughput",
+    "signal": "Signal Strength"
+  },
+  "grid": {
+    "title": "Beacon Health Grid",
+    "zone": "Zone",
+    "coverage": "Coverage"
+  },
+  "alerts": {
+    "title": "Network Alerts",
+    "noAlerts": "All systems nominal"
+  },
+  "metrics": {
+    "totalNodes": "Total Nodes",
+    "healthyNodes": "Healthy",
+    "degradedNodes": "Degraded",
+    "offlineNodes": "Offline"
+  }
+}

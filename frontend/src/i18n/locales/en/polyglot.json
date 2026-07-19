@@ -1,0 +1,40 @@
+{
+  "title": "Polyglot Tablet Kiosk",
+  "subtitle": "Split-screen translator interface optimized for staff-to-fan interactions.",
+  "speakerA": "Speaker A",
+  "speakerB": "Speaker B (Translation)",
+  "inputPlaceholder": "Type or speak here...",
+  "outputPlaceholder": "Translation output will display here...",
+  "translatingPhrase": "Translating phrase...",
+  "buttons": {
+    "translate": "Translate",
+    "translating": "Translating...",
+    "swap": "Swap"
+  },
+  "status": {
+    "translating": "Translating phrase..."
+  },
+  "aria": {
+    "region": "Polyglot Kiosk: Split-Screen Translation",
+    "swap": "Swap speaker languages",
+    "mic": "Activate microphone input for Speaker A",
+    "tts": "Text to speech output for translation",
+    "selectLangA": "Select Language for Speaker A",
+    "selectLangB": "Select Target Language for Speaker B",
+    "translate": "Translate spoken phrase"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "pt": "Portuguese",
+    "fr": "French",
+    "ar": "Arabic",
+    "de": "German",
+    "zh": "Chinese",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "hi": "Hindi",
+    "it": "Italian",
+    "nl": "Dutch"
+  }
+}

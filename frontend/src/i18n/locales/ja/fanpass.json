@@ -1,0 +1,30 @@
+{
+  "title": "FanPass AR",
+  "subtitle": "Ticket Hub & Venue Navigation",
+  "description": "Access your digital ticket, find your seat, and navigate the stadium with AR wayfinding.",
+  "ticket": {
+    "label": "Your Ticket",
+    "section": "Section",
+    "row": "Row",
+    "seat": "Seat",
+    "gate": "Entry Gate",
+    "match": "Match"
+  },
+  "navigation": {
+    "title": "Navigate to Seat",
+    "openMaps": "Open in Google Maps",
+    "directions": "Get Directions",
+    "estimatedWalk": "Estimated Walk"
+  },
+  "amenities": {
+    "title": "Nearby Amenities",
+    "restroom": "Restroom",
+    "concession": "Concession Stand",
+    "medic": "Medical Station",
+    "accessibility": "Accessibility Services"
+  },
+  "ar": {
+    "launch": "Launch AR View",
+    "scanning": "Scanning environment..."
+  }
+}

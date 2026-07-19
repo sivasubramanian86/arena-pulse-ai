@@ -1,0 +1,37 @@
+{
+  "title": "Centro di Comando",
+  "subtitle": "RAG Grafico Agente • Topologia dello Stadio in Tempo Reale",
+  "description": "Instradamento della folla in tempo reale e gestione dei nodi dello stadio basati sul consenso multi-agente.",
+  "nodes": {
+    "label": "Nodi dello Stadio",
+    "status": {
+      "optimal": "Ottimale",
+      "congested": "Congestionato",
+      "critical": "Critico",
+      "offline": "Offline"
+    },
+    "density": "Densità",
+    "capacity": "Capacità"
+  },
+  "agent": {
+    "thinking": "Agente in elaborazione...",
+    "executing": "Esecuzione strumento",
+    "completed": "Completato",
+    "idle": "Inattivo",
+    "error": "Errore"
+  },
+  "query": {
+    "placeholder": "Chiedi al Comandante Operativo (es. 'Reindirizza la folla dal Gate A al Gate C')",
+    "submit": "Invia all'Agente",
+    "response": "Risposta Agente"
+  },
+  "graph": {
+    "title": "Grafico della Topologia dello Stadio",
+    "legend": {
+      "gate": "Cancello",
+      "concourse": "Atrio",
+      "transit": "Hub di Transito",
+      "kiosk": "Chiosco"
+    }
+  }
+}

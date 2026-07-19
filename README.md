@@ -5,7 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Firebase Hosting](https://img.shields.io/badge/Live-arena--pulse--ai.web.app-orange?logo=firebase)](https://arena-pulse-ai.web.app)
 [![Backend: Cloud Run](https://img.shields.io/badge/Backend-Cloud%20Run-blue?logo=google-cloud)](https://cloud.google.com/run)
-[![Build](https://img.shields.io/github/actions/workflow/status/kailasamsiva/arena-pulse-ai/ci.yml?branch=main&label=CI)](../../actions)
+[![Frontend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-frontend.yml?branch=main&label=Frontend%20CI)](../../actions)
+[![Backend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-backend.yml?branch=main&label=Backend%20CI)](../../actions)
 [![codecov](https://img.shields.io/badge/coverage-100%25-brightgreen)](frontend/coverage)
 
 ---
@@ -219,4 +220,4 @@ See [SECURITY.md](SECURITY.md) for vulnerability reporting procedures.
 
 ## License
 
-[MIT](LICENSE) © 2026 Sivasubramanian Kailasam
+[MIT](LICENSE) © 2026 Sivasubramanian

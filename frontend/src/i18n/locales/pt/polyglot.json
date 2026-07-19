@@ -1,0 +1,40 @@
+{
+  "title": "Quiosque de Tablet Poliglota",
+  "subtitle": "Interface de tradutor em tela dividida otimizada para interações entre funcionários e torcedores.",
+  "speakerA": "Locutor A",
+  "speakerB": "Locutor B (Tradução)",
+  "inputPlaceholder": "Digite ou fale aqui...",
+  "outputPlaceholder": "A tradução será exibida aqui...",
+  "translatingPhrase": "Traduzindo frase...",
+  "buttons": {
+    "translate": "Traduzir",
+    "translating": "Traduzindo...",
+    "swap": "Trocar"
+  },
+  "status": {
+    "translating": "Traduzindo frase..."
+  },
+  "aria": {
+    "region": "Quiosque Poliglota: Tradução em Tela Dividida",
+    "swap": "Trocar idiomas dos locutores",
+    "mic": "Ativar entrada de microfone para o Locutor A",
+    "tts": "Saída de texto para fala para tradução",
+    "selectLangA": "Selecionar Idioma para o Locutor A",
+    "selectLangB": "Selecionar Idioma Alvo para o Locutor B",
+    "translate": "Traduzir frase falada"
+  },
+  "languages": {
+    "en": "Inglês",
+    "es": "Espanhol",
+    "pt": "Português",
+    "fr": "Francês",
+    "ar": "العربية",
+    "de": "Alemão",
+    "zh": "Chinês",
+    "ja": "Japonês",
+    "ko": "Coreano",
+    "hi": "Híndi",
+    "it": "Italiano",
+    "nl": "Holandês"
+  }
+}

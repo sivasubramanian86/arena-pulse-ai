@@ -1,0 +1,36 @@
+{
+  "title": "Volunteer HUD",
+  "subtitle": "Staff Deployment & Task Assignment",
+  "description": "Real-time volunteer management and task dispatch for stadium operations.",
+  "staff": {
+    "label": "Staff",
+    "status": {
+      "available": "Available",
+      "deployed": "Deployed",
+      "break": "On Break",
+      "offline": "Offline"
+    },
+    "role": "Role",
+    "zone": "Assigned Zone",
+    "tasks": "Active Tasks"
+  },
+  "dispatch": {
+    "title": "Dispatch",
+    "assign": "Assign Task",
+    "recall": "Recall",
+    "priority": {
+      "label": "Priority",
+      "low": "Low",
+      "normal": "Normal",
+      "high": "High",
+      "critical": "Critical"
+    }
+  },
+  "tasks": {
+    "title": "Task Queue",
+    "empty": "No pending tasks",
+    "completed": "Completed",
+    "pending": "Pending",
+    "inProgress": "In Progress"
+  }
+}

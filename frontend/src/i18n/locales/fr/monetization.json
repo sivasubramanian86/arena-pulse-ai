@@ -1,0 +1,30 @@
+{
+  "title": "Monetization Intelligence",
+  "subtitle": "Revenue Analytics & Dynamic Pricing Dashboard",
+  "description": "AI-powered concession, merchandise, and premium experience revenue analytics.",
+  "revenue": {
+    "label": "Revenue",
+    "total": "Total Revenue",
+    "today": "Today",
+    "perFan": "Revenue Per Fan",
+    "projection": "Projection"
+  },
+  "categories": {
+    "concessions": "Concessions",
+    "merchandise": "Merchandise",
+    "premium": "Premium Experiences",
+    "parking": "Parking & Transit",
+    "digital": "Digital Add-ons"
+  },
+  "pricing": {
+    "title": "Dynamic Pricing",
+    "current": "Current Price",
+    "suggested": "AI Suggested",
+    "surge": "Surge Active"
+  },
+  "chart": {
+    "hourly": "Hourly Revenue",
+    "byCategory": "By Category",
+    "trend": "Trend"
+  }
+}

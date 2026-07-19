@@ -13,8 +13,8 @@
 **Do NOT open a public GitHub issue for security vulnerabilities.**
 
 Report security issues privately via:
-- **Email:** kailasamsiva@gmail.com
-- **Subject:** `[SECURITY] ArenaPulseAI — <short description>`
+- **GitHub:** Use private vulnerability reporting for `sivasubramanian86/arena-pulse-ai`
+- **Subject:** `[SECURITY] ArenaPulseAI - <short description>`
 
 ### What to include
 

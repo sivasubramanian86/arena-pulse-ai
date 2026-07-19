@@ -1,0 +1,30 @@
+{
+  "title": "FanPass AR",
+  "subtitle": "Tickethub & Locatienavigatie",
+  "description": "Toegang tot uw digitale ticket, vind uw stoel en navigeer door het stadion met AR-wegwijzers.",
+  "ticket": {
+    "label": "Uw Ticket",
+    "section": "Vak",
+    "row": "Rij",
+    "seat": "Stoel",
+    "gate": "Toegangspoort",
+    "match": "Wedstrijd"
+  },
+  "navigation": {
+    "title": "Navigeer naar stoel",
+    "openMaps": "Openen in Google Maps",
+    "directions": "Routebeschrijving opvragen",
+    "estimatedWalk": "Geschatte looptijd"
+  },
+  "amenities": {
+    "title": "Voorzieningen in de buurt",
+    "restroom": "Toilet",
+    "concession": "Verkoopkraam",
+    "medic": "EHBO-post",
+    "accessibility": "Toegankelijkheidsdiensten"
+  },
+  "ar": {
+    "launch": "AR-weergave starten",
+    "scanning": "Omgeving scannen..."
+  }
+}

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { TelemetryProvider } from "../context/TelemetryContext";
-import { DashboardLayout } from "../components/DashboardLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +17,12 @@ export const metadata: Metadata = {
   description: "Multi-agent Smart Stadium Operating System for FIFA World Cup 2026",
 };
 
+/**
+ * Root layout — minimal shell.
+ * The real layout (with locale, RTL, DashboardLayout, TelemetryProvider)
+ * lives in src/app/[locale]/layout.tsx and runs for all app routes.
+ * This root layout only handles the outer HTML document shell.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,15 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      data-theme="dark"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100">
-        <TelemetryProvider>
-          <DashboardLayout>{children}</DashboardLayout>
-        </TelemetryProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

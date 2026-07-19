@@ -1,0 +1,30 @@
+{
+  "title": "Intelligenza di Monetizzazione",
+  "subtitle": "Analisi dei Ricavi e Dashboard di Prezzi Dinamici",
+  "description": "Analisi dei ricavi di concessioni, merchandising ed esperienze premium basate su AI.",
+  "revenue": {
+    "label": "Ricavi",
+    "total": "Ricavi Totali",
+    "today": "Oggi",
+    "perFan": "Ricavi per Fan",
+    "projection": "Proiezione"
+  },
+  "categories": {
+    "concessions": "Concessioni",
+    "merchandise": "Merchandising",
+    "premium": "Esperienze Premium",
+    "parking": "Parcheggio e Trasporto",
+    "digital": "Componenti Aggiuntivi Digitali"
+  },
+  "pricing": {
+    "title": "Prezzi Dinamici",
+    "current": "Prezzo Attuale",
+    "suggested": "Suggerito da AI",
+    "surge": "Sovrapprezzo Attivo"
+  },
+  "chart": {
+    "hourly": "Ricavi Orari",
+    "byCategory": "Per Categoria",
+    "trend": "Andamento"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "brand": "ARENAPULSE AI",
+  "tagline": "Smart Stadium OS • FIFA World Cup 2026",
+  "nav": {
+    "commandNexus": "Command Nexus",
+    "fanpass": "FanPass AR",
+    "polyglot": "Polyglot Kiosk",
+    "multimodal": "MultiModal Hub",
+    "ecoTransit": "EcoTransit",
+    "volunteerHUD": "Volunteer HUD",
+    "evacSimulator": "Evac Simulator",
+    "monetization": "Monetization",
+    "edgeMesh": "Edge Mesh",
+    "settings": "Settings",
+    "vaultFaq": "Vault FAQ"
+  },
+  "status": {
+    "telemetryLive": "TELEMETRY LIVE",
+    "degraded": "DEGRADED (LOCAL MOCK)"
+  },
+  "role": {
+    "label": "Role:",
+    "nocDirector": "NOC Director",
+    "fieldSupervisor": "Field Supervisor",
+    "volunteer": "Volunteer"
+  },
+  "auditConsole": "NOC Operational Audit Console",
+  "telemetry": {
+    "stadiumAttendance": "Stadium Attendance",
+    "wifiDataRate": "WiFi Data Rate",
+    "fifaLive": "FIFA Live Match Telemetry"
+  },
+  "aria": {
+    "toggleTheme": "Toggle Light/Dark operational layout",
+    "systemMenu": "System Interfaces Menu"
+  },
+  "language": {
+    "switcherLabel": "Language",
+    "select": "Select language"
+  },
+  "buttons": {
+    "translate": "Translate",
+    "translating": "Translating...",
+    "swap": "Swap",
+    "run": "Run",
+    "reset": "Reset",
+    "save": "Save",
+    "close": "Close",
+    "submit": "Submit"
+  }
+}

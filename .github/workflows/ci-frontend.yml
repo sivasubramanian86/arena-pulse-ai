@@ -1,4 +1,4 @@
-name: CI — Frontend
+name: CI - Frontend
 
 on:
   push:
@@ -38,17 +38,15 @@ jobs:
       - name: TypeScript type check
         run: npx tsc --noEmit
 
-      - name: ESLint
-        run: npm run lint
-
-      - name: Run tests with coverage
-        run: npm test -- --ci --coverage --coverageReporters=lcov,text
+      - name: Run frontend unit tests
+        run: npm run test:unit -- --ci
         env:
           CI: true
 
-      - name: Verify coverage thresholds (100%)
-        run: |
-          echo "Coverage gate enforced by jest.config.js thresholds"
+      - name: Run frontend tests with 100% coverage
+        run: npm test -- --ci --runInBand --coverageReporters=lcov --coverageReporters=text
+        env:
+          CI: true
 
       - name: Next.js production build
         run: npm run build

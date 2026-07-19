@@ -1,0 +1,51 @@
+{
+  "brand": "ARENAPULSE AI",
+  "tagline": "Slim Stadion Besturingssysteem • FIFA Wereldkampioenschap 2026",
+  "nav": {
+    "commandNexus": "Commando Centrum",
+    "fanpass": "FanPass AR",
+    "polyglot": "Polyglot Kiosk",
+    "multimodal": "Multimodale Hub",
+    "ecoTransit": "EcoTransit",
+    "volunteerHUD": "Vrijwilligers HUD",
+    "evacSimulator": "Evacuatie Simulator",
+    "monetization": "Monetisatie",
+    "edgeMesh": "Randnetwerk",
+    "settings": "Instellingen",
+    "vaultFaq": "Kluis FAQ"
+  },
+  "status": {
+    "telemetryLive": "TELEMETRIE LIVE",
+    "degraded": "VERSLECHTERD (LOKALE MOCK)"
+  },
+  "role": {
+    "label": "Rol:",
+    "nocDirector": "NOC Directeur",
+    "fieldSupervisor": "Veld supervisor",
+    "volunteer": "Vrijwilliger"
+  },
+  "auditConsole": "NOC Operationele Audit Console",
+  "telemetry": {
+    "stadiumAttendance": "Stadionbezetting",
+    "wifiDataRate": "WiFi Datasnelheid",
+    "fifaLive": "FIFA Live Wedstrijd Telemetrie"
+  },
+  "aria": {
+    "toggleTheme": "Wissel Lichte/Donkere operationele lay-out",
+    "systemMenu": "Systeeminterfaces Menu"
+  },
+  "language": {
+    "switcherLabel": "Taal",
+    "select": "Selecteer taal"
+  },
+  "buttons": {
+    "translate": "Vertalen",
+    "translating": "Bezig met vertalen...",
+    "swap": "Wisselen",
+    "run": "Uitvoeren",
+    "reset": "Resetten",
+    "save": "Opslaan",
+    "close": "Sluiten",
+    "submit": "Verzenden"
+  }
+}

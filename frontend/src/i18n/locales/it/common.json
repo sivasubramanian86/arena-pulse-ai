@@ -1,0 +1,51 @@
+{
+  "brand": "ARENAPULSE AI",
+  "tagline": "Sistema Operativo per Stadi Intelligenti • FIFA World Cup 2026",
+  "nav": {
+    "commandNexus": "Centro di Comando",
+    "fanpass": "FanPass AR",
+    "polyglot": "Chiosco Poliglotta",
+    "multimodal": "Hub Multimodale",
+    "ecoTransit": "EcoTrasporto",
+    "volunteerHUD": "HUD Volontario",
+    "evacSimulator": "Simulatore di Evacuazione",
+    "monetization": "Monetizzazione",
+    "edgeMesh": "Edge Mesh",
+    "settings": "Impostazioni",
+    "vaultFaq": "Domande Frequenti della Cassaforte"
+  },
+  "status": {
+    "telemetryLive": "TELEMETRIA LIVE",
+    "degraded": "DEGRADATO (MOCK LOCALE)"
+  },
+  "role": {
+    "label": "Ruolo:",
+    "nocDirector": "Direttore NOC",
+    "fieldSupervisor": "Supervisore sul Campo",
+    "volunteer": "Volontario"
+  },
+  "auditConsole": "Console di Audit Operativo NOC",
+  "telemetry": {
+    "stadiumAttendance": "Presenze nello Stadio",
+    "wifiDataRate": "Velocità Dati WiFi",
+    "fifaLive": "Telemetria Partita Live FIFA"
+  },
+  "aria": {
+    "toggleTheme": "Attiva/Disattiva layout operativo Chiaro/Scuro",
+    "systemMenu": "Menu Interfacce di Sistema"
+  },
+  "language": {
+    "switcherLabel": "Lingua",
+    "select": "Seleziona lingua"
+  },
+  "buttons": {
+    "translate": "Traduci",
+    "translating": "Traduzione in corso...",
+    "swap": "Scambia",
+    "run": "Esegui",
+    "reset": "Reimposta",
+    "save": "Salva",
+    "close": "Chiudi",
+    "submit": "Invia"
+  }
+}

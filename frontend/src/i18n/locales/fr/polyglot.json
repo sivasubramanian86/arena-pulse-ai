@@ -1,0 +1,40 @@
+{
+  "title": "Kiosque Tablette Polyglotte",
+  "subtitle": "Interface de traduction à écran partagé optimisée pour les interactions personnel-fan.",
+  "speakerA": "Locuteur A",
+  "speakerB": "Locuteur B (Traduction)",
+  "inputPlaceholder": "Tapez ou parlez ici...",
+  "outputPlaceholder": "Le résultat de la traduction s'affichera ici...",
+  "translatingPhrase": "Traduction de la phrase...",
+  "buttons": {
+    "translate": "Traduire",
+    "translating": "Traduction en cours...",
+    "swap": "Échanger"
+  },
+  "status": {
+    "translating": "Traduction de la phrase..."
+  },
+  "aria": {
+    "region": "Kiosque Polyglotte : Traduction à écran partagé",
+    "swap": "Échanger les langues des locuteurs",
+    "mic": "Activer l'entrée micro pour le Locuteur A",
+    "tts": "Sortie texte-parole pour la traduction",
+    "selectLangA": "Sélectionner la langue du Locuteur A",
+    "selectLangB": "Sélectionner la langue cible du Locuteur B",
+    "translate": "Traduire la phrase parlée"
+  },
+  "languages": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "pt": "Portugais",
+    "fr": "Français",
+    "ar": "Arabe",
+    "de": "Allemand",
+    "zh": "Chinois",
+    "ja": "Japonais",
+    "ko": "Coréen",
+    "hi": "Hindi",
+    "it": "Italien",
+    "nl": "Néerlandais"
+  }
+}

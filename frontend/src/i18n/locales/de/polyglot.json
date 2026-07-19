@@ -1,0 +1,40 @@
+{
+  "title": "Polyglot-Tablet-Kiosk",
+  "subtitle": "Geteilter Übersetzerbildschirm, optimiert für Interaktionen zwischen Personal und Fans.",
+  "speakerA": "Sprecher A",
+  "speakerB": "Sprecher B (Übersetzung)",
+  "inputPlaceholder": "Hier tippen oder sprechen...",
+  "outputPlaceholder": "Die Übersetzung wird hier angezeigt...",
+  "translatingPhrase": "Phrase wird übersetzt...",
+  "buttons": {
+    "translate": "Übersetzen",
+    "translating": "Übersetzen...",
+    "swap": "Tauschen"
+  },
+  "status": {
+    "translating": "Phrase wird übersetzt..."
+  },
+  "aria": {
+    "region": "Polyglot-Kiosk: Geteilte Bildschirmübersetzung",
+    "swap": "Sprechersprachen tauschen",
+    "mic": "Mikrofoneingabe für Sprecher A aktivieren",
+    "tts": "Text-zu-Sprache-Ausgabe für die Übersetzung",
+    "selectLangA": "Sprache für Sprecher A auswählen",
+    "selectLangB": "Zielsprache für Sprecher B auswählen",
+    "translate": "Gesprochene Phrase übersetzen"
+  },
+  "languages": {
+    "en": "Englisch",
+    "es": "Spanisch",
+    "pt": "Portugiesisch",
+    "fr": "Französisch",
+    "ar": "العربية",
+    "de": "Deutsch",
+    "zh": "Chinesisch",
+    "ja": "Japanisch",
+    "ko": "Koreanisch",
+    "hi": "Hindi",
+    "it": "Italienisch",
+    "nl": "Niederländisch"
+  }
+}

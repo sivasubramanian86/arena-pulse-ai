@@ -1,0 +1,40 @@
+{
+  "title": "Polyglot Tablet Kiosk",
+  "subtitle": "Gesplitst scherm vertalerinterface geoptimaliseerd voor interacties tussen personeel en fans.",
+  "speakerA": "Spreker A",
+  "speakerB": "Spreker B (Vertaling)",
+  "inputPlaceholder": "Typ of spreek hier...",
+  "outputPlaceholder": "De vertaling verschijnt hier...",
+  "translatingPhrase": "Zin wordt vertaald...",
+  "buttons": {
+    "translate": "Vertalen",
+    "translating": "Bezig met vertalen...",
+    "swap": "Wisselen"
+  },
+  "status": {
+    "translating": "Zin wordt vertaald..."
+  },
+  "aria": {
+    "region": "Polyglot Kiosk: Vertaling met gesplitst scherm",
+    "swap": "Wissel spreektaal",
+    "mic": "Activeer microfooninvoer voor Spreker A",
+    "tts": "Tekst-naar-spraak uitvoer voor vertaling",
+    "selectLangA": "Selecteer taal voor Spreker A",
+    "selectLangB": "Selecteer doeltaal voor Spreker B",
+    "translate": "Vertaal gesproken zin"
+  },
+  "languages": {
+    "en": "Engels",
+    "es": "Spaans",
+    "pt": "Portugees",
+    "fr": "Frans",
+    "ar": "Arabisch",
+    "de": "Duits",
+    "zh": "Chinees",
+    "ja": "Japans",
+    "ko": "Koreaans",
+    "hi": "Hindi",
+    "it": "Italiaans",
+    "nl": "Nederlands"
+  }
+}

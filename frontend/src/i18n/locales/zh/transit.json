@@ -1,0 +1,34 @@
+{
+  "title": "EcoTransit Sync",
+  "subtitle": "Real-Time Shuttle & Transit Orchestration",
+  "description": "Live transit coordination for sustainable fan transportation across all venues.",
+  "shuttle": {
+    "label": "Shuttles",
+    "status": {
+      "onRoute": "On Route",
+      "atStop": "At Stop",
+      "delayed": "Delayed",
+      "offline": "Offline"
+    },
+    "capacity": "Capacity",
+    "eta": "ETA",
+    "minutes": "min"
+  },
+  "route": {
+    "label": "Routes",
+    "origin": "Origin",
+    "destination": "Destination",
+    "duration": "Duration",
+    "eco": "Eco Score"
+  },
+  "emissions": {
+    "label": "CO₂ Savings",
+    "today": "Today",
+    "total": "Tournament Total"
+  },
+  "gantt": {
+    "title": "Transit Gantt Schedule",
+    "departure": "Departure",
+    "arrival": "Arrival"
+  }
+}

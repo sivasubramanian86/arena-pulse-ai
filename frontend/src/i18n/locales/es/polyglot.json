@@ -1,0 +1,40 @@
+{
+  "title": "Kiosco de Tableta Políglota",
+  "subtitle": "Interfaz de traducción de pantalla dividida optimizada para interacciones entre personal y aficionados.",
+  "speakerA": "Interlocutor A",
+  "speakerB": "Interlocutor B (Traducción)",
+  "inputPlaceholder": "Escriba o hable aquí...",
+  "outputPlaceholder": "La traducción se mostrará aquí...",
+  "translatingPhrase": "Traduciendo frase...",
+  "buttons": {
+    "translate": "Traducir",
+    "translating": "Traduciendo...",
+    "swap": "Intercambiar"
+  },
+  "status": {
+    "translating": "Traduciendo frase..."
+  },
+  "aria": {
+    "region": "Kiosco Políglota: Traducción de Pantalla Dividida",
+    "swap": "Intercambiar idiomas de los interlocutores",
+    "mic": "Activar entrada de micrófono para el Interlocutor A",
+    "tts": "Salida de texto a voz para la traducción",
+    "selectLangA": "Seleccionar idioma para el Interlocutor A",
+    "selectLangB": "Seleccionar idioma de destino para el Interlocutor B",
+    "translate": "Traducir frase hablada"
+  },
+  "languages": {
+    "en": "Inglés",
+    "es": "Español",
+    "pt": "Portugués",
+    "fr": "Francés",
+    "ar": "Árabe",
+    "de": "Alemán",
+    "zh": "Chino",
+    "ja": "Japonés",
+    "ko": "Coreano",
+    "hi": "Hindi",
+    "it": "Italiano",
+    "nl": "Neerlandés"
+  }
+}

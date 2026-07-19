@@ -21,7 +21,7 @@ Compress-Archive -Path backend\* -DestinationPath backend.zip -Force
 
 Go to: **https://shell.cloud.google.com**
 
-Make sure you are signed in as `kailasamsiva@gmail.com`
+Make sure you are signed in as `Sivasubramanian` with access to the GCP project.
 
 ### Step 3 — Upload the zip
 

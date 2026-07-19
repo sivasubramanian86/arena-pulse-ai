@@ -1,0 +1,29 @@
+{
+  "title": "Evacuatiesimulator",
+  "subtitle": "Monte Carlo Crisismodellering • Realtime Uitstroomberekening",
+  "description": "Simuleer en plan noodevacuaties met behulp van AI-gestuurde routeoptimalisatie.",
+  "hazardLevel": {
+    "label": "Gevarenafniveau",
+    "low": "Laag",
+    "medium": "Gemiddeld",
+    "high": "Hoog",
+    "extreme": "Extreem"
+  },
+  "routes": {
+    "title": "Veilige routes",
+    "estimatedTime": "Geschatte tijd",
+    "seconds": "seconden",
+    "bottleneck": "Knelpuntknooppunt"
+  },
+  "progress": {
+    "label": "Evacuatievoortgang",
+    "complete": "Voltooid"
+  },
+  "simulation": {
+    "run": "Simulatie uitvoeren",
+    "running": "Simuleren...",
+    "gateCount": "Aantal poorten",
+    "initialDensity": "Initiële menigtedichtheid",
+    "hazardLocation": "Locatie gevaar"
+  }
+}

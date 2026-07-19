@@ -1,0 +1,40 @@
+{
+  "title": "多语言平板信息亭",
+  "subtitle": "为工作人员与球迷互动优化的分屏翻译界面。",
+  "speakerA": "说话者A",
+  "speakerB": "说话者B（译文）",
+  "inputPlaceholder": "在此输入或讲话...",
+  "outputPlaceholder": "译文将在此显示...",
+  "translatingPhrase": "正在翻译短语...",
+  "buttons": {
+    "translate": "翻译",
+    "translating": "正在翻译...",
+    "swap": "切换"
+  },
+  "status": {
+    "translating": "正在翻译短语..."
+  },
+  "aria": {
+    "region": "多语言信息亭：分屏翻译",
+    "swap": "切换说话者语言",
+    "mic": "为说话者A激活麦克风输入",
+    "tts": "翻译的文本转语音输出",
+    "selectLangA": "为说话者A选择语言",
+    "selectLangB": "为说话者B选择目标语言",
+    "translate": "翻译所说的短语"
+  },
+  "languages": {
+    "en": "英语",
+    "es": "西班牙语",
+    "pt": "葡萄牙语",
+    "fr": "法语",
+    "ar": "阿拉伯语",
+    "de": "德语",
+    "zh": "中文",
+    "ja": "日语",
+    "ko": "韩语",
+    "hi": "印地语",
+    "it": "意大利语",
+    "nl": "荷兰语"
+  }
+}

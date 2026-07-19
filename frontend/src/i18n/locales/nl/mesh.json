@@ -1,0 +1,31 @@
+{
+  "title": "Edge Mesh NOC",
+  "subtitle": "Netwerkbaken Statusoverzicht & Latentiemonitoring",
+  "description": "Realtime inzicht in de Wi-Fi van het stadion, 5G-bakens en de gezondheid van randknooppunten.",
+  "beacon": {
+    "label": "Bakens",
+    "status": {
+      "healthy": "Gezond",
+      "degraded": "Verslechterd",
+      "offline": "Offline"
+    },
+    "latency": "Latentie",
+    "throughput": "Doorvoer",
+    "signal": "Signaalsterkte"
+  },
+  "grid": {
+    "title": "Bakenstatusoverzicht",
+    "zone": "Zone",
+    "coverage": "Dekking"
+  },
+  "alerts": {
+    "title": "Netwerkmeldingen",
+    "noAlerts": "Alle systemen nominaal"
+  },
+  "metrics": {
+    "totalNodes": "Totaal aantal knooppunten",
+    "healthyNodes": "Gezond",
+    "degradedNodes": "Verslechterd",
+    "offlineNodes": "Offline"
+  }
+}

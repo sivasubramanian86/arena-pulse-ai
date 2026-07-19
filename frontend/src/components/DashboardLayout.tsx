@@ -3,7 +3,10 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useTelemetry } from "../context/TelemetryContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { type Locale } from "../i18n/config";
 import {
   Network,
   Ticket,
@@ -23,7 +26,8 @@ import {
   CloudLightning
 } from "lucide-react";
 
-export const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Locale }> = ({ children, locale }) => {
+  const t = useTranslations("common");
   const pathname = usePathname();
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
   const [activeRole, setActiveRole] = useState<string>("noc_director");
@@ -42,18 +46,18 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ child
   }, [isDarkMode]);
 
   const tabs = useMemo(() => [
-    { id: "nexus", path: "/nexus", label: "Command Nexus", icon: Network },
-    { id: "fanpass", path: "/fanpass", label: "FanPass AR", icon: Ticket },
-    { id: "polyglot", path: "/polyglot", label: "Polyglot Kiosk", icon: Languages },
-    { id: "multimodal", path: "/multimodal", label: "MultiModal Hub", icon: FolderLock },
-    { id: "transit", path: "/transit", label: "EcoTransit", icon: Compass },
-    { id: "volunteer", path: "/volunteer", label: "Volunteer HUD", icon: Briefcase },
-    { id: "crisis", path: "/crisis", label: "Evac Simulator", icon: Skull },
-    { id: "monetization", path: "/monetization", label: "Monetization", icon: TrendingUp },
-    { id: "mesh", path: "/mesh", label: "Edge Mesh", icon: Activity },
-    { id: "preferences", path: "/preferences", label: "Settings", icon: Settings },
-    { id: "faq", path: "/faq", label: "Vault FAQ", icon: HelpCircle }
-  ], []);
+    { id: "nexus",        path: `/${locale}/nexus`,        label: t("nav.commandNexus"),  icon: Network },
+    { id: "fanpass",      path: `/${locale}/fanpass`,      label: t("nav.fanpass"),        icon: Ticket },
+    { id: "polyglot",     path: `/${locale}/polyglot`,     label: t("nav.polyglot"),       icon: Languages },
+    { id: "multimodal",   path: `/${locale}/multimodal`,   label: t("nav.multimodal"),     icon: FolderLock },
+    { id: "transit",      path: `/${locale}/transit`,      label: t("nav.ecoTransit"),     icon: Compass },
+    { id: "volunteer",    path: `/${locale}/volunteer`,    label: t("nav.volunteerHUD"),   icon: Briefcase },
+    { id: "crisis",       path: `/${locale}/crisis`,       label: t("nav.evacSimulator"), icon: Skull },
+    { id: "monetization", path: `/${locale}/monetization`, label: t("nav.monetization"),   icon: TrendingUp },
+    { id: "mesh",         path: `/${locale}/mesh`,         label: t("nav.edgeMesh"),       icon: Activity },
+    { id: "preferences",  path: `/${locale}/preferences`,  label: t("nav.settings"),       icon: Settings },
+    { id: "faq",          path: `/${locale}/faq`,          label: t("nav.vaultFaq"),       icon: HelpCircle },
+  ], [locale, t]);
 
   return (
     <div className="flex flex-col min-h-screen bg-zinc-950 text-zinc-100 font-sans mesh-bg" role="application">
@@ -65,10 +69,10 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ child
           </div>
           <div>
             <h1 className="text-lg font-black tracking-tight bg-gradient-to-r from-blue-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent">
-              ARENAPULSE AI
+              {t("brand")}
             </h1>
             <p className="text-[10px] text-zinc-500 font-mono font-semibold uppercase tracking-widest mt-0.5">
-              Smart Stadium OS • FIFA World Cup 2026
+              {t("tagline")}
             </p>
           </div>
         </div>
@@ -87,35 +91,38 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ child
             {wsConnected ? (
               <>
                 <CloudLightning className="w-3.5 h-3.5 animate-bounce" />
-                TELEMETRY LIVE
+                {t("status.telemetryLive")}
               </>
             ) : (
               <>
                 <CloudOff className="w-3.5 h-3.5" />
-                DEGRADED (LOCAL MOCK)
+                {t("status.degraded")}
               </>
             )}
           </div>
 
           {/* User Profile Selector */}
           <div className="flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 rounded-xl px-2.5 py-1.5">
-            <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">Role:</span>
+            <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">{t("role.label")}</span>
             <select
               value={activeRole}
               onChange={(e) => setActiveRole(e.target.value)}
               className="bg-transparent text-xs text-white font-bold focus:outline-none pr-1 cursor-pointer"
             >
-              <option value="noc_director" className="bg-zinc-950 text-white">NOC Director</option>
-              <option value="field_supervisor" className="bg-zinc-950 text-white">Field Supervisor</option>
-              <option value="volunteer" className="bg-zinc-950 text-white">Volunteer</option>
+              <option value="noc_director" className="bg-zinc-950 text-white">{t("role.nocDirector")}</option>
+              <option value="field_supervisor" className="bg-zinc-950 text-white">{t("role.fieldSupervisor")}</option>
+              <option value="volunteer" className="bg-zinc-950 text-white">{t("role.volunteer")}</option>
             </select>
           </div>
+
+          {/* Language Switcher */}
+          <LanguageSwitcher currentLocale={locale} />
 
           {/* Theme Switcher Toggle */}
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
             className="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 rounded-xl p-2.5 transition-colors active:scale-95 cursor-pointer"
-            aria-label="Toggle Light/Dark operational layout"
+            aria-label={t("aria.toggleTheme")}
           >
             {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
@@ -126,7 +133,7 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ child
       <div className="flex flex-1 flex-col lg:flex-row">
         {/* Navigation Sidebar */}
         <aside className="w-full lg:w-64 border-r border-white/10 bg-slate-900/30 p-4 backdrop-blur-2xl animate-fade-in" role="complementary">
-          <nav className="flex flex-row lg:flex-col gap-1.5 overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0" role="navigation" aria-label="System Interfaces Menu">
+          <nav className="flex flex-row lg:flex-col gap-1.5 overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0" role="navigation" aria-label={t("aria.systemMenu")}>
             {tabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = pathname === tab.path;
@@ -150,12 +157,12 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ child
 
           {/* Live FIFA Match Telemetry Sidebar Widget */}
           <div className="hidden lg:flex flex-col gap-4 mt-8 p-4 bg-zinc-950/60 border border-zinc-800/80 rounded-2xl">
-            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">FIFA Live Match Telemetry</span>
+            <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{t("telemetry.fifaLive")}</span>
             
             {/* Attendance progress bar */}
             <div className="flex flex-col gap-1.5">
               <div className="flex justify-between text-[11px] font-mono">
-                <span className="text-zinc-500">Stadium Attendance</span>
+                <span className="text-zinc-500">{t("telemetry.stadiumAttendance")}</span>
                 <span className="text-emerald-400 font-bold">78,450 / 80,000</span>
               </div>
               <div className="h-1.5 w-full bg-zinc-900 rounded-full overflow-hidden">
@@ -166,7 +173,7 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ child
             {/* WiFi Data Rate moving graph */}
             <div className="flex flex-col gap-2">
               <div className="flex justify-between text-[11px] font-mono">
-                <span className="text-zinc-500">WiFi Data Rate</span>
+                <span className="text-zinc-500">{t("telemetry.wifiDataRate")}</span>
                 <span className="text-blue-400 font-bold">12.4 Gbps</span>
               </div>
               <div className="flex gap-0.5 items-end h-7 bg-zinc-950/30 rounded border border-zinc-900/50 px-1 py-0.5" aria-hidden="true">
@@ -192,7 +199,7 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ child
         <div className="max-w-4xl mx-auto flex flex-col gap-3">
           <div className="flex items-center gap-2 text-xs font-bold text-zinc-400 uppercase tracking-widest">
             <TerminalIcon className="w-4 h-4 text-zinc-500" />
-            NOC Operational Audit Console
+            {t("auditConsole")}
           </div>
 
           <div

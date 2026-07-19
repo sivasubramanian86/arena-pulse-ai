@@ -1,0 +1,27 @@
+{
+  "title": "FAQ Vault",
+  "subtitle": "Intelligenza dello stadio basata su AI",
+  "description": "Fai qualsiasi domanda sullo stadio, sul calendario delle partite, sui servizi o sulle regole FIFA.",
+  "input": {
+    "placeholder": "Fai qualsiasi domanda sullo stadio o sulla FIFA World Cup 2026...",
+    "submit": "Chiedi all'AI",
+    "thinking": "Ricerca nel vault della conoscenza..."
+  },
+  "categories": {
+    "all": "Tutto",
+    "navigation": "Navigazione",
+    "services": "Servizi",
+    "schedule": "Programma",
+    "safety": "Sicurezza",
+    "accessibility": "Accessibilità"
+  },
+  "response": {
+    "sources": "Fonti",
+    "confidence": "Affidabilità",
+    "relatedQuestions": "Domande correlate"
+  },
+  "empty": {
+    "title": "Chiedi qualsiasi cosa",
+    "subtitle": "La tua guida AI dello stadio è pronta"
+  }
+}

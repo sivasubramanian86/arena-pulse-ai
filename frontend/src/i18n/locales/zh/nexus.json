@@ -1,0 +1,37 @@
+{
+  "title": "Command Nexus",
+  "subtitle": "Agentic Graph RAG • Live Stadium Topology",
+  "description": "Real-time crowd routing and stadium node management powered by multi-agent consensus.",
+  "nodes": {
+    "label": "Stadium Nodes",
+    "status": {
+      "optimal": "Optimal",
+      "congested": "Congested",
+      "critical": "Critical",
+      "offline": "Offline"
+    },
+    "density": "Density",
+    "capacity": "Capacity"
+  },
+  "agent": {
+    "thinking": "Agent thinking...",
+    "executing": "Executing tool",
+    "completed": "Completed",
+    "idle": "Idle",
+    "error": "Error"
+  },
+  "query": {
+    "placeholder": "Ask the Ops Commander (e.g. 'Reroute Gate A crowd to Gate C')",
+    "submit": "Send to Agent",
+    "response": "Agent Response"
+  },
+  "graph": {
+    "title": "Stadium Topology Graph",
+    "legend": {
+      "gate": "Gate",
+      "concourse": "Concourse",
+      "transit": "Transit Hub",
+      "kiosk": "Kiosk"
+    }
+  }
+}

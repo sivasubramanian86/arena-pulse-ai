@@ -1,0 +1,40 @@
+{
+  "title": "다국어 태블릿 키오스크",
+  "subtitle": "직원과 팬의 상호작용에 최적화된 분할 화면 번역기 인터페이스.",
+  "speakerA": "화자 A",
+  "speakerB": "화자 B (번역)",
+  "inputPlaceholder": "여기에 입력하거나 말하세요...",
+  "outputPlaceholder": "번역 결과가 여기에 표시됩니다...",
+  "translatingPhrase": "문구 번역 중...",
+  "buttons": {
+    "translate": "번역",
+    "translating": "번역 중...",
+    "swap": "바꾸기"
+  },
+  "status": {
+    "translating": "문구 번역 중..."
+  },
+  "aria": {
+    "region": "다국어 키오스크: 분할 화면 번역",
+    "swap": "화자 언어 바꾸기",
+    "mic": "화자 A의 마이크 입력 활성화",
+    "tts": "번역을 위한 텍스트 음성 변환 출력",
+    "selectLangA": "화자 A의 언어 선택",
+    "selectLangB": "화자 B의 대상 언어 선택",
+    "translate": "말한 문구 번역"
+  },
+  "languages": {
+    "en": "영어",
+    "es": "스페인어",
+    "pt": "포르투갈어",
+    "fr": "프랑스어",
+    "ar": "아랍어",
+    "de": "독일어",
+    "zh": "중국어",
+    "ja": "일본어",
+    "ko": "한국어",
+    "hi": "힌디어",
+    "it": "이탈리아어",
+    "nl": "네덜란드어"
+  }
+}

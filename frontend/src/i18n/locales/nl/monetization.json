@@ -1,0 +1,30 @@
+{
+  "title": "Monetarisatie-intelligentie",
+  "subtitle": "Omzetanalyse & Dynamisch Prijzen Dashboard",
+  "description": "AI-gestuurde omzetanalyse van concessies, merchandise en premium ervaringen.",
+  "revenue": {
+    "label": "Omzet",
+    "total": "Totale Omzet",
+    "today": "Vandaag",
+    "perFan": "Omzet Per Fan",
+    "projection": "Prognose"
+  },
+  "categories": {
+    "concessions": "Concessies",
+    "merchandise": "Merchandise",
+    "premium": "Premium Ervaringen",
+    "parking": "Parkeren & Vervoer",
+    "digital": "Digitale Add-ons"
+  },
+  "pricing": {
+    "title": "Dynamisch Prijzen",
+    "current": "Huidige Prijs",
+    "suggested": "AI-gesuggereerd",
+    "surge": "Piektoeslag actief"
+  },
+  "chart": {
+    "hourly": "Uurlijkse Omzet",
+    "byCategory": "Per Categorie",
+    "trend": "Trend"
+  }
+}

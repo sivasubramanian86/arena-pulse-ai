@@ -80,4 +80,4 @@ All PRs must pass:
 
 ## Questions
 
-Open a GitHub Discussion or email kailasamsiva@gmail.com.
+Open a GitHub Discussion in `sivasubramanian86/arena-pulse-ai`.

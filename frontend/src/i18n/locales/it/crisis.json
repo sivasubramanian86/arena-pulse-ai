@@ -1,0 +1,29 @@
+{
+  "title": "Simulatore di Evacuazione",
+  "subtitle": "Modellazione di Crisi Monte Carlo • Calcolo di Esodo in Tempo Reale",
+  "description": "Simula e pianifica evacuazioni di emergenza utilizzando l'ottimizzazione del percorso basata su AI.",
+  "hazardLevel": {
+    "label": "Livello di Pericolo",
+    "low": "Basso",
+    "medium": "Medio",
+    "high": "Alto",
+    "extreme": "Estremo"
+  },
+  "routes": {
+    "title": "Percorsi Sicuri",
+    "estimatedTime": "Tempo Stimato",
+    "seconds": "secondi",
+    "bottleneck": "Nodo Collo di Bottiglia"
+  },
+  "progress": {
+    "label": "Avanzamento Evacuazione",
+    "complete": "Completato"
+  },
+  "simulation": {
+    "run": "Avvia Simulazione",
+    "running": "Simulazione in corso...",
+    "gateCount": "Conteggio Cancelli",
+    "initialDensity": "Densità Iniziale della Folla",
+    "hazardLocation": "Posizione del Pericolo"
+  }
+}

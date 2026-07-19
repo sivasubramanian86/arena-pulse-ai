@@ -1,0 +1,36 @@
+{
+  "title": "Vrijwilligersoverzicht",
+  "subtitle": "Personeelsinzet & Taaktoewijzing",
+  "description": "Realtime vrijwilligersbeheer en taakverdeling voor stadionactiviteiten.",
+  "staff": {
+    "label": "Personeel",
+    "status": {
+      "available": "Beschikbaar",
+      "deployed": "Ingezet",
+      "break": "Pauze",
+      "offline": "Offline"
+    },
+    "role": "Rol",
+    "zone": "Toegewezen Zone",
+    "tasks": "Actieve Taken"
+  },
+  "dispatch": {
+    "title": "Opdrachten",
+    "assign": "Taak Toewijzen",
+    "recall": "Terugroepen",
+    "priority": {
+      "label": "Prioriteit",
+      "low": "Laag",
+      "normal": "Normaal",
+      "high": "Hoog",
+      "critical": "Kritiek"
+    }
+  },
+  "tasks": {
+    "title": "Takenwachtrij",
+    "empty": "Geen openstaande taken",
+    "completed": "Voltooid",
+    "pending": "Openstaand",
+    "inProgress": "Bezig"
+  }
+}

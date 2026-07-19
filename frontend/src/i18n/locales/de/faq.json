@@ -1,0 +1,27 @@
+{
+  "title": "Vault FAQ",
+  "subtitle": "AI-Powered Stadium Intelligence",
+  "description": "Ask any question about the stadium, match schedule, services, or FIFA rules.",
+  "input": {
+    "placeholder": "Ask anything about the stadium or FIFA World Cup 2026...",
+    "submit": "Ask AI",
+    "thinking": "Searching knowledge vault..."
+  },
+  "categories": {
+    "all": "All",
+    "navigation": "Navigation",
+    "services": "Services",
+    "schedule": "Schedule",
+    "safety": "Safety",
+    "accessibility": "Accessibility"
+  },
+  "response": {
+    "sources": "Sources",
+    "confidence": "Confidence",
+    "relatedQuestions": "Related Questions"
+  },
+  "empty": {
+    "title": "Ask Anything",
+    "subtitle": "Your AI stadium guide is ready"
+  }
+}
