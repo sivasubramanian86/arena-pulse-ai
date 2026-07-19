@@ -87,4 +87,30 @@ describe("VolunteerHUD Unit Component", () => {
     // Form inputs should populate with Amina's info
     expect(screen.getByDisplayValue("Emergency Alert: Assistance required at Gate A. Please deploy.")).toBeInTheDocument();
   });
+
+  it("ignores blank dispatches, shows low priority tasks, and reaches all clear", () => {
+    render(<VolunteerHUD />);
+
+    const submitBtn = screen.getByRole("button", { name: /Dispatch To HUD/i });
+    const form = screen.getByPlaceholderText(/Crowd density surge/i).closest("form");
+    fireEvent.submit(form!);
+    expect(screen.getAllByLabelText(/Start task:/i)).toHaveLength(2);
+
+    fireEvent.change(screen.getByPlaceholderText(/Crowd density surge/i), {
+      target: { value: "Check signage" },
+    });
+    fireEvent.change(screen.getByLabelText(/Priority Level/i), {
+      target: { value: "low" },
+    });
+    fireEvent.click(submitBtn);
+    expect(screen.getByRole("button", { name: /Start task: Check signage/i }).closest("div")).toHaveClass("border-blue-500/30");
+
+    for (const taskName of ["Check signage", "Congestion at Gate B", "Wheelchair Assist"]) {
+      fireEvent.click(screen.getByRole("button", { name: new RegExp(`Start task: ${taskName}`) }));
+      fireEvent.click(screen.getByRole("button", { name: /Mark current task as complete/i }));
+    }
+
+    expect(screen.getByText(/All Clear/i)).toBeInTheDocument();
+  });
+
 });

@@ -3,16 +3,18 @@ import { LanguageSwitcher } from "../../src/components/LanguageSwitcher";
 import "@testing-library/jest-dom";
 
 const mockPush = jest.fn();
+let mockPathname: unknown = "/en/nexus";
 jest.mock("next/navigation", () => ({
   useRouter: () => ({
     push: mockPush,
   }),
-  usePathname: () => "/en/nexus",
+  usePathname: () => mockPathname,
 }));
 
 describe("LanguageSwitcher Unit Component", () => {
   beforeEach(() => {
     mockPush.mockClear();
+    mockPathname = "/en/nexus";
   });
 
   it("renders correct locale and opens menu on click", () => {
@@ -57,4 +59,35 @@ describe("LanguageSwitcher Unit Component", () => {
     fireEvent.mouseDown(screen.getByTestId("outside"));
     expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
   });
+
+  it("renders RTL current locale and switches from Arabic to English", () => {
+    mockPathname = "/ar/polyglot";
+    render(<LanguageSwitcher currentLocale="ar" />);
+
+    const button = screen.getByRole("button", { name: /Select language/i });
+    expect(button.querySelector("span.hidden")).toHaveStyle({ direction: "rtl" });
+
+    fireEvent.click(button);
+    const activeOptions = screen.getAllByRole("option", { selected: true });
+    expect(activeOptions[0]).toHaveStyle({ direction: "rtl" });
+
+    fireEvent.click(screen.getByRole("option", { name: /English/i }));
+    expect(mockPush).toHaveBeenCalledWith("/en/polyglot");
+  });
+
+
+  it("falls back to the locale root when the rewritten path is empty", () => {
+    mockPathname = {
+      split: () => ({
+        join: () => "",
+      }),
+    };
+
+    render(<LanguageSwitcher currentLocale="en" />);
+    fireEvent.click(screen.getByRole("button", { name: /Select language/i }));
+    fireEvent.click(screen.getByRole("option", { name: /Fran/i }));
+
+    expect(mockPush).toHaveBeenCalledWith("/fr");
+  });
+
 });

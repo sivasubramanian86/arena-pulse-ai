@@ -292,4 +292,17 @@ describe("MultiModalHub Unit Component", () => {
     fireEvent.click(playBtn);
     expect(screen.getByText("Broadcasting Live Announcement")).toBeInTheDocument();
   });
+
+  it("loads the canned PA script and handles an empty file input change", () => {
+    const { container } = render(<MultiModalHub />);
+
+    const fileInput = container.querySelector('input[type="file"]') as HTMLInputElement;
+    fireEvent.change(fileInput, { target: { files: [] } });
+
+    fireEvent.click(screen.getByRole("button", { name: /Load Script/i }));
+    expect(screen.getByLabelText(/Broadcast Announcement Script/i)).toHaveValue(
+      "Attention all fans in Zone 1, please proceed towards Gate C for rapid boarding."
+    );
+  });
+
 });

@@ -37,11 +37,14 @@ jest.mock("next-intl", () => ({
   }
 }));
 
+const mockPush = jest.fn();
+let mockPathname = "/en/nexus";
+
 // Mock next/navigation
 jest.mock("next/navigation", () => ({
-  usePathname: () => "/nexus",
+  usePathname: () => mockPathname,
   useRouter: () => ({
-    push: jest.fn(),
+    push: mockPush,
   }),
 }));
 
@@ -61,10 +64,14 @@ class MockWebSocket {
 global.WebSocket = MockWebSocket as unknown as typeof WebSocket;
 
 describe("DashboardLayout Integration Component", () => {
+  beforeEach(() => {
+    mockPathname = "/en/nexus";
+    mockPush.mockClear();
+  });
   it("renders layout elements and supports theme toggling", () => {
     render(
       <TelemetryProvider>
-        <DashboardLayout>
+        <DashboardLayout locale="en">
           <div data-testid="child-content">Child Content</div>
         </DashboardLayout>
       </TelemetryProvider>
@@ -107,7 +114,7 @@ describe("DashboardLayout Integration Component", () => {
 
     render(
       <TelemetryProvider>
-        <DashboardLayout>
+        <DashboardLayout locale="en">
           <div>child</div>
         </DashboardLayout>
       </TelemetryProvider>
@@ -172,7 +179,7 @@ describe("DashboardLayout Integration Component", () => {
 
     render(
       <TelemetryProvider>
-        <DashboardLayout>
+        <DashboardLayout locale="en">
           <div>child</div>
         </DashboardLayout>
       </TelemetryProvider>
@@ -194,7 +201,7 @@ describe("DashboardLayout Integration Component", () => {
   it("supports changing the operational role profile", () => {
     render(
       <TelemetryProvider>
-        <DashboardLayout>
+        <DashboardLayout locale="en">
           <div>child</div>
         </DashboardLayout>
       </TelemetryProvider>
@@ -208,4 +215,20 @@ describe("DashboardLayout Integration Component", () => {
     fireEvent.change(select, { target: { value: "volunteer" } });
     expect(select).toHaveValue("volunteer");
   });
+
+  it("marks the matching navigation tab active while leaving others inactive", () => {
+    mockPathname = "/en/nexus";
+
+    render(
+      <TelemetryProvider>
+        <DashboardLayout locale="en">
+          <div>child</div>
+        </DashboardLayout>
+      </TelemetryProvider>
+    );
+
+    expect(screen.getByRole("link", { name: /Nexus/i })).toHaveClass("bg-blue-600");
+    expect(screen.getByRole("link", { name: /Fan Pass/i })).not.toHaveClass("bg-blue-600");
+  });
+
 });
