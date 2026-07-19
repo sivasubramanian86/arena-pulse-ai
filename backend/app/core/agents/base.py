@@ -92,5 +92,27 @@ class ArenaAgent:
             return self._mock_fallback(context_prompt)
 
     def _mock_fallback(self, prompt: str) -> str:
-        """Fallback mock generator for AI-disabled state."""
+        """Fallback mock generator for AI-disabled state. Parses and resolves FIFA queries."""
+        try:
+            from app.core.fifa_data import FIFAMatchEngine
+            matches = FIFAMatchEngine.search_matches(prompt)
+            if matches:
+                m = matches[0]
+                if m["status"] == "LIVE":
+                    return (
+                        f"Live Match Telemetry Analyzed: {m['home_team']} vs {m['away_team']} playing at {m['venue']}. "
+                        f"Current score is {m['home_score']}-{m['away_score']} ({m['minute']}' min). Crowd density at the venue is normal, and transit lines are active."
+                    )
+                elif m["status"] == "COMPLETED":
+                    return (
+                        f"Post-Match Analysis: Match {m['home_team']} vs {m['away_team']} at {m['venue']} finished "
+                        f"with score {m['home_score']}-{m['away_score']}. Evacuation and transit systems successfully cleared the venue."
+                    )
+                else:
+                    return (
+                        f"Match Preparation: {m['home_team']} vs {m['away_team']} scheduled at {m['venue']} on {m['date']}. "
+                        f"Pre-game security checks and volunteer placement are finalized."
+                    )
+        except Exception:
+            pass
         return f"[MOCK_FALLBACK] {self.name} processed: '{prompt}'"

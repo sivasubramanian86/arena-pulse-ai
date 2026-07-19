@@ -242,6 +242,10 @@ class ArenaPulseOrchestrator:
         }
         await asyncio.sleep(0.5)
 
+        # Retrieve real-time FIFA match and venue context
+        from app.core.fifa_data import FIFAMatchEngine
+        fifa_context = FIFAMatchEngine.query_fifa_context(query)
+
         agg_prompt = (
             f"Synthesize the following reports to answer the query '{query}':\n"
             f"- Crowd Status: {crowd_res}\n"
@@ -250,6 +254,8 @@ class ArenaPulseOrchestrator:
         )
         if consensus_result:
             agg_prompt += f"\n- Negotiated Consensus Decision: {consensus_result.agreed_action} (Utility: {consensus_result.utility_score:.2f}, Rationale: {consensus_result.rationale_summary})"
+        if fifa_context:
+            agg_prompt += f"\n- Real-time FIFA World Cup Match Context:\n{fifa_context}"
 
         final_decision = await self.supervisor.generate_response(agg_prompt)
 

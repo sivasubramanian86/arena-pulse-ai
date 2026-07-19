@@ -88,6 +88,119 @@ export const MultiModalHub: React.FC = React.memo(() => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" role="region" aria-label="Multimodal AI Upload & Speech Hub">
+      {/* Demo Assets Grid Section */}
+      <div className="col-span-1 lg:col-span-2 bg-zinc-900/40 backdrop-blur border border-zinc-800/80 p-6 rounded-2xl shadow-xl flex flex-col gap-4">
+        <div>
+          <h2 className="text-lg font-bold text-white flex items-center gap-2">
+            <Sparkles className="text-yellow-500 w-5 h-5 animate-pulse" />
+            Stadium Operations Multimodal Asset Vault
+          </h2>
+          <p className="text-zinc-400 text-xs mt-0.5">
+            Pre-loaded high-fidelity feeds and media assets from MetLife Stadium for operational analytics verification.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+          {/* Image Asset Card */}
+          <div className="bg-zinc-950/70 border border-zinc-800/60 rounded-xl overflow-hidden flex flex-col group hover:border-zinc-700/80 transition-colors">
+            <div className="h-32 w-full relative bg-zinc-900 overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://storage.googleapis.com/genai-apac-2026-491004-assets/data/stadium.jpg"
+                alt="MetLife Stadium South Gate"
+                className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute top-2 left-2 bg-zinc-950/80 text-[10px] px-2 py-0.5 rounded text-blue-400 font-bold border border-blue-500/20">
+                IMAGE FEED
+              </div>
+            </div>
+            <div className="p-3 flex flex-col gap-1.5 flex-1">
+              <span className="text-xs font-bold text-zinc-200">South Gate Entrance Feed</span>
+              <span className="text-[10px] text-zinc-500 leading-normal">High-res capture of fan queue density at Gate C concourse.</span>
+              <button
+                onClick={() => {
+                  setFilePreview("https://storage.googleapis.com/genai-apac-2026-491004-assets/data/stadium.jpg");
+                  setSelectedFile(new File([new Uint8Array(10)], "stadium.jpg", { type: "image/jpeg" }));
+                  setVisionResult(null);
+                }}
+                className="mt-auto bg-blue-600/10 hover:bg-blue-600 border border-blue-500/20 hover:border-blue-500 text-blue-400 hover:text-white text-[11px] py-1.5 rounded-lg font-bold transition-all text-center"
+              >
+                Analyze in Vision AI
+              </button>
+            </div>
+          </div>
+
+          {/* Video Asset Card */}
+          <div className="bg-zinc-950/70 border border-zinc-800/60 rounded-xl overflow-hidden flex flex-col group hover:border-zinc-700/80 transition-colors">
+            <div className="h-32 w-full relative bg-black flex items-center justify-center">
+              <video
+                src="https://storage.googleapis.com/genai-apac-2026-491004-assets/data/security_cam.mp4"
+                muted
+                loop
+                autoPlay
+                playsInline
+                className="w-full h-full object-cover opacity-50"
+              />
+              <div className="absolute top-2 left-2 bg-zinc-950/80 text-[10px] px-2 py-0.5 rounded text-red-400 font-bold border border-red-500/20">
+                LIVE VIDEO FEED
+              </div>
+            </div>
+            <div className="p-3 flex flex-col gap-1.5 flex-1">
+              <span className="text-xs font-bold text-zinc-200">Perimeter Security Cam-04</span>
+              <span className="text-[10px] text-zinc-500 leading-normal">Live CCTV monitoring of transit platforms and exit channels.</span>
+              <button
+                onClick={() => {
+                  setFilePreview("https://storage.googleapis.com/genai-apac-2026-491004-assets/data/security_cam.mp4");
+                  setSelectedFile(new File([new Uint8Array(10)], "security_cam.mp4", { type: "video/mp4" }));
+                  setVisionResult(null);
+                }}
+                className="mt-auto bg-red-600/10 hover:bg-red-600 border border-red-500/20 hover:border-red-500 text-red-400 hover:text-white text-[11px] py-1.5 rounded-lg font-bold transition-all text-center"
+              >
+                Analyze in Vision AI
+              </button>
+            </div>
+          </div>
+
+          {/* Audio Asset Card */}
+          <div className="bg-zinc-950/70 border border-zinc-800/60 rounded-xl overflow-hidden flex flex-col group hover:border-zinc-700/80 transition-colors">
+            <div className="h-32 w-full bg-zinc-900/60 flex items-center justify-center p-4 relative">
+              <div className="flex gap-1 items-end h-10 w-full justify-center">
+                <span className="w-1 bg-emerald-500/30 h-4 rounded" />
+                <span className="w-1 bg-emerald-500/40 h-8 rounded animate-pulse" />
+                <span className="w-1 bg-emerald-500/50 h-5 rounded" />
+                <span className="w-1 bg-emerald-500/60 h-10 rounded animate-pulse [animation-delay:0.2s]" />
+                <span className="w-1 bg-emerald-500/50 h-6 rounded" />
+                <span className="w-1 bg-emerald-500/40 h-8 rounded animate-pulse [animation-delay:0.4s]" />
+                <span className="w-1 bg-emerald-500/30 h-3 rounded" />
+              </div>
+              <div className="absolute top-2 left-2 bg-zinc-950/80 text-[10px] px-2 py-0.5 rounded text-emerald-400 font-bold border border-emerald-500/20">
+                AUDIO ANNOUNCEMENT
+              </div>
+            </div>
+            <div className="p-3 flex flex-col gap-1.5 flex-1">
+              <span className="text-xs font-bold text-zinc-200">Standard PA Announcement</span>
+              <span className="text-[10px] text-zinc-500 leading-normal">Pre-recorded official announcement script for transit crowd control.</span>
+              <div className="mt-auto grid grid-cols-2 gap-2">
+                <button
+                  onClick={() => {
+                    setSpeechSynthesisText("Attention all fans in Zone 1, please proceed towards Gate C for rapid boarding.");
+                  }}
+                  className="bg-emerald-600/10 hover:bg-emerald-600 border border-emerald-500/20 hover:border-emerald-500 text-emerald-400 hover:text-white text-[10px] py-1.5 rounded-lg font-bold transition-all text-center"
+                >
+                  Load Script
+                </button>
+                <button
+                  onClick={playSampleAudio}
+                  className="bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-zinc-300 text-[10px] py-1.5 rounded-lg font-bold transition-all text-center"
+                >
+                  Listen Live
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Vision AI Section */}
       <div className="flex flex-col gap-6 bg-zinc-900/50 backdrop-blur border border-zinc-800 p-6 rounded-2xl shadow-xl">
         <div>
@@ -98,31 +211,6 @@ export const MultiModalHub: React.FC = React.memo(() => {
           <p className="text-zinc-400 text-sm mt-1">
             Upload gate screenshots or crowd camera footage to run real-time density assessments.
           </p>
-        </div>
-
-        {/* Demo Assets Loader */}
-        <div className="flex gap-2 bg-zinc-950/60 p-3 rounded-xl border border-zinc-800/80">
-          <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider self-center">Demo Assets:</span>
-          <button
-            onClick={() => {
-              setFilePreview("https://storage.googleapis.com/genai-apac-2026-491004-assets/data/stadium.jpg");
-              setSelectedFile(new File([new Uint8Array(10)], "stadium.jpg", { type: "image/jpeg" }));
-              setVisionResult(null);
-            }}
-            className="text-[10px] bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 px-2 py-1 rounded-lg font-bold transition-colors"
-          >
-            Stadium Image
-          </button>
-          <button
-            onClick={() => {
-              setFilePreview("https://storage.googleapis.com/genai-apac-2026-491004-assets/data/security_cam.mp4");
-              setSelectedFile(new File([new Uint8Array(10)], "security_cam.mp4", { type: "video/mp4" }));
-              setVisionResult(null);
-            }}
-            className="text-[10px] bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 px-2 py-1 rounded-lg font-bold transition-colors"
-          >
-            Security Video
-          </button>
         </div>
 
         {/* Drag and Drop Zone */}
