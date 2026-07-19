@@ -1,3 +1,4 @@
+import logging
 import os
 from dataclasses import dataclass
 from typing import Any, Callable, Dict, List, Optional
@@ -34,6 +35,8 @@ class ADKMemory:
         """Appends event data to long-term post-match analytics log."""
         self.long_term.append(event_data)
 
+
+logger = logging.getLogger(__name__)
 
 class ArenaAgent:
     """Base class for ArenaPulseAI agents with model selection, dynamic tool injection, and ADK primitives."""
@@ -115,6 +118,6 @@ class ArenaAgent:
                         f"Match Preparation: {m['home_team']} vs {m['away_team']} scheduled at {m['venue']} on {m['date']}. "
                         f"Pre-game security checks and volunteer placement are finalized."
                     )
-        except Exception:
-            pass
+        except Exception as exc:
+            logger.warning("Mock fallback for %s failed: %s", self.name, exc)
         return f"[MOCK_FALLBACK] {self.name} processed: '{prompt}'"

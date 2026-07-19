@@ -1,5 +1,6 @@
 import asyncio
 import json
+import logging
 import os
 from datetime import datetime
 
@@ -22,6 +23,8 @@ app = FastAPI(
     description="Multi-agent Smart Stadium Operating System backend",
     version="1.0.0"
 )
+
+logger = logging.getLogger(__name__)
 
 # Dynamic CORS settings for local development and Cloud deployments
 allowed_origins_env = os.getenv("ALLOWED_ORIGINS", "")
@@ -81,9 +84,10 @@ async def websocket_endpoint(websocket: WebSocket):
                 await websocket.send_text(json.dumps(message))
                 await asyncio.sleep(3.0)
         except asyncio.CancelledError:
-            pass
+            raise
         except Exception:
-            pass
+            logger.exception("Telemetry streamer failed")
+            return
 
     stream_task = asyncio.create_task(telemetry_streamer())
 
@@ -160,7 +164,9 @@ async def websocket_endpoint(websocket: WebSocket):
                 await websocket.send_text(json.dumps(mutation_msg))
 
     except WebSocketDisconnect:
-        pass
+        logger.info("WebSocket disconnected by client")
+    except Exception:
+        logger.exception("WebSocket handler encountered an error")
     finally:
         stream_task.cancel()
         await stream_task
