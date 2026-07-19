@@ -7,6 +7,7 @@
 [![Backend: Cloud Run](https://img.shields.io/badge/Backend-Cloud%20Run-blue?logo=google-cloud)](https://cloud.google.com/run)
 [![Frontend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-frontend.yml?branch=main&label=Frontend%20CI)](../../actions)
 [![Backend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-backend.yml?branch=main&label=Backend%20CI)](../../actions)
+[![Security Scan](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/security-scan.yml?branch=main&label=Security%20Scan)](../../actions)
 [![codecov](https://img.shields.io/badge/coverage-100%25-brightgreen)](frontend/coverage)
 
 ---
@@ -37,10 +38,10 @@ ArenaPulseAI is engineered to achieve 100% compliance with the hackathon's core 
 
 ### 3. Testing Rigor
 * **Backend:** Exactly **100.00% statement and branch coverage** via `pytest --cov=app` across the entire FastAPI core modules, verified in CI/CD.
-* **Frontend:** **99.53% statement coverage** via Jest + React Testing Library, enforcing rigorous UI component and state transition checks.
+* **Frontend:** Exactly **100.00% statement coverage** via Jest + React Testing Library, enforcing rigorous UI component and state transition checks.
 
 ### 4. Security & Compliance
-* **Zero Secret Leakage:** Checked via CI/CD pre-commit hooks. No API keys or credentials are in source control; Secret Manager is used for all runtime environment secrets.
+* **Zero Secret Leakage:** Checked via CI/CD pre-commit hooks and a dedicated Gitleaks security workflow. No API keys or credentials are in source control; Secret Manager is used for all runtime environment secrets.
 * **Firestore Security Rules:** Implements strict rule assertions to prevent unauthorized read/write access to volunteers' rosters.
 * **CORS Compliance:** Restricts origin access using FastAPI CORS Middleware.
 
@@ -162,9 +163,9 @@ cp .env.example .env
 cd frontend
 npm test
 
-# Backend — pytest
+# Backend — pytest with coverage
 cd backend
-python -m pytest -v
+python -m pytest --cov=app -q
 ```
 
 ---
