@@ -81,7 +81,7 @@ export const MultiModalHub: React.FC = React.memo(() => {
 
   const playSampleAudio = useCallback(() => {
     setAudioPlaybackActive(true);
-    const audio = new Audio("https://storage.googleapis.com/genai-apac-2026-491004-assets/data/announcement.wav");
+    const audio = new Audio("/data/announcement.wav");
     audio.play().catch(() => {});
     audio.onended = () => setAudioPlaybackActive(false);
   }, []);
@@ -106,7 +106,7 @@ export const MultiModalHub: React.FC = React.memo(() => {
             <div className="h-32 w-full relative bg-zinc-900 overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://storage.googleapis.com/genai-apac-2026-491004-assets/data/stadium.jpg"
+                src="/data/stadium.jpg"
                 alt="MetLife Stadium South Gate"
                 className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-300"
               />
@@ -119,7 +119,7 @@ export const MultiModalHub: React.FC = React.memo(() => {
               <span className="text-[10px] text-zinc-500 leading-normal">High-res capture of fan queue density at Gate C concourse.</span>
               <button
                 onClick={() => {
-                  setFilePreview("https://storage.googleapis.com/genai-apac-2026-491004-assets/data/stadium.jpg");
+                  setFilePreview("/data/stadium.jpg");
                   setSelectedFile(new File([new Uint8Array(10)], "stadium.jpg", { type: "image/jpeg" }));
                   setVisionResult(null);
                 }}
@@ -134,7 +134,7 @@ export const MultiModalHub: React.FC = React.memo(() => {
           <div className="bg-zinc-950/70 border border-zinc-800/60 rounded-xl overflow-hidden flex flex-col group hover:border-zinc-700/80 transition-colors">
             <div className="h-32 w-full relative bg-black flex items-center justify-center">
               <video
-                src="https://storage.googleapis.com/genai-apac-2026-491004-assets/data/security_cam.mp4"
+                src="/data/security_cam.mp4"
                 muted
                 loop
                 autoPlay
@@ -150,7 +150,7 @@ export const MultiModalHub: React.FC = React.memo(() => {
               <span className="text-[10px] text-zinc-500 leading-normal">Live CCTV monitoring of transit platforms and exit channels.</span>
               <button
                 onClick={() => {
-                  setFilePreview("https://storage.googleapis.com/genai-apac-2026-491004-assets/data/security_cam.mp4");
+                  setFilePreview("/data/security_cam.mp4");
                   setSelectedFile(new File([new Uint8Array(10)], "security_cam.mp4", { type: "video/mp4" }));
                   setVisionResult(null);
                 }}

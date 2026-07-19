@@ -60,9 +60,9 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
   ], [locale, t]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-zinc-950 text-zinc-100 font-sans mesh-bg" role="application">
+    <div className="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans mesh-bg transition-colors duration-250" role="application">
       {/* Top Header */}
-      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-slate-900/40 px-6 py-4 backdrop-blur-2xl" role="banner">
+      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-zinc-200 dark:border-white/10 bg-white/80 dark:bg-slate-900/40 px-6 py-4 backdrop-blur-2xl transition-colors duration-250" role="banner">
         <div className="flex items-center gap-3">
           <div className="bg-blue-600/10 p-2 rounded-xl border border-blue-500/20 text-blue-500">
             <Activity className="w-6 h-6 animate-pulse" />
@@ -83,8 +83,8 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
           <div
             className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-mono font-bold ${
               wsConnected
-                ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
-                : "bg-amber-500/10 border-amber-500/20 text-amber-400"
+                ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-600 dark:text-emerald-400"
+                : "bg-amber-500/10 border-amber-500/20 text-amber-600 dark:text-amber-400"
             }`}
             aria-live="polite"
           >
@@ -102,16 +102,16 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
           </div>
 
           {/* User Profile Selector */}
-          <div className="flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 rounded-xl px-2.5 py-1.5">
-            <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">{t("role.label")}</span>
+          <div className="flex items-center gap-1.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl px-2.5 py-1.5 text-zinc-800 dark:text-white">
+            <span className="text-[10px] text-zinc-400 dark:text-zinc-500 font-bold uppercase tracking-wider">{t("role.label")}</span>
             <select
               value={activeRole}
               onChange={(e) => setActiveRole(e.target.value)}
-              className="bg-transparent text-xs text-white font-bold focus:outline-none pr-1 cursor-pointer"
+              className="bg-transparent text-xs text-zinc-900 dark:text-white font-bold focus:outline-none pr-1 cursor-pointer"
             >
-              <option value="noc_director" className="bg-zinc-950 text-white">{t("role.nocDirector")}</option>
-              <option value="field_supervisor" className="bg-zinc-950 text-white">{t("role.fieldSupervisor")}</option>
-              <option value="volunteer" className="bg-zinc-950 text-white">{t("role.volunteer")}</option>
+              <option value="noc_director" className="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-white">{t("role.nocDirector")}</option>
+              <option value="field_supervisor" className="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-white">{t("role.fieldSupervisor")}</option>
+              <option value="volunteer" className="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-white">{t("role.volunteer")}</option>
             </select>
           </div>
 
@@ -121,7 +121,7 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
           {/* Theme Switcher Toggle */}
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className="bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 rounded-xl p-2.5 transition-colors active:scale-95 cursor-pointer"
+            className="bg-zinc-100 dark:bg-zinc-900 hover:bg-zinc-200 dark:hover:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-xl p-2.5 transition-colors active:scale-95 cursor-pointer"
             aria-label={t("aria.toggleTheme")}
           >
             {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -132,7 +132,7 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
       {/* Main Layout Container */}
       <div className="flex flex-1 flex-col lg:flex-row">
         {/* Navigation Sidebar */}
-        <aside className="w-full lg:w-64 border-r border-white/10 bg-slate-900/30 p-4 backdrop-blur-2xl animate-fade-in" role="complementary">
+        <aside className="w-full lg:w-64 border-r border-zinc-200 dark:border-white/10 bg-zinc-100/50 dark:bg-slate-900/30 p-4 backdrop-blur-2xl animate-fade-in transition-colors duration-250" role="complementary">
           <nav className="flex flex-row lg:flex-col gap-1.5 overflow-x-auto lg:overflow-x-visible pb-3 lg:pb-0" role="navigation" aria-label={t("aria.systemMenu")}>
             {tabs.map((tab) => {
               const Icon = tab.icon;
@@ -145,7 +145,7 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
                   className={`w-full flex items-center gap-3 px-4 py-3 text-xs font-bold rounded-xl transition-all flex-shrink-0 lg:flex-shrink-1 ${
                     isActive
                       ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20"
-                      : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
+                      : "text-zinc-500 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-200"
                   }`}
                 >
                   <Icon className="w-4 h-4 flex-shrink-0" />
@@ -156,16 +156,16 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
           </nav>
 
           {/* Live FIFA Match Telemetry Sidebar Widget */}
-          <div className="hidden lg:flex flex-col gap-4 mt-8 p-4 bg-zinc-950/60 border border-zinc-800/80 rounded-2xl">
+          <div className="hidden lg:flex flex-col gap-4 mt-8 p-4 bg-white dark:bg-zinc-950/60 border border-zinc-200 dark:border-zinc-800/80 rounded-2xl shadow-sm transition-colors duration-250">
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">{t("telemetry.fifaLive")}</span>
             
             {/* Attendance progress bar */}
             <div className="flex flex-col gap-1.5">
               <div className="flex justify-between text-[11px] font-mono">
-                <span className="text-zinc-500">{t("telemetry.stadiumAttendance")}</span>
-                <span className="text-emerald-400 font-bold">78,450 / 80,000</span>
+                <span className="text-zinc-400 dark:text-zinc-500">{t("telemetry.stadiumAttendance")}</span>
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">78,450 / 80,000</span>
               </div>
-              <div className="h-1.5 w-full bg-zinc-900 rounded-full overflow-hidden">
+              <div className="h-1.5 w-full bg-zinc-200 dark:bg-zinc-900 rounded-full overflow-hidden">
                 <div className="h-full bg-gradient-to-r from-blue-500 to-emerald-500 animate-pulse" style={{ width: "98%" }} />
               </div>
             </div>
@@ -173,16 +173,16 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
             {/* WiFi Data Rate moving graph */}
             <div className="flex flex-col gap-2">
               <div className="flex justify-between text-[11px] font-mono">
-                <span className="text-zinc-500">{t("telemetry.wifiDataRate")}</span>
-                <span className="text-blue-400 font-bold">12.4 Gbps</span>
+                <span className="text-zinc-400 dark:text-zinc-500">{t("telemetry.wifiDataRate")}</span>
+                <span className="text-blue-600 dark:text-blue-400 font-bold">12.4 Gbps</span>
               </div>
-              <div className="flex gap-0.5 items-end h-7 bg-zinc-950/30 rounded border border-zinc-900/50 px-1 py-0.5" aria-hidden="true">
-                <span className="flex-1 bg-blue-600/40 rounded-sm animate-pulse h-[40%]" />
-                <span className="flex-1 bg-blue-600/60 rounded-sm animate-pulse [animation-delay:0.1s] h-[70%]" />
-                <span className="flex-1 bg-blue-600/50 rounded-sm animate-pulse [animation-delay:0.2s] h-[55%]" />
-                <span className="flex-1 bg-blue-600/80 rounded-sm animate-pulse [animation-delay:0.3s] h-[90%]" />
-                <span className="flex-1 bg-blue-600/70 rounded-sm animate-pulse [animation-delay:0.4s] h-[75%]" />
-                <span className="flex-1 bg-blue-600/90 rounded-sm animate-pulse [animation-delay:0.5s] h-[95%]" />
+              <div className="flex gap-0.5 items-end h-7 bg-zinc-100 dark:bg-zinc-950/30 rounded border border-zinc-200 dark:border-zinc-900/50 px-1 py-0.5 animate-pulse" aria-hidden="true">
+                <span className="flex-1 bg-blue-600/40 rounded-sm h-[40%]" />
+                <span className="flex-1 bg-blue-600/60 rounded-sm [animation-delay:0.1s] h-[70%]" />
+                <span className="flex-1 bg-blue-600/50 rounded-sm [animation-delay:0.2s] h-[55%]" />
+                <span className="flex-1 bg-blue-600/80 rounded-sm [animation-delay:0.3s] h-[90%]" />
+                <span className="flex-1 bg-blue-600/70 rounded-sm [animation-delay:0.4s] h-[75%]" />
+                <span className="flex-1 bg-blue-600/90 rounded-sm [animation-delay:0.5s] h-[95%]" />
               </div>
             </div>
           </div>
@@ -195,26 +195,26 @@ export const DashboardLayout: React.FC<{ children: React.ReactNode; locale: Loca
       </div>
 
       {/* Audit Log / System Terminal panel */}
-      <footer className="border-t border-white/10 bg-slate-900/40 p-4 backdrop-blur-2xl" role="contentinfo">
+      <footer className="border-t border-zinc-200 dark:border-white/10 bg-zinc-100/50 dark:bg-slate-900/40 p-4 backdrop-blur-2xl transition-colors duration-250" role="contentinfo">
         <div className="max-w-4xl mx-auto flex flex-col gap-3">
-          <div className="flex items-center gap-2 text-xs font-bold text-zinc-400 uppercase tracking-widest">
-            <TerminalIcon className="w-4 h-4 text-zinc-500" />
+          <div className="flex items-center gap-2 text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest">
+            <TerminalIcon className="w-4 h-4 text-zinc-400 dark:text-zinc-500" />
             {t("auditConsole")}
           </div>
 
           <div
-            className="bg-slate-950/60 border border-white/10 rounded-xl p-3 h-28 overflow-y-auto font-mono text-[10px] leading-relaxed flex flex-col gap-1"
+            className="bg-white dark:bg-slate-950/60 border border-zinc-200 dark:border-white/10 rounded-xl p-3 h-28 overflow-y-auto font-mono text-[10px] leading-relaxed flex flex-col gap-1 text-zinc-700 dark:text-zinc-400"
             role="log"
             aria-live="polite"
           >
             {logs.map((log, idx) => {
               const color =
-                log.level === "success" ? "text-emerald-400" :
-                log.level === "warning" ? "text-amber-500" :
-                log.level === "error" ? "text-rose-500" : "text-zinc-400";
+                log.level === "success" ? "text-emerald-600 dark:text-emerald-400" :
+                log.level === "warning" ? "text-amber-600 dark:text-amber-500" :
+                log.level === "error" ? "text-rose-600 dark:text-rose-500" : "text-zinc-500 dark:text-zinc-400";
               return (
                 <div key={idx} className="flex gap-2">
-                  <span className="text-zinc-600">[{log.component}]</span>
+                  <span className="text-zinc-400 dark:text-zinc-600">[{log.component}]</span>
                   <span className={color}>{log.message}</span>
                 </div>
               );
