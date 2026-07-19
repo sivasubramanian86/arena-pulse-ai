@@ -81,7 +81,7 @@ export const MultiModalHub: React.FC = React.memo(() => {
 
   const playSampleAudio = useCallback(() => {
     setAudioPlaybackActive(true);
-    const audio = new Audio("/data/announcement.wav");
+    const audio = new Audio("/data/announcement.mp3");
     audio.play().catch(() => {});
     audio.onended = () => setAudioPlaybackActive(false);
   }, []);
