@@ -349,3 +349,84 @@ input::placeholder, textarea::placeholder {
   border-color: var(--border-focus);
   color: var(--text-primary);
 }
+
+/* ═══════════════════════════════════════════════════════════
+   LIGHT MODE CONTRAST & LEGIBILITY FIXES
+   Remaps hardcoded Tailwind dark classes to CSS theme variables 
+   when light theme is active.
+   ═══════════════════════════════════════════════════════════ */
+[data-theme='light'] {
+  /* Dynamic Background Mappings */
+  .bg-zinc-900,
+  .bg-zinc-950,
+  .bg-zinc-900\/40,
+  .bg-zinc-900\/50,
+  .bg-zinc-950\/40,
+  .bg-zinc-950\/60,
+  .bg-zinc-950\/70,
+  .bg-zinc-950\/80,
+  .bg-zinc-900\/60,
+  .bg-zinc-900\/80,
+  .bg-black {
+    background-color: var(--bg-surface) !important;
+  }
+
+  .bg-zinc-950,
+  .bg-zinc-950\/40,
+  .bg-zinc-950\/60,
+  .bg-zinc-950\/70,
+  .bg-zinc-950\/80 {
+    background-color: var(--bg-surface-2) !important;
+  }
+
+  /* Dynamic Border Mappings */
+  .border-zinc-800,
+  .border-zinc-800\/80,
+  .border-zinc-800\/60,
+  .border-zinc-700,
+  .border-zinc-900,
+  .border-zinc-700\/80 {
+    border-color: var(--border-subtle) !important;
+  }
+
+  /* Dynamic Text Color Mappings */
+  .text-white {
+    color: var(--text-primary) !important;
+  }
+
+  .text-zinc-200,
+  .text-zinc-100 {
+    color: var(--text-primary-dim) !important;
+  }
+
+  /* Preserve white text inside elements that must retain dark accent backgrounds in light mode */
+  .bg-blue-600 .text-white,
+  .bg-blue-500 .text-white,
+  .bg-rose-600 .text-white,
+  .bg-rose-500 .text-white,
+  .bg-emerald-600 .text-white,
+  .bg-emerald-500 .text-white,
+  .bg-indigo-600 .text-white,
+  .bg-indigo-500 .text-white,
+  .bg-violet-600 .text-white,
+  .bg-amber-600 .text-white,
+  .bg-zinc-500\/10 .text-zinc-500,
+  button.bg-blue-600,
+  button.bg-rose-600,
+  button.bg-emerald-600,
+  button.bg-indigo-600,
+  button.bg-violet-600,
+  a.bg-blue-600,
+  a.bg-rose-600,
+  a.bg-emerald-600,
+  a.bg-indigo-600,
+  .text-on-accent {
+    color: #ffffff !important;
+  }
+
+  /* Handle specific icons inside buttons */
+  .bg-rose-600 .text-rose-500,
+  .bg-emerald-600 .text-emerald-500 {
+    color: #ffffff !important;
+  }
+}
