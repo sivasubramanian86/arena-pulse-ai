@@ -5,11 +5,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Firebase Hosting](https://img.shields.io/badge/Live-arena--pulse--ai.web.app-orange?logo=firebase)](https://arena-pulse-ai.web.app)
 [![Backend: Cloud Run](https://img.shields.io/badge/Backend-Cloud%20Run-blue?logo=google-cloud)](https://cloud.google.com/run)
-[![Frontend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-frontend.yml?branch=main&label=Frontend%20CI)](../../actions)
-[![Backend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-backend.yml?branch=main&label=Backend%20CI)](../../actions)
-[![Security Scan](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/security-scan.yml?branch=main&label=Security%20Scan)](../../actions)
-[![Backend Coverage](https://img.shields.io/badge/Backend%20Coverage-100%25-brightgreen)](./backend)
-[![Frontend Coverage](https://img.shields.io/badge/Frontend%20Coverage-100%25-brightgreen)](./frontend)
+[![Frontend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-frontend.yml?branch=main&label=Frontend%20CI)](https://github.com/sivasubramanian86/arena-pulse-ai/actions/workflows/ci-frontend.yml)
+[![Backend CI](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/ci-backend.yml?branch=main&label=Backend%20CI)](https://github.com/sivasubramanian86/arena-pulse-ai/actions/workflows/ci-backend.yml)
+[![Security Scan](https://img.shields.io/github/actions/workflow/status/sivasubramanian86/arena-pulse-ai/security-scan.yml?branch=main&label=Security%20Scan)](https://github.com/sivasubramanian86/arena-pulse-ai/actions/workflows/security-scan.yml)
+[![Backend Coverage](https://img.shields.io/badge/Backend%20Coverage-100%25-brightgreen)](https://github.com/sivasubramanian86/arena-pulse-ai/actions/workflows/ci-backend.yml)
+[![Frontend Coverage](https://img.shields.io/badge/Frontend%20Coverage-100%25-brightgreen)](https://github.com/sivasubramanian86/arena-pulse-ai/actions/workflows/ci-frontend.yml)
 
 ---
 
