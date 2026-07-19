@@ -1,3 +1,8 @@
+/**
+ * @file PolyglotKiosk.test.tsx
+ * @description Jest test suite validating frontend PolyglotKiosk component rendering and actions.
+ */
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { render, screen, fireEvent, act } from "@testing-library/react";
 import { PolyglotKiosk } from "../../src/components/PolyglotKiosk";

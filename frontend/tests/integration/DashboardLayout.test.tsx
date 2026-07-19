@@ -1,3 +1,8 @@
+/**
+ * @file DashboardLayout.test.tsx
+ * @description Jest test suite validating frontend DashboardLayout component rendering and actions.
+ */
+
 import { render, screen, fireEvent, act } from "@testing-library/react";
 import { DashboardLayout } from "../../src/components/DashboardLayout";
 import { TelemetryProvider } from "../../src/context/TelemetryContext";

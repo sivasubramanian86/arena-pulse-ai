@@ -1,9 +1,9 @@
+"use client";
+
 /**
  * @file DynamicMonetization.tsx
  * @description Revenue performance and dynamic monetization analytics dashboard displaying sponsor streams and metrics.
  */
-
-"use client";
 
 import React, { useMemo } from "react";
 import { TrendingUp, Award, DollarSign, Users } from "lucide-react";

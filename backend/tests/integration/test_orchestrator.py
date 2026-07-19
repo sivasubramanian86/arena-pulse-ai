@@ -1,3 +1,5 @@
+"""Test suite validating backend Orchestrator functionality."""
+
 import pytest
 
 from app.core.agents.edge_swarm import SwarmAnomaly
@@ -9,6 +11,7 @@ async def _no_sleep(_seconds):
 
 @pytest.mark.asyncio
 async def test_orchestrator_cache_hit():
+    """Verify that the orchestrator cache hit logic operates correctly."""
     orch = ArenaPulseOrchestrator()
     steps = []
     async for step in orch.execute_task_stream("Where is Gate C?"):
@@ -22,6 +25,7 @@ async def test_orchestrator_cache_hit():
 
 @pytest.mark.asyncio
 async def test_orchestrator_translation_route():
+    """Verify that the orchestrator translation route logic operates correctly."""
     orch = ArenaPulseOrchestrator()
     steps = []
     async for step in orch.execute_task_stream("Translate this please: hola"):
@@ -34,6 +38,7 @@ async def test_orchestrator_translation_route():
 
 @pytest.mark.asyncio
 async def test_orchestrator_complex_flow():
+    """Verify that the orchestrator complex flow logic operates correctly."""
     orch = ArenaPulseOrchestrator()
     steps = []
     async for step in orch.execute_task_stream("Topological route from Gate B"):
@@ -45,6 +50,7 @@ async def test_orchestrator_complex_flow():
     assert steps[-1]["status"] == "completed"
 
 def test_orchestrator_injected_tools_coverage():
+    """Verify that the orchestrator injected tools coverage logic operates correctly."""
     orch = ArenaPulseOrchestrator()
     # Explicitly invoke the tool callbacks bound within _bind_agent_tools
     assert len(orch.crowd_worker.tools) == 2
@@ -58,6 +64,7 @@ def test_orchestrator_injected_tools_coverage():
 
 @pytest.mark.asyncio
 async def test_orchestrator_consensus_and_anomaly_branch(monkeypatch):
+    """Verify that the orchestrator consensus and anomaly branch logic operates correctly."""
     class FakeSwarmCoordinator:
         def __init__(self, anomaly_threshold):
             self.anomaly_threshold = anomaly_threshold
@@ -92,6 +99,7 @@ async def test_orchestrator_consensus_and_anomaly_branch(monkeypatch):
 
 @pytest.mark.asyncio
 async def test_orchestrator_no_anomaly_branch(monkeypatch):
+    """Verify that the orchestrator no anomaly branch logic operates correctly."""
     class QuietSwarmCoordinator:
         def __init__(self, anomaly_threshold):
             self.anomaly_threshold = anomaly_threshold

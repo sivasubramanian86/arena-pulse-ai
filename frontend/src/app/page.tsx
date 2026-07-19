@@ -1,3 +1,8 @@
+/**
+ * @file page.tsx
+ * @description Next.js page wrapper for the stadium App sub-system view.
+ */
+
 import { redirect } from "next/navigation";
 import { DEFAULT_LOCALE } from "../i18n/config";
 

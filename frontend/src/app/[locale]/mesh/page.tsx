@@ -1,3 +1,8 @@
+/**
+ * @file page.tsx
+ * @description Next.js page wrapper for the stadium Mesh sub-system view.
+ */
+
 "use client";
 
 import { EdgeMeshTopology } from "../../../components/EdgeMeshTopology";

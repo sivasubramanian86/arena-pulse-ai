@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * @file Preferences.tsx
+ * @description Settings configuration panel for stadium IoT update intervals, telemetry sharing, and edge nodes mode.
+ */
+
 import React, { useState, useCallback } from "react";
 import { Settings, Save, CheckCircle, AlertTriangle } from "lucide-react";
 import { z } from "zod";

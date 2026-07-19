@@ -1,9 +1,12 @@
+"""Test suite validating backend Evacuation E2E functionality."""
+
 from fastapi.testclient import TestClient
 
 from app.main import app
 
 
 def test_websocket_e2e_simulation_flow():
+    """Verify that the websocket e2e simulation flow logic operates correctly."""
     client = TestClient(app)
     with client.websocket_connect("/ws") as websocket:
         # Trigger evacuation simulation
@@ -23,6 +26,7 @@ def test_websocket_e2e_simulation_flow():
         assert data["event"] in ["telemetry", "audit_log", "crisis_alert"]
 
 def test_websocket_e2e_query_flow():
+    """Verify that the websocket e2e query flow logic operates correctly."""
     client = TestClient(app)
     with client.websocket_connect("/ws") as websocket:
         # Execute query

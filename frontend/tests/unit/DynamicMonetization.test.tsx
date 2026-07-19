@@ -1,3 +1,8 @@
+/**
+ * @file DynamicMonetization.test.tsx
+ * @description Jest test suite validating frontend DynamicMonetization component rendering and actions.
+ */
+
 import { render, screen } from "@testing-library/react";
 import { DynamicMonetization } from "../../src/components/DynamicMonetization";
 import "@testing-library/jest-dom";

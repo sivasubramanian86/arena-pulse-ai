@@ -1,9 +1,9 @@
+"use client";
+
 /**
  * @file CrisisSimulator.tsx
  * @description Operational simulation interface modeling stadium emergency scenarios and computing optimal egress routes.
  */
-
-"use client";
 
 import React, { useState, useCallback } from "react";
 import { ShieldAlert, Play, AlertCircle, Compass, HelpCircle } from "lucide-react";

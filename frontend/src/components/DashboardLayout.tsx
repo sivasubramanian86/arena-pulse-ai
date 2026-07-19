@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * @file DashboardLayout.tsx
+ * @description Core shell rendering the stadium dashboard layout, side navigation, and global configuration bars.
+ */
+
 import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

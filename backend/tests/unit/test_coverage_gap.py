@@ -1,3 +1,5 @@
+"""Test suite validating backend Coverage Gap functionality."""
+
 from unittest.mock import AsyncMock, patch
 
 import pytest
@@ -9,6 +11,7 @@ from app.core.orchestrator import ArenaPulseOrchestrator
 
 @pytest.mark.asyncio
 async def test_arena_agent_mock_fallback_branches(monkeypatch):
+    """Verify that the arena agent mock fallback branches logic operates correctly."""
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     agent = ArenaAgent(name="TestAgent", instruction="test", model="gemini-2.5-flash")
 
@@ -25,6 +28,7 @@ async def test_arena_agent_mock_fallback_branches(monkeypatch):
     assert "Match Preparation" in res_scheduled
 
 def test_arena_agent_fallback_exception():
+    """Verify that the arena agent fallback exception logic operates correctly."""
     # Test fallback exception branch to hit lines 116-117 in base.py
     agent = ArenaAgent(name="TestAgent", instruction="test", model="gemini-2.5-flash")
     with patch("app.core.fifa_data.FIFAMatchEngine.search_matches", side_effect=ValueError("Test exception")):
@@ -32,6 +36,7 @@ def test_arena_agent_fallback_exception():
         assert "[MOCK_FALLBACK] TestAgent" in res
 
 def test_fifa_data_engine_coverage():
+    """Verify that the fifa data engine coverage logic operates correctly."""
     # 1. get_all_matches
     matches = FIFAMatchEngine.get_all_matches()
     assert len(matches) > 0
@@ -50,6 +55,7 @@ def test_fifa_data_engine_coverage():
 
 @pytest.mark.asyncio
 async def test_orchestrator_no_fifa_context_branch():
+    """Verify that the orchestrator no fifa context branch logic operates correctly."""
     # Test orchestrator with mocked empty fifa context to hit 257->260 branch
     with patch("app.core.fifa_data.FIFAMatchEngine.query_fifa_context", return_value=""):
         orchestrator = ArenaPulseOrchestrator()

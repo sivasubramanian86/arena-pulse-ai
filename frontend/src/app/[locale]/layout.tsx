@@ -1,3 +1,8 @@
+/**
+ * @file layout.tsx
+ * @description Localized layout wrapper inject next-intl context, configuring dynamic lang and dir attributes.
+ */
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
@@ -60,7 +65,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       data-theme="dark"
     >
-      <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100">
+      <body className="min-h-full flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
         <NextIntlClientProvider locale={typedLocale} messages={messages}>
           <TelemetryProvider>
             <DashboardLayout locale={typedLocale}>{children}</DashboardLayout>

@@ -1,9 +1,9 @@
+"use client";
+
 /**
  * @file PolyglotKiosk.tsx
  * @description Real-time language translation simulator for MetLife smart kiosks supporting multi-lingual operations.
  */
-
-"use client";
 
 import React, { useState, useCallback } from "react";
 import { Languages, Mic, Volume2, ArrowRightLeft, Sparkles } from "lucide-react";

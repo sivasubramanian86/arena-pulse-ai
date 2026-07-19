@@ -1,3 +1,8 @@
+/**
+ * @file EvacuationFlow.test.tsx
+ * @description Jest test suite validating frontend EvacuationFlow component rendering and actions.
+ */
+
 import { render, screen, fireEvent, act } from "@testing-library/react";
 import { TelemetryProvider } from "../../src/context/TelemetryContext";
 import { CrisisSimulator } from "../../src/components/CrisisSimulator";

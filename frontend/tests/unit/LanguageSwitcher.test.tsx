@@ -1,3 +1,8 @@
+/**
+ * @file LanguageSwitcher.test.tsx
+ * @description Jest test suite validating frontend LanguageSwitcher component rendering and actions.
+ */
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import { LanguageSwitcher } from "../../src/components/LanguageSwitcher";
 import "@testing-library/jest-dom";

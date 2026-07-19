@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * @file FanPass.tsx
+ * @description FanPass interface simulating AR seat routing, ticket details, and deep link navigation for fans.
+ */
+
 import React from "react";
 import { Ticket, MapPin, Compass, ShieldAlert } from "lucide-react";
 

@@ -1,5 +1,11 @@
 "use client";
 
+/**
+ * @file TelemetryContext.tsx
+ * @description Telemetry context provider establishing WebSocket connections with the FastAPI backend
+ * and managing live match attendance, IoT edge grid logs, and evacuations state.
+ */
+
 import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
 import { z } from "zod";
 import { NexusNode, NexusEdge, AuditLogPayload, MonetizationFlowPayload, EdgeMeshNode, CrisisAlertPayload } from "../types";

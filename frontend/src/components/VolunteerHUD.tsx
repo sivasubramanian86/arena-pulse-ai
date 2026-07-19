@@ -1,9 +1,9 @@
+"use client";
+
 /**
  * @file VolunteerHUD.tsx
  * @description Operational dashboard for volunteer management and task dispatch to Wrist HUD units.
  */
-
-"use client";
 
 import React, { useState, useCallback } from "react";
 import { UserCheck, ShieldAlert, Award, Play, Check, Users, MessageSquare, Send, Bell, Star } from "lucide-react";

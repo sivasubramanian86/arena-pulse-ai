@@ -1,10 +1,10 @@
+"use client";
+
 /**
  * @file CommandNexus.tsx
  * @description Core interactive command dashboard containing the stadium topological network graph representation
  * and Graph RAG cognitive search interface. Leverages client-side Dijkstra safe route mapping.
  */
-
-"use client";
 
 import React, { useState, useMemo, useCallback } from "react";
 import { Search, Network, AlertTriangle } from "lucide-react";

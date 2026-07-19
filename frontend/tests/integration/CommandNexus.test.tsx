@@ -1,3 +1,8 @@
+/**
+ * @file CommandNexus.test.tsx
+ * @description Jest test suite validating frontend CommandNexus component rendering and actions.
+ */
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import { CommandNexus } from "../../src/components/CommandNexus";
 import { NexusNode } from "../../src/types";

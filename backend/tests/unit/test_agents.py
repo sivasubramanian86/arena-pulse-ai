@@ -1,3 +1,5 @@
+"""Test suite validating backend Agents functionality."""
+
 import pytest
 from google.genai.errors import APIError
 
@@ -11,6 +13,7 @@ from app.core.agents.transit import TransitWorker
 
 @pytest.mark.asyncio
 async def test_agent_fallback_no_api_key(monkeypatch):
+    """Verify that the agent fallback no api key logic operates correctly."""
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     agent = ArenaAgent(name="TestAgent", instruction="test", model="gemini-2.5-flash")
     resp = await agent.generate_response("hello")
@@ -21,6 +24,7 @@ from unittest.mock import MagicMock, patch
 
 @pytest.mark.asyncio
 async def test_agent_generate_response_with_mock_client():
+    """Verify that the agent generate response with mock client logic operates correctly."""
     mock_client = MagicMock()
     mock_response = MagicMock()
     mock_response.text = "Mocked LLM Response"
@@ -41,6 +45,7 @@ async def test_agent_generate_response_with_mock_client():
 
 @pytest.mark.asyncio
 async def test_agent_generate_response_exception():
+    """Verify that the agent generate response exception logic operates correctly."""
     mock_client = MagicMock()
     mock_client.models.generate_content.side_effect = APIError("API call failed", response_json={})
 
@@ -51,6 +56,7 @@ async def test_agent_generate_response_exception():
     assert "[MOCK_FALLBACK] TestAgent" in resp
 
 def test_agent_initialization_with_api_key(monkeypatch):
+    """Verify that the agent initialization with api key logic operates correctly."""
     monkeypatch.setenv("GEMINI_API_KEY", "dummy_key")
     with patch("google.genai.Client") as mock_genai_client:
         agent = ArenaAgent(name="TestAgent", instruction="test", model="gemini-2.5-flash")
@@ -59,6 +65,7 @@ def test_agent_initialization_with_api_key(monkeypatch):
 
 @pytest.mark.asyncio
 async def test_worker_classes_fallback():
+    """Verify that the worker classes fallback logic operates correctly."""
     crowd = CrowdWorker()
     transit = TransitWorker()
     polyglot = PolyglotWorker()
@@ -73,6 +80,7 @@ async def test_worker_classes_fallback():
     assert "Supervisor Dispatch Plan" in supervisor._mock_fallback("test")
 
 def test_agent_tool_injection():
+    """Verify that the agent tool injection logic operates correctly."""
     agent = CrowdWorker()
     def sample_tool():
         return "telemetry"
@@ -82,6 +90,7 @@ def test_agent_tool_injection():
 
 
 def test_memory_recall_and_long_term_log():
+    """Verify that the memory recall and long term log logic operates correctly."""
     memory = ADKMemory()
     assert memory.recall("missing") is None
 
@@ -93,6 +102,7 @@ def test_memory_recall_and_long_term_log():
 
 
 def test_agent_initialization_with_vertex(monkeypatch):
+    """Verify that the agent initialization with vertex logic operates correctly."""
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     monkeypatch.setenv("USE_VERTEX_AI", "true")
     monkeypatch.setenv("GOOGLE_CLOUD_PROJECT", "arena-test")
@@ -111,6 +121,7 @@ def test_agent_initialization_with_vertex(monkeypatch):
 
 @pytest.mark.asyncio
 async def test_agent_generate_response_with_task_and_empty_response():
+    """Verify that the agent generate response with task and empty response logic operates correctly."""
     mock_client = MagicMock()
     mock_response = MagicMock()
     mock_response.text = ""
@@ -133,6 +144,7 @@ async def test_agent_generate_response_with_task_and_empty_response():
 
 
 def test_supervisor_decompose_all_task_types():
+    """Verify that the supervisor decompose all task types logic operates correctly."""
     supervisor = OpsSupervisor()
     tasks = supervisor.decompose_task(
         "Evacuate gate crowd to transit shuttle and dispatch volunteer staff"
@@ -146,6 +158,7 @@ def test_supervisor_decompose_all_task_types():
 
 
 def test_supervisor_decompose_transit_only_and_default():
+    """Verify that the supervisor decompose transit only and default logic operates correctly."""
     supervisor = OpsSupervisor()
 
     transit_tasks = supervisor.decompose_task("Metro train outbound schedule")

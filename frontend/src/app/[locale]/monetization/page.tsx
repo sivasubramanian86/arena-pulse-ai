@@ -1,3 +1,8 @@
+/**
+ * @file page.tsx
+ * @description Next.js page wrapper for the stadium Monetization sub-system view.
+ */
+
 "use client";
 
 import { DynamicMonetization } from "../../../components/DynamicMonetization";

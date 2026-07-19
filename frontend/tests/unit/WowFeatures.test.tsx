@@ -1,3 +1,8 @@
+/**
+ * @file WowFeatures.test.tsx
+ * @description Jest test suite validating frontend WowFeatures component rendering and actions.
+ */
+
 import { render, screen } from "@testing-library/react";
 import { WowFeatures } from "../../src/components/WowFeatures";
 import "@testing-library/jest-dom";

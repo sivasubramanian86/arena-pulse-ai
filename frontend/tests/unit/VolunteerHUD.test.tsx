@@ -1,3 +1,8 @@
+/**
+ * @file VolunteerHUD.test.tsx
+ * @description Jest test suite validating frontend VolunteerHUD component rendering and actions.
+ */
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import { VolunteerHUD } from "../../src/components/VolunteerHUD";
 import "@testing-library/jest-dom";

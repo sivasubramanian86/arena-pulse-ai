@@ -1,3 +1,8 @@
+/**
+ * @file VaultFAQ.test.tsx
+ * @description Jest test suite validating frontend VaultFAQ component rendering and actions.
+ */
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import { VaultFAQ } from "../../src/components/VaultFAQ";
 import "@testing-library/jest-dom";

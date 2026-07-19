@@ -1,3 +1,8 @@
+/**
+ * @file EdgeMeshTopology.test.tsx
+ * @description Jest test suite validating frontend EdgeMeshTopology component rendering and actions.
+ */
+
 import { render, screen } from "@testing-library/react";
 import { EdgeMeshTopology } from "../../src/components/EdgeMeshTopology";
 import "@testing-library/jest-dom";

@@ -1,3 +1,8 @@
+/**
+ * @file MultiModalHub.test.tsx
+ * @description Jest test suite validating frontend MultiModalHub component rendering and actions.
+ */
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { render, screen, fireEvent, act } from "@testing-library/react";
 import { MultiModalHub } from "../../src/components/MultiModalHub";

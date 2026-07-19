@@ -1,3 +1,8 @@
+/**
+ * @file page.tsx
+ * @description Next.js page wrapper for the stadium Nexus sub-system view.
+ */
+
 "use client";
 
 import { CommandNexus } from "../../../components/CommandNexus";

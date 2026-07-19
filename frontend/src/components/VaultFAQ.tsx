@@ -1,9 +1,9 @@
+"use client";
+
 /**
  * @file VaultFAQ.tsx
  * @description Technical FAQ panel detailing system architecture, agent mesh protocols, and security designs.
  */
-
-"use client";
 
 import React, { useState, useCallback } from "react";
 import { HelpCircle, ChevronDown, Cpu, Network, Shield } from "lucide-react";

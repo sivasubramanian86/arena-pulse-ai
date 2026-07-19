@@ -1,3 +1,8 @@
+/**
+ * @file page.tsx
+ * @description Next.js page wrapper for the localized landing page.
+ */
+
 import { redirect } from "next/navigation";
 
 interface Props {

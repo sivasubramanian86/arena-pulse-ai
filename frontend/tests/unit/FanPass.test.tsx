@@ -1,3 +1,8 @@
+/**
+ * @file FanPass.test.tsx
+ * @description Jest test suite validating frontend FanPass component rendering and actions.
+ */
+
 import { render, screen } from "@testing-library/react";
 import { FanPass } from "../../src/components/FanPass";
 import "@testing-library/jest-dom";

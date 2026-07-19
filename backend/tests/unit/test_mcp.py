@@ -1,3 +1,5 @@
+"""Test suite validating backend Mcp functionality."""
+
 import pytest
 
 from app.mcp import MCPServer, MCPServerRegistry, MCPTool
@@ -8,6 +10,7 @@ async def _custom_handler() -> dict[str, bool]:
 
 
 def test_registry_discovers_tools_by_intent_tags():
+    """Verify that the registry discovers tools by intent tags logic operates correctly."""
     registry = MCPServerRegistry()
 
     transit_tools = registry.discover("optimize transit metro schedule")
@@ -21,6 +24,7 @@ def test_registry_discovers_tools_by_intent_tags():
 
 
 def test_registry_lists_and_registers_servers():
+    """Verify that the registry lists and registers servers logic operates correctly."""
     registry = MCPServerRegistry()
     custom_server = MCPServer("CustomOps", "Custom operational tooling")
     custom_tool = MCPTool(
@@ -42,6 +46,7 @@ def test_registry_lists_and_registers_servers():
 
 @pytest.mark.asyncio
 async def test_simulated_tool_handlers_return_expected_payloads():
+    """Verify that the simulated tool handlers return expected payloads logic operates correctly."""
     registry = MCPServerRegistry()
     tools = {tool.name: tool for tool in registry.list_all_tools()}
 

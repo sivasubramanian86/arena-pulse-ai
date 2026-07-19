@@ -1,3 +1,5 @@
+"""Test suite validating backend Websocket functionality."""
+
 from app.schemas.websocket_schemas import (
     CrisisAlertPayloadModel,
     NexusEdgeModel,
@@ -8,6 +10,7 @@ from app.schemas.websocket_schemas import (
 
 
 def test_websocket_pydantic_schemas():
+    """Verify that the websocket pydantic schemas logic operates correctly."""
     node = NexusNodeModel(id="n-1", name="Gate A", type="GATE", density=0.15, status="optimal")
     assert node.id == "n-1"
 

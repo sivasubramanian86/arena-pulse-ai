@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * @file WowFeatures.tsx
+ * @description Operational feature overview cards displaying stadium key performance indicators (KPIs) and telemetry summaries.
+ */
+
 import React, { useMemo } from "react";
 import { Zap, Cpu, Users, GitMerge, TrendingUp } from "lucide-react";
 

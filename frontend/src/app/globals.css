@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
+/* Configure class-based dark mode selector strategy for Tailwind CSS v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
+
   /* ── Custom font sizes for legibility ── */
   --font-size-xs:   0.80rem;
   --font-size-sm:   0.925rem;
@@ -359,33 +363,33 @@ input::placeholder, textarea::placeholder {
   /* Dynamic Background Mappings */
   .bg-zinc-900,
   .bg-zinc-950,
-  .bg-zinc-900\/40,
-  .bg-zinc-900\/50,
-  .bg-zinc-950\/40,
-  .bg-zinc-950\/60,
-  .bg-zinc-950\/70,
-  .bg-zinc-950\/80,
-  .bg-zinc-900\/60,
-  .bg-zinc-900\/80,
+  [class*="bg-zinc-900/40"],
+  [class*="bg-zinc-900/50"],
+  [class*="bg-zinc-900/60"],
+  [class*="bg-zinc-900/80"],
+  [class*="bg-zinc-950/40"],
+  [class*="bg-zinc-950/60"],
+  [class*="bg-zinc-950/70"],
+  [class*="bg-zinc-950/80"],
   .bg-black {
     background-color: var(--bg-surface) !important;
   }
 
   .bg-zinc-950,
-  .bg-zinc-950\/40,
-  .bg-zinc-950\/60,
-  .bg-zinc-950\/70,
-  .bg-zinc-950\/80 {
+  [class*="bg-zinc-950/40"],
+  [class*="bg-zinc-950/60"],
+  [class*="bg-zinc-950/70"],
+  [class*="bg-zinc-950/80"] {
     background-color: var(--bg-surface-2) !important;
   }
 
   /* Dynamic Border Mappings */
   .border-zinc-800,
-  .border-zinc-800\/80,
-  .border-zinc-800\/60,
+  [class*="border-zinc-800/80"],
+  [class*="border-zinc-800/60"],
   .border-zinc-700,
   .border-zinc-900,
-  .border-zinc-700\/80 {
+  [class*="border-zinc-700/80"] {
     border-color: var(--border-subtle) !important;
   }
 
@@ -410,7 +414,7 @@ input::placeholder, textarea::placeholder {
   .bg-indigo-500 .text-white,
   .bg-violet-600 .text-white,
   .bg-amber-600 .text-white,
-  .bg-zinc-500\/10 .text-zinc-500,
+  [class*="bg-zinc-500/10"] .text-zinc-500,
   button.bg-blue-600,
   button.bg-rose-600,
   button.bg-emerald-600,

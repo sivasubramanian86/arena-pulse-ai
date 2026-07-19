@@ -1,3 +1,8 @@
+/**
+ * @file Preferences.test.tsx
+ * @description Jest test suite validating frontend Preferences component rendering and actions.
+ */
+
 import { render, screen, fireEvent, act } from "@testing-library/react";
 import { Preferences } from "../../src/components/Preferences";
 import "@testing-library/jest-dom";

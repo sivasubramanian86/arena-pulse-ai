@@ -1,3 +1,8 @@
+/**
+ * @file CrisisSimulator.test.tsx
+ * @description Jest test suite validating frontend CrisisSimulator component rendering and actions.
+ */
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import { CrisisSimulator } from "../../src/components/CrisisSimulator";
 import "@testing-library/jest-dom";

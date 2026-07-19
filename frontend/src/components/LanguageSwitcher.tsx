@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * @file LanguageSwitcher.tsx
+ * @description Dropdown language selector component integrating with next-intl routing constraints.
+ */
+
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { Globe } from "lucide-react";

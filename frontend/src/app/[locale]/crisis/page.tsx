@@ -1,3 +1,8 @@
+/**
+ * @file page.tsx
+ * @description Next.js page wrapper for the stadium Crisis sub-system view.
+ */
+
 "use client";
 
 import { CrisisSimulator } from "../../../components/CrisisSimulator";

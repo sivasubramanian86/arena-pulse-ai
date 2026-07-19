@@ -1,9 +1,9 @@
+"use client";
+
 /**
  * @file MultiModalHub.tsx
  * @description Operations interface for ingestion and analysis of security feeds (video/audio/image) using Gemini's multimodal capabilities.
  */
-
-"use client";
 
 import React, { useState, useCallback, useRef } from "react";
 import { Upload, Image as ImageIcon, Volume2, Sparkles, CheckCircle, AlertCircle } from "lucide-react";
