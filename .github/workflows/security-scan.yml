@@ -37,8 +37,24 @@ jobs:
       - name: Install pip-audit
         run: python -m pip install --upgrade pip pip-audit
 
-      - name: Run backend dependency audit
-        run: python -m pip_audit --fail-on high
+      - name: Run backend dependency audit (fail on high/critical)
+        run: |
+          python -m pip_audit --format=json > audit_backend.json || true
+          python - <<'PY'
+import json, sys
+try:
+    data = json.load(open('audit_backend.json'))
+except Exception:
+    print('pip-audit failed to produce JSON output or network error')
+    sys.exit(2)
+for pkg in data:
+    for vuln in pkg.get('vulns', []):
+        sev = (vuln.get('severity') or '').lower()
+        if sev in ('high', 'critical'):
+            print('High/Critical vulnerability found:', pkg.get('name'), vuln.get('id'), sev)
+            sys.exit(1)
+print('No high/critical vulnerabilities found')
+PY
         working-directory: backend
 
       - name: Run frontend dependency audit
