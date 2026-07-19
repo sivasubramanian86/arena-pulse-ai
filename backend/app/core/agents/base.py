@@ -10,6 +10,7 @@ from google.genai import errors, types
 @dataclass
 class ADKTask:
     """ADK Primitive representing a task execution context."""
+
     task_id: str
     intent: str
     priority: int  # 1 = Urgent, 3 = Low
@@ -19,20 +20,22 @@ class ADKTask:
 
 class ADKMemory:
     """ADK Memory interface supporting short-term active states and long-term history logs."""
+
     def __init__(self) -> None:
+        """Initialize ADKMemory with empty short-term and long-term stores."""
         self.short_term: Dict[str, Any] = {}
         self.long_term: List[Dict[str, Any]] = []
 
     def remember(self, key: str, value: Any) -> None:
-        """Saves telemetry or state to short-term cache."""
+        """Save telemetry or state to short-term cache."""
         self.short_term[key] = value
 
     def recall(self, key: str) -> Optional[Any]:
-        """Recalls state from short-term cache."""
+        """Recall state from short-term cache."""
         return self.short_term.get(key)
 
     def log_long_term(self, event_data: Dict[str, Any]) -> None:
-        """Appends event data to long-term post-match analytics log."""
+        """Append event data to long-term post-match analytics log."""
         self.long_term.append(event_data)
 
 
