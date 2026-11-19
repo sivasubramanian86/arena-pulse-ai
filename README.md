@@ -1,3 +1,8 @@
+> [!NOTE]
+> **OFFICIAL PORTFOLIO SHOWCASE BY SIVASUBRAMANIAN**  
+> **Original Author:** [Sivasubramanian](https://github.com/sivasubramanian86)  
+> *This repository is an open portfolio showcase. Unauthorized cloning, re-hosting, or submission to hackathons/competitions under another name is strictly prohibited.*
+
 # ArenaPulseAI — FIFA World Cup 2026 Smart Stadium Operating System
 
 > A production-grade, multi-agent AI platform that orchestrates crowd safety, fan experience, real-time translation, and stadium operations for the FIFA World Cup 2026.
